@@ -60,6 +60,16 @@
 \newcommand{\prereqE}[2] {
    \draw [->, thick]
     ($(#1.east) + (0,-2mm) $) -| ($(#1.east) + (3mm,-10mm) $) -| ($ (#2.west) -(4mm,-2mm)$) -- ($(#2.west) + (0,2mm)    $);}
+\newcommand{\prereqJ}[2] {
+   \draw [->, thick]
+    ($(#1.east) $) -| ($(#1.east) + (1mm,-10mm) $) -| ($ (#2.west) -(4mm,-2mm)$) -- ($(#2.west) + (0,2mm)    $);}
+       
+\newcommand{\prereqH}[2] {
+       \draw [->, thick]
+        ($(#1.east) + (0,-2mm) $) -| ($(#1.east) + (3mm,-10mm) $) -| ($ (#2.west) -(3mm,-2mm)$) -- ($(#2.west) + (0,2mm)    $);}
+\newcommand{\prereqI}[2] {
+       \draw [->, thick]
+        ($(#1.east) $) -| ($(#1.east) + (4mm,-9mm) $) -| ($ (#2.west) -(3mm,-2mm)$) -- ($(#2.west) + (0,2mm)    $);}
 \newcommand{\prereqA}[2] {
    \draw [->, thick]
     ($(#1.east) + (0,2mm) $) -| ($(#1.east) + (1mm,10mm) $) -| ($ (#2.west) -(4mm,0)$) -- ($(#2.west)    $);}
@@ -67,7 +77,14 @@
   \draw [->, thick]
     ($(#1.east) + (0,-1mm) $)  -| ($ (#2.west) -(2mm,-4mm)$) -- ($(#2.west) + (0,4mm)    $);}
 \geometry{margin=1cm,bottom=1.5cm} 
-  
+
+\newcommand{\prereqF}[2] {
+   \draw [->, thick]
+    ($(#1.east) + (0,2mm) $) -| ($(#1.east) + (1mm,10mm) $) -| ($ (#2.west) -(3mm,0)$) -- ($(#2.west)    $);}
+
+\newcommand{\prereqG}[2] {
+   \draw [->, thick]
+    ($(#1.east) + (0,2mm) $) -| ($(#1.east) + (1mm,10mm) $) -| ($ (#2.west) -(3mm,2mm)$) -- ($(#2.west) -(0,2mm)   $);}
 \begin{document}
 \noindent
 {\Large \textbf{Curso: Engenharia}}\\
@@ -90,67 +107,67 @@
 %{nome abreviado para referência}
 
 %Básico
-\disciplina{basico}{2}{6}{IME 02-01388}	{Álgebra\\ Linear III}{75}{5}{AlgLin}
-\disciplina{basico}{3}{6}{IME 02-04629}	{Análise\\ Vetorial}{60}{4}{AnaVet}
-\disciplina{basico}{1}{2}{IME 01-00508}	{Cálculo Dif. e Integral I}{75}{5}{CalcI}
-\disciplina{basico}{2}{2}{IME 01-00854}	{Cálculo Dif. e Integral II}{75}{5}{CalcII}
-\disciplina{basico}{3}{2}{IME 01-03646}	{Cálculo Dif. e Integral III}{75}{5}{CalcIII}
+\disciplina{basico}{2}{2}{IME 02-01388}	{Álgebra\\ Linear III}{75}{5}{AlgLin}
+\disciplina{basico}{3}{2}{IME 02-04629}	{Análise\\ Vetorial}{60}{4}{AnaVet}
+\disciplina{basico}{1}{3}{IME 01-00508}	{Cálculo Dif. e Integral I}{75}{5}{CalcI}
+\disciplina{basico}{2}{3}{IME 01-00854}	{Cálculo Dif. e Integral II}{75}{5}{CalcII}
+\disciplina{basico}{3}{3}{IME 01-03646}	{Cálculo Dif. e Integral III}{75}{5}{CalcIII}
 \disciplina{basico}{2}{1}{IME 04-04541}	{Cálculo Numérico IV}{60}{4}{CalcNum}
-\disciplina{basico}{2}{4}{IME 03-00587}	{Desenho\\ Básico}{60}{3}{DesBas}
-\disciplina{basico}{1}{3}{FIS 01-05095}	{Física Teórica e\\Experimental I}{105}{5}{FisI}
-\disciplina{basico}{2}{3}{FIS 02-05143}	{Física Teórica e\\Experimental II}{105}{5}{FisII}
-\disciplina{basico}{3}{3}{FIS 03-05185}	{Física Teórica e\\Experim. III}{120}{6}{FisIII}
-\disciplina{basico}{4}{3}{FIS 04-05212}	{Física Teórica e\\Experim. IV}{120}{6}{FisIV}
-\disciplina{basico}{1}{4}{IME 03-02046}	{Geometria Descritiva I}{60}{3}{GD}
-\disciplina{basico}{1}{6}{IME 03-01913}	{Geom. Analít.\\ e Cálc. Vet. I}{75}{5}{GeoAna}
-\disciplina{basico}{3}{4}{FEN 03-05787}	{Mecânica\\ Técnica}{60}{4}{MecTec}
-\disciplina{basico}{3}{5}{IME 05-05316}	{Probabilidade e\\ Estatística III}{75}{5}{ProbEst}
-\disciplina{basico}{1}{5}{QUI 07-03793}	{Química\\ X}{60}{3}{QuiX}
-\disciplina{basico}{2}{5}{QUI 07-03865}	{Química\\ XI}{60}{3}{QuiXI}
+\disciplina{basico}{2}{5}{IME 03-00587}	{Desenho\\ Básico}{60}{3}{DesBas}
+\disciplina{basico}{1}{4}{FIS 01-05095}	{Física Teórica e\\Experimental I}{105}{5}{FisI}
+\disciplina{basico}{2}{4}{FIS 02-05143}	{Física Teórica e\\Experimental II}{105}{5}{FisII}
+\disciplina{basico}{3}{4}{FIS 03-05185}	{Física Teórica e\\Experim. III}{120}{6}{FisIII}
+\disciplina{basico}{4}{4}{FIS 04-05212}	{Física Teórica e\\Experim. IV}{120}{6}{FisIV}
+\disciplina{basico}{1}{5}{IME 03-02046}	{Geometria Descritiva I}{60}{3}{GD}
+\disciplina{basico}{1}{2}{IME 03-01913}	{Geom. Analít.\\ e Cálc. Vet. I}{75}{5}{GeoAna}
+\disciplina{basico}{3}{5}{FEN 03-05787}	{Mecânica\\ Técnica}{60}{4}{MecTec}
+\disciplina{basico}{3}{6}{IME 05-05316}	{Probabilidade e\\ Estatística III}{75}{5}{ProbEst}
+\disciplina{basico}{1}{6}{QUI 07-03793}	{Química\\ X}{60}{3}{QuiX}
+\disciplina{basico}{2}{6}{QUI 07-03865}	{Química\\ XI}{60}{3}{QuiXI}
 
 %disciplinas profissional
 \disciplina{profissional}{10}{6}{FAF 03-04439}	{Administração Aplic. a Eng. III}{60}{3}{Adm}
-\disciplina{profissional}{6}{5}	{FEN 04-05253}	{Análise de Sistemas Físicos I}{75}{4}{AnaFis}
-\disciplina{profissional}{6}{4}	{FEN 05-00662}	{Circuitos Combinacionais e Sequenciais}{60}{3}{CirComb}
-\disciplina{profissional}{4}{5}	{FEN 04-00944}	{Circuitos Elétricos I}{90}{4}{CEI}
-\disciplina{profissional}{5}{5}	{FEN 04-01129}	{Circuitos Elétricos IV}{90}{4}{CEIV}
-\disciplina{profissional}{7}{5}	{FEN 05-05025}	{Controle e Servomecanismos III}{75}{4}{ServoMec}
-\disciplina{profissional}{7}{4}	{FEN 04-05153}	{Conv. Eletrom. de Energia III}{90}{4}{ConvEle}
-\disciplina{profissional}{5}{6}	{FEN 05-01620}	{Eletrônica\\ I}{90}{4}{EletI}
-\disciplina{profissional}{6}{6}	{FEN 05-01840}	{Eletrônica\\ II}{90}{4}{EletII}
-\disciplina{profissional}{4}{2}	{FEN 03-02040}	{Fenômenos de Transporte}{60}{3}{FenTran}
+\disciplina{profissional}{6}{4}	{FEN 04-05253}	{Análise de Sistemas Físicos I}{75}{4}{AnaFis}
+\disciplina{profissional}{6}{6}	{FEN 05-00662}	{Circuitos Combinacionais e Sequenciais}{60}{3}{CirComb}
+\disciplina{profissional}{4}{6}	{FEN 04-00944}	{Circuitos Elétricos I}{90}{4}{CEI}
+\disciplina{profissional}{5}{6}	{FEN 04-01129}	{Circuitos Elétricos IV}{90}{4}{CEIV}
+\disciplina{profissional}{7}{4}	{FEN 05-05025}	{Controle e Servomecanismos III}{75}{4}{ServoMec}
+\disciplina{profissional}{7}{5}	{FEN 04-05153}	{Conv. Eletrom. de Energia III}{90}{4}{ConvEle}
+\disciplina{profissional}{5}{5}	{FEN 05-01620}	{Eletrônica\\ I}{90}{4}{EletI}
+\disciplina{profissional}{6}{5}	{FEN 05-01840}	{Eletrônica\\ II}{90}{4}{EletII}
+\disciplina{profissional}{4}{3}	{FEN 03-02040}	{Fenômenos de Transporte}{60}{3}{FenTran}
 \disciplina{profissional}{9}{5}	{FCE 02-04657}	{Introdução à Economia III}{60}{4}{IntEco}
 \disciplina{profissional}{7}{6}	{FEN 07-02162}	{Introdução à Engenharia Ambiental}{60}{3}{IntAmb}
-\disciplina{profissional}{4}{6}	{FEN 04-05197}	{Mat. Elét. e Magnéticos I}{60}{3}{MatEle}
+\disciplina{profissional}{4}{2}	{FEN 04-05197}	{Mat. Elét. e Magnéticos I}{60}{3}{MatEle}
 \disciplina{profissional}{5}{4} {FEN 05-04923}	{Modelos Matemáticos III}{75}{4}{ModMat}
 \disciplina{profissional}{8}{6} {FEN 09-7345}	{Métodos Quant. Aplic. em Produção I}{45}{3}{PO}
 \disciplina{profissional}{7}{3}	{FEN 05-04975}	{Princípios de Telec. III}{75}{4}{PrincTelec}
-\disciplina{profissional}{4}{4}	{FEN 01-04833}	{Resistência dos Mat. Básica}{60}{3}{ResMat}
+\disciplina{profissional}{4}{5}	{FEN 01-04833}	{Resistência dos Mat. Básica}{60}{3}{ResMat}
 \disciplina{profissional}{9}{6}	{FEN 07-02722}	{Segurança e Higiene no Trabalho}{30}{2}{SegHig}
 
 %Disciplinas Desc
 \disciplina{desc}{1}{1} {FEN 06-xxxx}	{Algoritmos\\Computacionais}{75}{4}{AlgComp}
 \disciplina{desc}{6}{2} {FEN 06-xxxx}	{Análise de Algoritmos}{60}{3}{AnAlg}
 \disciplina{desc}{7}{2} {FEN 06-xxxx}	{Arquitetura de Computadores}{75}{4}{ArqComp}
-\disciplina{desc}{8}{4} {FEN 06-xxxx}	{Compiladores}{60}{3}{Comp}
+\disciplina{desc}{8}{2} {FEN 06-xxxx}	{Arquitetura de Sistemas Operacionais}{60}{3}{SO}
+\disciplina{desc}{8}{4} {FEN 06-xxxx}	{Compiladores}{75}{3}{Comp}
 \disciplina{desc}{10}{2}{FEN 06-xxxx}	{Cont. de Proc. por Comput.}{60}{3}{Control}
-\disciplina{desc}{9}{3} {FEN 06-xxxx}	{Engenharia, Tecnologia e Sociedade}{60}{3}{ETS}
+\disciplina{desc}{9}{2} {FEN 06-xxxx}	{Engenharia, Tecnologia e Sociedade}{60}{3}{ETS}
 \disciplina{desc}{6}{1} {FEN 06-xxxx}	{Engenharia de Sistemas A}{60}{3}{EnsSistA}
 \disciplina{desc}{7}{1} {FEN 06-xxxx}	{Engenharia de Sistemas B}{60}{3}{EngSistB}
 \disciplina{desc}{9}{4} {FEN 06-xxxx}	{Estágio Supervisionado}{30}{1}{EstSup}
-\disciplina{desc}{3}{1} {FEN 06-xxxx}	{Estrutura da Informação I}{60}{3}{EstrInf}
+\disciplina{desc}{3}{1} {FEN 06-xxxx}	{Estrutura da Informação}{60}{3}{EstrInf}
 \disciplina{desc}{5}{3} {FEN 06-xxxx}	{Fundamentos de Computadores}{60}{3}{FundComp}
 \disciplina{desc}{6}{3} {FEN 06-xxxx}	{Inteligência Computacional}{60}{3}{IC}
 \disciplina{desc}{4}{1} {FEN 06-xxxx}	{Laboratório de Programação I}{60}{3}{LabProgI}
 \disciplina{desc}{5}{1} {FEN 06-xxxx}	{Laboratório de Programação II}{60}{3}{LabProgII}
-\disciplina{desc}{5}{2} {FEN 06-xxxx}	{Lógica em Programação I}{60}{3}{LogProg}
-\disciplina{desc}{8}{1} {FEN 06-xxxx}	{Processamento de Imagens}{60}{3}{ProcImag}
-\disciplina{desc}{9}{2} {FEN 06-xxxx}	{Programação Paralela}{60}{3}{ProParal}
+\disciplina{desc}{5}{2} {FEN 06-xxxx}	{Lógica em Programação}{60}{3}{LogProg}
+\disciplina{desc}{8}{3} {FEN 06-xxxx}	{Processamento de Imagens}{60}{3}{ProcImag}
+\disciplina{desc}{9}{3} {FEN 06-xxxx}	{Programação Paralela}{60}{3}{ProParal}
 \disciplina{desc}{9}{1} {FEN 06-xxxx}	{Projeto de Graduação A}{45}{2}{ProjA}
 \disciplina{desc}{10}{1}{FEN 06-xxxx}	{Projeto de Graduação B}{45}{2}{ProjB}
 \disciplina{desc}{8}{5} {FEN 06-xxxx}	{Sistemas Embutidos}{60}{3}{SistEmb}
-\disciplina{desc}{8}{3} {FEN 06-xxxx}	{Sistemas Operacionais}{60}{3}{SO}
-\disciplina{desc}{8}{2} {FEN 06-xxxx}	{Teleproc. e Redes de Comput.}{60}{3}{TeleRed}
+\disciplina{desc}{8}{1} {FEN 06-xxxx}	{Telep. e Redes de Comput.}{60}{3}{TeleRed}
 
 %eletivas
 \disciplina{eletiva}{9}{7} {FEN 06-xxxx}	{Eletiva A}{60}{3}{EA}
@@ -164,29 +181,34 @@
 \prereqC			{CalcI}		{CalcNum}
 \prereq				{AlgComp}	{CalcNum}
 \prereq				{CalcII}	{CalcIII}
-\prereqE			{EletII}	{CirComb}
+\prereq				{EletII}	{CirComb}
 \prereq				{CEI}		{CEIV}
-\prereqE			{ModMat}	{CEIV}
+\prereq				{ModMat}	{CEIV}
 \prereq				{GD}		{DesBas}
-\prereq			{FisIII}	{EletI}
+\prereqE			{FisIII}	{EletI}
 \prereq				{EletI}		{EletII}
-\prereqE			{CEI}		{EletII}
+\prereqG			{CEI}		{EletII}
 \prereqA			{FisII}		{FenTran}
 \prereqD			{AnaVet}	{FenTran}
-\prereq			{FisI}		{FisII}
+\prereq				{FisI}		{FisII}
 \prereqD			{CalcI}		{FisII}
-\prereq			{FisII}		{FisIII}
-\prereq			{FisIII}	{FisIV}
+\prereq				{FisII}		{FisIII}
+\prereq				{FisIII}	{FisIV}
 \prereqE			{FisI}		{MecTec}
 \prereqB			{CalcII}	{MecTec}
-\prereqE			{CalcIII}	{ModMat}
-\prereq			{QuiX}		{QuiXI}
-\prereqA			{AlgLin}	{PO}
+\prereqF			{CalcIII}	{ModMat}
+\prereq				{QuiX}		{QuiXI}
+\prereqJ			{AlgLin}	{PO}
 \prereqD			{CalcII}	{ProbEst}
 \prereq				{ProjA}		{ProjB}
 \prereq				{MecTec}	{ResMat}
 \prereq				{AnaFis}	{ServoMec}
 
+\prereq				{ArqComp}	{SO}
+\prereqH			{LabProgII}		{SO}
+\prereqI			{LabProgII}		{ETS}
+%\prereqA			{AlgLin}	{ProcImag}
+%\prereq			{ProbEst}	{ProcImag}
 
 %\node [above of=IntAmb] 
 %        {
