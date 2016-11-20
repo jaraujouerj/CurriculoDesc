@@ -1,0 +1,150 @@
+%%%%%%%%%%%%%%%%%%%% book.tex %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% sample root file for the chapters of your "monograph"
+%
+% Use this file as a template for your own input.
+%
+%%%%%%%%%%%%%%%% Springer-Verlag %%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% RECOMMENDED %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[envcountsame,envcountchap,openany]{svmono}
+%\documentclass[11pt]{book} 
+% teste
+%\usepackage[dvinames]{xcolor}
+% Measurements are taken directly from the guide
+\usepackage[top=1in,left=1.5in,bottom=1in,right=2.5cm]{geometry}
+%\usepackage{graphicx}
+%\usepackage[colorlinks=false,
+%            pdfborder={0 0 0},
+%            ]{hyperref}
+%\usepackage{lipsum}
+\usepackage[absolute]{textpos}
+\usepackage[table]{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usepackage{scrextend}
+\usepackage{tabularx}
+\usepackage{spreadtab}
+
+% A nice serif font, but no the prescribed nonfree ITC stone
+%\usepackage[oldstylenums]{kpfonts}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[portuguese]{babel}
+\usepackage{enumerate}
+\usepackage{multirow}
+\usepackage[titletoc,toc,page]{appendix}
+\usepackage{pdfpages}
+%\usepackage[titletoc]{appendix}
+%\renewcommand{\appendixtocname}{Anexos}
+\renewcommand{\appendixtocname}{Anexos}
+\renewcommand{\appendixpagename}{Anexos}
+
+\newcounter{artigo}
+\newcommand{\artigo}{\refstepcounter{artigo} % 
+	\ifnum\theartigo<10 %
+	{\bfseries Art.~\arabic{artigo}º~--~}%
+	\else
+	{\bfseries Art. \arabic{artigo}~--~}%
+	\fi
+	%Art. \arabic{artigo}.~
+	}
+\newcounter{paragrafo}
+\newcommand{\paragrafo}{\refstepcounter{paragrafo} % 
+	\S~\arabic{paragrafo}º~%
+}
+
+\newenvironment{paragrafos}{\setcounter{paragrafo}{0}
+	\setlength{\parindent}{0pt}
+	\begin{addmargin}[4em]{0pt} 
+	}
+	{\end{addmargin}
+		}
+
+\newenvironment{itquotation}
+{\begin{quotation}\itshape}
+{\end{quotation}}	
+% No paragraph indentation
+\parindent0pt
+\setlength{\parskip}{0.8\baselineskip}
+%\raggedright
+%\pagestyle{empty}
+
+%fim teste
+% choose options for [] as required from the list
+% in the Reference Guide, Sect. 2.2
+
+\usepackage{makeidx}         % allows index generation
+\usepackage{graphicx}        % standard LaTeX graphics tool
+                             % when including figure files
+\usepackage{multicol}        % used for the two-column index
+\usepackage[bottom]{footmisc}% places footnotes at page bottom
+
+% etc.
+% see the list of further useful packages
+% in the Reference Guide, Sects. 2.3, 3.1-3.3
+
+\makeindex             % used for the subject index
+                       % please use the style svind.ist with
+                       % your makeindex program
+
+% Nomes das Disciplinas
+\input{disciplinasDB}
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Básico
+\normalsize 
+
+\begin{document}
+
+\begin{textblock*}{3cm}[0.5,0.5](4cm,4cm)
+    \includegraphics[width=3cm]{imagens/logo_uerj_cor.jpg}
+\end{textblock*}
+\begin{textblock*}{12cm}(6cm,3cm)   % 6.375=8.5 - 1.5 - 0.625
+    Universidade do Estado do Rio de Janeiro\\
+    Sub-Reitoria de Graduação \\
+    Faculdade de Engenharia\\
+    Departamento de Engenharia de Sistemas e Computação
+\end{textblock*}
+
+
+
+\title{Projeto Pedagógico do Curso de Engenharia de Computação}
+\subtitle{2016}
+\date{}
+\maketitle
+
+
+\begin{minipage}{\textwidth}
+\vfill
+\tableofcontents
+\end{minipage}
+\frontmatter%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\include{dedic}
+%\include{pref} 
+
+%\tableofcontents
+
+
+\mainmatter%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\include{part}
+\include{Capitulos}
+%\include{chapter}
+\backmatter%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\appendix
+\appendixpage
+\include{anexos}
+\addappheadtotoc
+
+
+%\printindex
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}
+
+
+
+
+

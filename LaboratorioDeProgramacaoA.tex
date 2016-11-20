@@ -1,0 +1,43 @@
+%----------------------------------------------------------------------------------------
+%	Latex para ementa tipo dep da uerj
+%----------------------------------------------------------------------------------------
+%apagar .aux e executar biber ementalatex para obter bibliografia atualizada
+\documentclass[12pt,a4paper]{article} % Use A4 paper with a 12pt font size 
+
+\usepackage{ementa}
+\input{default.def}
+
+\newcommand \nomeprofessor{João Araujo Ribeiro}
+\newcommand \matriculaprofessor{8055-6}
+
+\newcommand \ndisciplina {Laboratório de Programação A}
+
+\newcommand \chta 		{75h}%carga horária total aluno
+\newcommand \chtp		{75h}%carga horária total professor
+\newcommand \creditos		{4}%Créditos
+\newcommand \codigo		{FEN06-xxxxx}%Código da disciplina 
+
+\renewcommand \isoladasim			{x} %Permite
+\renewcommand \isoladanao			{} %Não Permite
+
+\newcommand \objetivos	{
+Ao final do período o aluno deverá ser capaz de criar, editar, compilar, corrigir e depurar programas de computador numa linguagem de programação de alto nível.
+}
+
+\newcommand \ementa	{
+Introdução aos Sistemas Operacionais da família UNIX. Linguagem C ANSI. Ferramentas para desenvolvimento, compilação, correção e depuração de programas. Programação para UNIX. Manipulação de estruturas de dados usando ponteiros.}
+
+\newcommand \preum		{Estruturas de Informação A} %
+\newcommand \codpreum	{FEN06-xxxxx} %
+\newcommand \predois		{} %
+\newcommand \codpredois		{} %
+
+\newcommand \crteorica	{3} %
+\newcommand \crlab	{1} %
+
+\input{contadores.inc}
+
+\begin{document}
+\headsep = 1pt
+\formementa{LabProgI}
+\end{document}

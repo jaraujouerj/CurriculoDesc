@@ -1,0 +1,89 @@
+%----------------------------------------------------------------------------------------
+%	Latex para ementa tipo dep da uerj
+%----------------------------------------------------------------------------------------
+%apagar .aux e executar biber ementalatex para obter bibliografia atualizada
+\documentclass[12pt,a4paper]{article} % Use A4 paper with a 12pt font size 
+
+\usepackage{ementaEletrica}
+
+\def \criacao	{x}
+\def \alteracao	{}
+\def \nomeprofessor{}
+\def \matriculaprofessor{}
+
+\def \ndisciplina {Circuitos Elétricos VI}
+\def \presencial 	{x}
+\def \semipresencial	{}
+\def \adistancia	{}
+
+\def \chta 		{90h}%carga horária total aluno
+\def \chtp		{90h}%carga horária total professor
+\def \creditos		{6}%Créditos
+\def \codigo		{FEN04-xxxxx}%Código da disciplina 
+\def \obrigatoria	{x}%disciplina é obrigatória? marcar x
+\def \erestrita		{}%disciplina é eletiva restrita? marcar x
+\def \edefinida		{}%disciplina é eletiva definida? marcar x
+\def \euniversal	{}%disciplina é eletiva universal? marcar x
+\def \cursouniversal		{}
+\def \cursorestrita {}
+\def \frequencia	{} %Se aprovação for por frequência, marcar x.
+\def \frequenciaenota	{x} %Se aprovação for por frequência e nota, marcar x.
+
+\def \empreparosim	{} % Permite situação em preparo? sim?
+\def \empreparonao	{x} % Permite situação em preparo? não?
+
+\def \maisdeumdocentesim	{x} %Permite mais de um docente? sim
+\def \maisdeumdocentenao	{} %Permite mais de um docente? nao
+
+\def \horarioincompletosim	{} %Permite
+\def \horarioincompletonao	{x} %Não Permite
+
+\def \concomitanciasim		{} %Permite
+\def \concomitancianao		{x} %Não Permite
+
+\def \isoladasim			{} %Permite
+\def \isoladanao			{x} %Não Permite
+
+\def \objetivos	{
+Ao  final  do  período  o  aluno  deverá  ser  capaz  de  analisar  circuitos elétricos  lineares  e  parâmetros concentrados no domínio da frequência. 
+}
+
+\def \ementa	{
+Circuitos  de  corrente  alternado.  Frequência  complexa.  Impedância  e  admitância  no  plano  S.  Pólos  e zeros.   Diagrama   de   BODE.   Indutância   mútua.   Resposta de   frequência.   Circuitos   Acoplados. Transformada de Laplace aplicada a circuitos elétricos. Potência e energia. }
+
+\def \preum		{Circuitos Elétricos V} %
+\def \codpreum	{FEN04-xxxxx} %
+\def \predois		{Modelos Matemáticos III} %
+\def \codpredois		{FEN 05-04923} %
+\def \travadecreditos   {} % trava de créditos
+\def \crteorica	{2} %
+\def \crlab	{1} %
+\def \crestagio		{0} %
+\def \crpratica		{1} %
+
+
+\setcounter{numcr}{0}
+\addtocounter{numcr}{\crteorica}
+\addtocounter{numcr}{\crlab}
+\addtocounter{numcr}{\crpratica}
+
+\setcounter{chteoricatotal}{15*\crteorica}
+
+\setcounter{chlabtotal}{30*\crlab}
+\setcounter{chprattotal}{30*\crpratica}
+
+\setcounter{chlabsemanal}{2*\crlab}
+\setcounter{chpratsemanal}{2*\crpratica}
+
+\setcounter{chtotalsemanal}{0}
+\setcounter{chtotalsemanal}{2*\crlab}
+\addtocounter{chtotalsemanal}{2*\crpratica}
+\addtocounter{chtotalsemanal}{\crteorica}
+
+\setcounter{chtotal}{0}
+\setcounter{chtotal}{\the\value{chlabtotal}+\the\value{chteoricatotal}+\the\value{chprattotal}}
+
+\begin{document}
+\headsep = 1pt
+\formementa{circuitosVI}
+\end{document}

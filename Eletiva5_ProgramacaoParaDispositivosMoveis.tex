@@ -1,0 +1,84 @@
+%----------------------------------------------------------------------------------------
+%	Latex para ementa tipo dep da uerj
+%----------------------------------------------------------------------------------------
+%apagar .aux e executar biber ementalatex para obter bibliografia atualizada
+\documentclass[12pt,a4paper]{article} % Use A4 paper with a 12pt font size 
+
+\usepackage{ementaeletiva}
+
+\def \criacao	{x}
+\def \alteracao	{}
+\def \nomeprofessor{João Araujo Ribeiro}
+\def \matriculaprofessor{8055-6}
+
+\def \ndisciplina 	{Programação para Dispositivos Móveis}
+\def \presencial 	{x}
+\def \semipresencial	{}
+\def \adistancia	{}
+
+\def \chta 		{60h}%carga horária total aluno
+\def \chtp		{60h}%carga horária total professor
+\def \codigo		{FEN06-XXXXX}%Código da disciplina 
+\def \obrigatoria	{}%disciplina é obrigatória? marcar x
+\def \erestrita		{x}%disciplina é eletiva restrita? marcar x
+\def \edefinida		{}%disciplina é eletiva definida? marcar x
+\def \euniversal	{}%disciplina é eletiva universal? marcar x
+\def \cursorestrita		{\scriptsize Eng. de Sist. e Comp., Eng. Elétrica/Eletrônica e Eng. Elétrica/Telecomunicações}
+\def \cursodefinida		{}
+\def \cursouniversal {}
+\def \frequencia	{} %Se aprovação for por frequência, marcar x.
+\def \frequenciaenota	{x} %Se aprovação for por frequência e nota, marcar x.
+
+\def \empreparosim	{} % Permite situação em preparo? sim?
+\def \empreparonao	{x} % Permite situação em preparo? não?
+
+\def \maisdeumdocentesim	{x} %Permite mais de um docente? sim
+\def \maisdeumdocentenao	{} %Permite mais de um docente? nao
+
+\def \horarioincompletosim	{} %Permite
+\def \horarioincompletonao	{x} %Não Permite
+
+\def \concomitanciasim		{} %Permite
+\def \concomitancianao		{x} %Não Permite
+
+\def \isoladasim		{} %Permite
+\def \isoladanao		{x} %Não Permite
+
+\def \objetivos	{Ao final do período o aluno deverá ter assimilado os conceitos e técnicas para programar dispositivos móveis tais como smartphones e tablets. 
+}
+
+\def \ementa	{Tipos de plataformas e arquiteturas de dispositivos móveis. Programação para smartphones e tablets. Recursos disponíveis. Limitações ligadas ao dispositivo. Ambientes de desenvolvimento. Linguagens utilizadas. Interfaces gráficas para dispositivos móveis, Tratamento de eventos, Multimí­dia, Comunicação entre processos, Persistência de dados, Provedores de conteúdo, Geolocalização, Mapas. Máquina virtual e bytecode. Exemplo prático de programação. 
+}
+
+\def \preum		{Algoritmos Computacionais I} %
+\def \codpreum		{FEN06-xxxxx} %
+\def \predois		{} %
+\def \codpredois	{} %
+\def \travadecreditos   {170} % trava de créditos
+\def \crteorica		{2} %
+\def \crlab		{1} %
+\def \crestagio		{0} %
+
+
+\setcounter		{numcr}{0}
+\addtocounter		{numcr}{\crteorica}
+\addtocounter		{numcr}{\crlab}
+
+\setcounter		{chteoricatotal}{15*\crteorica}
+
+\setcounter		{chlabtotal}{30*\crlab}
+
+\setcounter		{chlabsemanal}{2*\crlab}
+
+\setcounter		{chtotalsemanal}{0}
+\setcounter		{chtotalsemanal}{2*\crlab}
+\addtocounter		{chtotalsemanal}{\crteorica}
+
+\setcounter		{chtotal}{0}
+\setcounter		{chtotal}{\the\value{chlabtotal}+\the\value{chteoricatotal}}
+
+
+\begin{document}
+\headsep = 1pt
+\formementa{Eletiva5_ProgDispMoveis}
+\end{document}

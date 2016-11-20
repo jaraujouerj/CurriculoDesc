@@ -1,0 +1,88 @@
+%----------------------------------------------------------------------------------------
+%	Latex para ementa tipo dep da uerj
+%----------------------------------------------------------------------------------------
+%apagar .aux e executar biber ementalatex para obter bibliografia atualizada
+\documentclass[12pt,a4paper]{article} % Use A4 paper with a 12pt font size 
+
+\usepackage{ementa}
+
+\def \criacao		{x}
+\def \alteracao		{}
+\def \nomeprofessor	{Marley M. Bernardes Rebuzzi Vellasco}
+\def \matriculaprofessor{31250-4}
+
+\def \ndisciplina 	{Inteligência Computacional}
+\def \presencial 	{x}
+\def \semipresencial	{}
+\def \adistancia	{}
+
+\def \chta 		{60h}%carga horária total aluno
+\def \chtp		{60h}%carga horária total professor
+\def \codigo		{FEN06-xxxxx}%Código da disciplina 
+\def \obrigatoria	{x}%disciplina é obrigatória? marcar x
+\def \erestrita		{}%disciplina é eletiva restrita? marcar x
+\def \edefinida		{}%disciplina é eletiva definida? marcar x
+\def \euniversal	{}%disciplina é eletiva universal? marcar x
+\def \cursouniversal		{}
+\def \cursorestrita {}
+\def \frequencia	{} %Se aprovação for por frequência, marcar x.
+\def \frequenciaenota	{x} %Se aprovação for por frequência e nota, marcar x.
+
+\def \empreparosim	{} % Permite situação em preparo? sim?
+\def \empreparonao	{x} % Permite situação em preparo? não?
+
+\def \maisdeumdocentesim	{x} %Permite mais de um docente? sim
+\def \maisdeumdocentenao	{} %Permite mais de um docente? nao
+
+\def \horarioincompletosim	{} %Permite
+\def \horarioincompletonao	{x} %Não Permite
+
+\def \concomitanciasim		{} %Permite
+\def \concomitancianao		{x} %Não Permite
+
+\def \isoladasim		{x} %Permite
+\def \isoladanao		{} %Não Permite
+
+\def \objetivos	{Introduzir conceitos básicos de redes neurais, algoritmos genéticos e lógica fuzzy; exemplificar a modelagem e  aplicações em problemas reais; utilizar softwares e demos para a implementação de sistemas de redes neurais, algoritmos genéticos e lógica fuzzy em problemas de classificação, previsão, otimização e controle. 
+}
+
+\def \ementa	{Redes Neurais: Definição e Características; Histórico, Conceitos Básicos e Aplicações; Neurônio Artificial; Estruturas de Interconexão; Processamento Neural - Aprendizado e Recuperação dos Dados; Tipos de Aprendizado - Supervisionado e Não-Supervisionado; Redes Multi-Layer Perceptron, Algoritmo de aprendizado Back Propagation; Aplicações em Classificação de Padrões e Previsão de Séries Temporais. 
+ 
+ Computação Evolucionária: Componentes de um Algoritmo Genético (AG); Desenvolvimento de AGs; Reprodução e Seleção; Técnicas e Operadores; Problemas de Otimização Combinatorial. 
+ 
+ Lógica Fuzzy: Introdução; Conjuntos Fuzzy; Operações com conjuntos fuzzy: interseção, união e negação de conjuntos; Sistemas de Inferência Fuzzy; Extração automática de regras fuzzy.
+}
+
+\def \preum		{Laboratório de Programação A} %
+\def \codpreum		{FEN 06-xxxxx} %
+\def \predois		{} %
+\def \codpredois		{} %
+\def \travadecreditos   {} % trava de créditos
+\def \crteorica		{4} %
+\def \crlab		{0} %
+\def \crestagio		{0} %
+\def \crpratica		{0} %
+
+
+\setcounter		{numcr}{0}
+\addtocounter		{numcr}{\crteorica}
+\addtocounter		{numcr}{\crlab}
+
+\setcounter		{chteoricatotal}{15*\crteorica}
+
+\setcounter		{chlabtotal}{30*\crlab}
+
+\setcounter		{chlabsemanal}{2*\crlab}
+
+\setcounter		{chtotalsemanal}{0}
+\setcounter		{chtotalsemanal}{2*\crlab}
+\addtocounter		{chtotalsemanal}{\crteorica}
+
+\setcounter		{chtotal}{0}
+\setcounter		{chtotal}{\the\value{chlabtotal}+\the\value{chteoricatotal}}
+
+
+\begin{document}
+\headsep = 1pt
+\formementa{IntComp}
+\end{document}

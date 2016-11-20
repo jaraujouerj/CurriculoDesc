@@ -1,0 +1,92 @@
+%----------------------------------------------------------------------------------------
+%	Latex para ementa tipo dep da uerj
+%----------------------------------------------------------------------------------------
+%apagar .aux e executar biber ementalatex para obter bibliografia atualizada
+\documentclass[12pt,a4paper]{article} % Use A4 paper with a 12pt font size 
+
+\usepackage{ementa}
+\def \criacao		{x}
+\def \alteracao		{}
+\def \nomeprofessor	{Sheila Regina Murgel Veloso}
+\def \matriculaprofessor{34558-7}
+
+\def \ndisciplina 	{Análise de Algoritmos I}
+\def \presencial 	{x}
+\def \semipresencial	{}
+\def \adistancia	{}
+
+\def \chta 		{60h}%carga horária total aluno
+\def \chtp		{60h}%carga horária total professor
+\def \codigo		{FEN06-XXXXX}%Código da disciplina 
+\def \obrigatoria	{x}%disciplina é obrigatória? marcar x
+\def \erestrita		{}%disciplina é eletiva restrita? marcar x
+\def \edefinida		{}%disciplina é eletiva definida? marcar x
+\def \euniversal	{}%disciplina é eletiva universal? marcar x
+\def \cursouniversal {}
+\def \cursorestrita {}
+\def \frequencia	{} %Se aprovação for por frequência, marcar x.
+\def \frequenciaenota	{x} %Se aprovação for por frequência e nota, marcar x.
+
+\def \empreparosim	{} % Permite situação em preparo? sim?
+\def \empreparonao	{x} % Permite situação em preparo? não?
+
+\def \maisdeumdocentesim	{x} %Permite mais de um docente? sim
+\def \maisdeumdocentenao	{} %Permite mais de um docente? nao
+
+\def \horarioincompletosim	{} %Permite
+\def \horarioincompletonao	{x} %Não Permite
+
+\def \concomitanciasim		{} %Permite
+\def \concomitancianao		{x} %Não Permite
+
+\def \isoladasim		{} %Permite
+\def \isoladanao		{x} %Não Permite
+
+\def \objetivos	{O aluno deverá ter assimilado o tratamento matemático de um algoritmo, verificando sua correção e determinando sua eficiência; ser capaz de distinguir a melhor técnica para elaborar um algoritmo e ter assimilado conceitos básicos de Teoria dos Grafos.
+}
+
+\def \ementa	{Princípio de indução matemática (forte e fraca): Aplicação em Verificação de Corretude de  Algoritmos, Soluções de Recorrências, Estruturas   Algébricas, Combinatória, Ordens parciais e totais.
+
+Complexidade de algoritmos: Complexidade Assintótica, Complexidade de Algoritmos Recursivos, Algoritmos Polinomiais.
+
+Método da Divisão e Conquista: Princípios e aplicações algoritmos de pesquisa e de Ordenação, Busca Binária e Complexidade. Máximo e Mínimo de uma lista. Complexidade. 
+
+Método Guloso: Princípios  e Aplicações: árvore geradora mínima, armazenamento. 
+Programação Dinâmica: Princípios e Aplicações: escalonamento, caminhos mínimos, mochila 0/1. 
+
+Classes de problemas: Problemas de decisão; Algoritmos não determinísticos; Classes P e NP; Problemas árduos e problemas NP-completos; Redução entre problemas de decisão. 
+
+Teoria dos grafos. Conceitos básicos: (grafos,e subgrafos; isomorfismo, matrizes de adjacência e incidência, caminhos e ciclos. Árvores, caracterização de árvores, cortes de arestas, cortes de vértices. Conectividade de vértices e arestas; ciclos eulerianos e hamiltonianos; emparelhamentos; coloração de vértices e de arestas; planaridade).
+}
+
+\def \preum		{Algoritmos Computacionais I} %
+\def \codpreum		{FEN 06-XXXXX} %
+\def \predois		{Laboratório de Programação B} %
+\def \codpredois	{FEN 06-XXXXX} %
+\def \travadecreditos   {} % trava de créditos
+\def \crteorica		{4} %
+\def \crlab		{0} %
+\def \crestagio		{0} %
+
+
+\setcounter		{numcr}{0}
+\addtocounter		{numcr}{\crteorica}
+\addtocounter		{numcr}{\crlab}
+
+\setcounter		{chteoricatotal}{15*\crteorica}
+
+\setcounter		{chlabtotal}{30*\crlab}
+
+\setcounter		{chlabsemanal}{2*\crlab}
+
+\setcounter		{chtotalsemanal}{0}
+\setcounter		{chtotalsemanal}{2*\crlab}
+\addtocounter		{chtotalsemanal}{\crteorica}
+
+\setcounter		{chtotal}{0}
+\setcounter		{chtotal}{\the\value{chlabtotal}+\the\value{chteoricatotal}}
+
+\begin{document}
+\headsep = 1pt
+\formementa{AnaAlg}
+\end{document}

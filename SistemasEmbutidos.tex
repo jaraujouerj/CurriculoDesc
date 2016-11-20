@@ -1,0 +1,41 @@
+%----------------------------------------------------------------------------------------
+%	Latex para ementa tipo dep da uerj
+%----------------------------------------------------------------------------------------
+%apagar .aux e executar biber ementalatex para obter bibliografia atualizada
+\documentclass[12pt,a4paper]{article} % Use A4 paper with a 12pt font size 
+
+\usepackage{ementa}
+\input{default.def}
+
+\newcommand \nomeprofessor	{Luiza de Macedo Mourelle}
+\newcommand \matriculaprofessor{7058-1}
+
+\newcommand \ndisciplina 	{Sistemas Embutidos}
+
+\newcommand \chta 		{60h}%carga horária total aluno
+\newcommand \chtp		{60h}%carga horária total professor
+\newcommand \codigo		{FEN06-xxxxx}%Código da disciplina 
+
+\renewcommand \euniversal	{x}%disciplina é eletiva universal? marcar x
+\renewcommand \cursouniversal {Engenharia Elétrica-Eletrônica}
+
+\newcommand \objetivos	{Ao final  do período, o aluno deverá estar capacitado a especificar, modelar, validar e sintetizar sistemas embutidos.	
+}
+
+\newcommand \ementa	{Representação do sistema, níveis de abstração, modelos e arquiteturas, linguagens de especificação, particionamento do sistema, estimativa de qualidade do projeto, refinamento da especificação, metodologia de projeto do sistema.	
+}
+
+\newcommand \preum		{Arquitetura de Computadores A} %
+\newcommand \codpreum		{FEN06-xxxxx} %
+\newcommand \predois		{} %
+\newcommand \codpredois		{} %
+
+\newcommand \crteorica		{2} %
+\newcommand \crlab		{1} %
+
+\input{contadores.inc}
+
+\begin{document}
+\headsep = 1pt
+\formementa{SisEmb}
+\end{document}

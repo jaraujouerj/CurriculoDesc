@@ -1,0 +1,39 @@
+%----------------------------------------------------------------------------------------
+%	Latex para ementa tipo dep da uerj
+%----------------------------------------------------------------------------------------
+%apagar .aux e executar biber ementalatex para obter bibliografia atualizada
+\documentclass[12pt,a4paper]{article} % Use A4 paper with a 12pt font size 
+
+\usepackage{ementa}
+\input{default.def}
+
+\newcommand \nomeprofessor	{Orlando Bernardo Filho}
+\newcommand \matriculaprofessor{30802-3}
+
+\newcommand \ndisciplina 	{Teoria de Compiladores I}
+
+\newcommand \chta 		{75h}%carga horária total aluno
+\newcommand \chtp		{75h}%carga horária total professor
+\newcommand \codigo		{FEN06-XXXXX}%Código da disciplina 
+\newcommand \curso		{Engenharia de Sistemas e Computação}
+
+\newcommand \objetivos	{Ao final do período o aluno deverá ter assimilado a técnica e a teoria dos compiladores e ser capaz de transcender o seu uso para problemas extra compilação. O aluno também deverá ter assimilado as bases formais da Ciência da Computação, através do estudo dos elementos da Teoria da Computação.
+}
+
+\newcommand \ementa	{Introdução geral a compiladores e assemelhados.  Introdução à teoria de linguagens formais, gramáticas, linguagens e expressões regulares.  Reconhecedores, autômatos finitos, autômatos de pilha e Máquinas de Turing. A tese de Church-Turing, Máquinas de Turing universais, Problemas indecidíveis sobre máquinas de Turing, Complexidade computacional. Análise léxica, sintática e semântica. Código intermediário e objeto, Geração e otimização de código. Ferramentas para a implementação de compiladores. Aplicação de ferramentas de compilação em problemas de caráter geral.
+}
+
+\newcommand \preum		{Análise de Algoritmos I} %
+\newcommand \codpreum		{FEN06-XXXXX} %
+\newcommand \predois		{} %
+\newcommand \codpredois		{} %
+
+\newcommand \crteorica		{5} %
+\newcommand \crlab		{0} %
+
+\input{contadores.inc}
+
+\begin{document}
+\headsep = 1pt
+\formementa{TeoCompil}
+\end{document}

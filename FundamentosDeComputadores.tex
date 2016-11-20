@@ -1,0 +1,84 @@
+%----------------------------------------------------------------------------------------
+%	Latex para ementa tipo dep da uerj
+%----------------------------------------------------------------------------------------
+%apagar .aux e executar biber ementalatex para obter bibliografia atualizada
+\documentclass[12pt,a4paper]{article} % Use A4 paper with a 12pt font size 
+
+\usepackage{ementa}
+
+\def \criacao		{x}
+\def \alteracao		{}
+\def \nomeprofessor	{Raul Queiroz Feitosa}
+\def \matriculaprofessor{31242-1}
+
+\def \ndisciplina 	{Fundamentos de Computadores}
+\def \presencial 	{x}
+\def \semipresencial	{}
+\def \adistancia	{}
+
+\def \chta 		{90h}%carga horária total aluno
+\def \chtp		{90h}%carga horária total professor
+\def \codigo		{FEN06-xxxxx}%Código da disciplina 
+\def \obrigatoria	{x}%disciplina é obrigatória? marcar x
+\def \erestrita		{}%disciplina é eletiva restrita? marcar x
+\def \edefinida		{}%disciplina é eletiva definida? marcar x
+\def \euniversal	{x}%disciplina é eletiva universal? marcar x
+\def \cursouniversal {Engenharia Elétrica/Eletrônica/ Elétrica/Telecomunicações}
+\def \cursorestrita {}
+\def \frequencia	{} %Se aprovação for por frequência, marcar x.
+\def \frequenciaenota	{x} %Se aprovação for por frequência e nota, marcar x.
+
+\def \objetivos	{Ao final do período, o aluno deverá ter assimilado os conceitos de sistemas digitais e as características lógicas e físicas de um processador.
+}
+
+\def \ementa	{Representação numérica. Operações lógicas e aritméticas. Códigos e detecção de erros. Circuitos combinacionais. Circuitos sequenciais. Processador. Memória. Periféricos. Estruturas de interconexão. entrada e saída. Arquitetura do conjunto de instruções.
+}
+
+\def \preum		{Algoritmos Computacionais I} %
+\def \codpreum		{FEN06-xxxxx} %
+\def \predois		{} %
+\def \codpredois		{} %
+\def \travadecreditos   {} % trava de créditos
+\def \crteorica		{4} %
+\def \crlab		{1} %
+\def \crestagio		{0} %
+\def \crpratica		{0} %
+
+\def \empreparosim	{} % Permite situação em preparo? sim?
+\def \empreparonao	{x} % Permite situação em preparo? não?
+
+\def \maisdeumdocentesim	{x} %Permite mais de um docente? sim
+\def \maisdeumdocentenao	{} %Permite mais de um docente? nao
+
+\def \horarioincompletosim	{} %Permite
+\def \horarioincompletonao	{x} %Não Permite
+
+\def \concomitanciasim		{} %Permite
+\def \concomitancianao		{x} %Não Permite
+
+\def \isoladasim		{} %Permite
+\def \isoladanao		{x} %Não Permite
+
+%Não preencher daqui em diante
+\setcounter		{numcr}{0}
+\addtocounter		{numcr}{\crteorica}
+\addtocounter		{numcr}{\crlab}
+
+\setcounter		{chteoricatotal}{15*\crteorica}
+
+\setcounter		{chlabtotal}{30*\crlab}
+
+\setcounter		{chlabsemanal}{2*\crlab}
+
+\setcounter		{chtotalsemanal}{0}
+\setcounter		{chtotalsemanal}{2*\crlab}
+\addtocounter		{chtotalsemanal}{\crteorica}
+
+\setcounter		{chtotal}{0}
+\setcounter		{chtotal}{\the\value{chlabtotal}+\the\value{chteoricatotal}}
+
+
+\begin{document}
+\headsep = 1pt
+\formementa{FundComp}
+\end{document}

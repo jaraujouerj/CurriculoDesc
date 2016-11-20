@@ -1,0 +1,632 @@
+%%%%%%%%%%%%%%%%%%%%% chapter.tex %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% sample chapter
+%
+% Use this file as a template for your own input.
+%
+%%%%%%%%%%%%%%%%%%%%%%%% Springer-Verlag %%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\chapter{Introdução}
+\label{intro} % Always give a unique label
+% use \chaptermark{}
+% to alter or adjust the chapter heading in the running head
+
+Este documento apresenta o projeto da estrutura curricular de um novo curso de \textbf{Engenharia de Computação} da Universidade do Estado do Rio de Janeiro. Tal curso será oferecido pelo \textbf{Departamento de Engenharia de Sistemas e Computação} (DESC) da \textbf{Faculdade de Engenharia} (FEN). O DESC oferece o curso de Engenharia Elétrica com Ênfase em Sistemas e Computação desde 1977, sendo portanto o primeiro no Brasil a oferecer graduação na área de Engenharia de Computação. Este curso sofreu uma reformulação significativa no início da década de 1990 e desde então permanece com o mesmo currículo, sem modificações. O objetivo agora é promover uma reforma desse curso e ofertá-lo como uma nova habilitação da engenharia.
+
+A Engenharia, e principalmente a Engenharia de Computação, evolui rapidamente no mundo contemporâneo. Passados mais de 20 anos desde sua última reforma, urge adequar o curso aos novos tempos.
+
+A motivação para oferecer o curso de \textbf{Engenharia de Computação} como uma nova habilitação da engenharia é torná-lo mais atual, em face às demandas da sociedade, para o desenvolvimento científico e tecnológico nos setores industrial e de serviços. Atualmente (2015), por ocasião do vestibular, os candidatos aos cursos da FEN têm a opção, entre outras habilitações, da Engenharia Elétrica. Assim, ao escolherem o curso de Engenharia Elétrica e em seguida optarem pela Ênfase em Sistemas e Computação terão, quando formados, diplomas de Engenheiros Eletricistas. Todavia a formação nos dias de hoje necessita de um maior conhecimento de certos conteúdos no desenvolvimento de sistemas e dispositivos computacionais, conforme as diretrizes do ENADE de 2014.
+
+Outra motivação para oferecer o curso de \textbf{Engenharia de Computação} como uma nova habilitação da engenharia é tornar mais coerente a formação dos alunos da computação, pois o atual curso de Engenharia Elétrica com Ênfase em Sistemas e Computação prepara os seus alunos para atuarem como desenvolvedores  de sistemas de computação, criando software ou projetando hardware. Os egressos desse curso não teriam competência para projetar sistemas de potência, que a habilitação Engenharia Elétrica poderia sugerir. Tal situação já acarretou diversas problemas aos alunos ao realizarem o ENADE, pois eles ficam mal posicionados, já que não cursaram disciplinas mais específicas da área elétrica.
+
+Além das motivações para se criar um curso de Engenharia de Computação como uma habilitação única, tal projeto pedagógico visa apresentar uma atualização do currículo dentro da área da computação em face das mudanças tecnológicas ocorridas ao longo do tempo desde a última reforma do curso de Engenharia Elétrica com Ênfase em Sistemas e Computação, por volta dos anos 1990.
+
+
+\chapter{Dados da UERJ}
+
+\begin{description}
+\item[Mantenedor:] Governo do Estado do Rio de Janeiro.
+\item [Mantida:] Faculdade de Engenharia – Universidade do Estado do Rio de Janeiro.
+\item [Local de Funcionamento:] Rua São Francisco Xavier 524, quinto andar, Maracanã, Rio de Janeiro – RJ.
+\item [Reitor:] Ruy Garcia Marques.
+\item [Vice-Reitora:] Maria Georgina Muniz Washington.
+\item [Sub-Reitora de Graduação (SR1):] Tania Maria de Castro Carvalho Netto.
+\item [Sub-Reitor de Pós-graduação e Pesquisa (SR2):] Egberto Gaspar de Moura.
+\item [Sub-Reitora de Extensão e Cultura (SR3):] Elaine Ferreira Torres.
+\item [Diretor do Centro de Tecnologia e Ciências:] Luis Antonio Campinho Pereira da Mota .
+\item [Diretor da Faculdade de Engenharia:] Jorge Duarte Pires Valerio.
+\end{description}
+
+% Always give a unique label
+% and use \ref{<label>} for cross-references
+% and \cite{<label>} for bibliographic references
+% use \sectionmark{}
+% to alter or adjust the section heading in the running head
+%Your text goes here. Use the \LaTeX\ automatism for your citations
+%\cite{monograph}.
+
+\section{Cursos Oferecidos pela FEN}
+A tabela  ~\ref{tabvagas} apresenta as vagas oferecidas para o vestibular pela Faculdade de Engenharia da Universidade do Estado do Rio de Janeiro, campus Maracanã, para o primeiro e para o segundo semestre.
+\label{sec:cursosoferecidos}
+
+\setlength{\tabcolsep}{5pt}
+\begin{table}
+\centering
+\caption{Vagas Oferecidas no 1º e no 2º semestre}
+\label{tabvagas}
+\renewcommand{\arraystretch}{1.5}
+\begin{tabularx}{\textwidth}{|X|c|c|c|c|}
+\hline
+\multirow{2}{*}{\textbf{Habilitação}} & \multirow{2}{*}{\textbf{Turno}} & \multicolumn{2}{|c|}{\textbf{Vagas}} & \multirow{2}{*}{\textbf{Total}} \\\cline{3-4}
+ & & \textbf{1º Sem.} & \textbf{2º Sem.} & \\
+ \hline
+ Engenharia Engenharia Ambiental 
+ e Sanitária  & Manhã/Tarde & 40  & -- &   \\
+  & Tarde/Noite & -- & 40 & 80 \\
+\hline
+Engenharia Cartográfica & Manhã/Tarde & 20  & -- &   \\
+& Tarde/Noite & -- & 20 & 40 \\
+ \hline
+Engenharia Civil & Manhã/Tarde & 60  & -- &   \\
+(Construção Civil/Transportes/Estruturas)  & Tarde/Noite & -- & 60 & 120 \\
+ \hline
+Engenharia de Produção & Manhã/Tarde & 40  & -- &   \\
+& Tarde/Noite & -- & 40 & 80 \\
+\hline
+Engenharia Elétrica (Sistemas e Computação/
+& Manhã/Tarde & 100  & -- &   \\
+ Sist. de Potência/Sist. Eletrônicos/Telecomunicações)& Tarde/Noite & -- & 100 & 200 \\
+\hline
+Engenharia Mecânica & Manhã/Tarde & 40  & -- &   \\
+ & Tarde/Noite & -- & 40 & 80 \\
+ \hline
+\end{tabularx}
+\end{table}
+
+\chapter{DESC}
+
+O DESC (Departamento de Engenharia de Sistemas e Computação) da Faculdade de Engenharia da UERJ forma graduados em nível superior pleno da engenharia, com conhecimento técnico-científico abrangente e forte para atuação no desenvolvimento de software e hardware, tendo, predominantemente, a computação como atividade fim, destacando-se as seguintes áreas de atuação:
+\begin{enumerate}
+\item Concepção, projeto e análise de sistemas, produtos e processos computacionais;
+\item Planejamento, supervisão, elaboração e coordenação de projetos e serviços de engenharia de computação;
+\item Identificação, formulação e resolução de problemas de engenharia de computação.
+\end{enumerate}
+  
+Este projeto pedagógico propõe a criação de um curso de Engenharia de Computação a ser oferecido pelo Departamento de Engenharia de Sistemas e Computação em substituição ao curso de Engenharia Elétrica com ênfase em Sistemas e Computação.
+
+\chapter{Engenharia de Computação}
+O curso ora proposto de Engenharia de Computação obedecerá ao regime de créditos, oferecendo 60 vagas anuais, repartidas igualmente em dois semestres letivos. O aluno interessado em cursar a graduação em Engenharia de Computação fará tal opção diretamente a partir da sua inscrição no vestibular.
+
+\section{Concepção}
+
+A estrutura curricular do curso de Engenharia de Computação do Departamento de Engenharia de Sistemas e Computação da Faculdade de Engenharia da UERJ orientar-se-á pelas \textit{Diretrizes Curriculares Nacionais para o Ensino de Graduação em Engenharia} do MEC (anexo \ref{cne11}) e pela regulamentação do exercício da profissão de Engenheiro, estabelecida pelo Sistema CREA/CONFEA (Resolução 1.010 CONFEA, anexo \ref{res1010}), em vigor atualmente. 
+
+A grade curricular totaliza 4335 aulas de 50 minutos cada (doravante chamadas de horas-aula), distribuídas em 58 disciplinas (55 obrigatórias e mais 3 eletivas restritas), dentre as quais estão incluídas práticas laboratoriais em complementação à base teórica. Estão incluídos também Estágio Supervisionado (300 horas-aula) e Projeto de Graduação (trabalho de conclusão de curso) como atividade de síntese e integração do conhecimento científico, tecnológico e instrumental. Ainda, como atividades acadêmicas complementares facultativas incluem-se Estágio Interno, Monitoria e Iniciação Científica, Cursos, Eventos, Palestras e Visitas Técnicas ocasionais como atividades direcionadas a proporcionar uma melhor percepção do que é a Engenharia, como se encontra o setor no Brasil e quais são as áreas de atuação e as atividades desenvolvidas pelos Engenheiros de Computação. As 4335 horas-aulas correspondem a 3612 horas no total, atendendo o mínimo exigido pela legislação. 
+
+\section{Objetivos Gerais}
+
+Formar engenheiros aptos para a inserção em setores profissionais e para a participação no desenvolvimento da sociedade brasileira, habilitando-os para o exercício pleno de todas as funções nas diversas atividades de sua área de atuação e colaborando para a sua formação contínua.
+
+\section{Objetivos Específicos}
+Preparar engenheiros capazes de desenvolver e implementar soluções nas diferentes áreas de aplicação da tecnologia computacional, incluindo: análise e otimização de sistemas; sistemas de produção; sistemas digitais; sistemas operacionais; sistemas de comunicação de dados; sistemas de banco de dados; engenharia de software e sistemas de informação.
+
+\section{Finalidades Gerais}
+Formar engenheiros em condições de atuar em todos os setores da economia (comércio, indústria e serviços), em particular nas empresas fabricantes de equipamentos computacionais ou que prestam serviços de assistência técnica a esses tipos de produtos.
+
+\section{Finalidades Específicas}
+Formar profissionais com base nos conhecimentos, competências e habilidades adquiridas ao longo do curso que sejam habilitados a diagnosticar problemas, avaliar alternativas, propor soluções e conduzir projetos nas áreas de Inteligência Computacional, Banco de Dados, Engenharia de Software, Arquitetura de Sistemas Computacionais, Redes de Computadores, Processamento Distribuído e de Alto Desempenho, Automação, Processamento Gráfico, Linguagens Formais, Compiladores e Análise de Algoritmos Computacionais.
+
+\section{Nível de Formação e Título Acadêmico Concedido}
+O curso é de graduação plena em Engenharia com Habilitação em Computação e a titulação concedida é:
+
+\textbf{Título:} Engenheiro de Computação.
+
+\section{Perfil do Egresso (competência, habilidades e atitudes pretendidas)}
+O curso de Engenharia de Computação tem como perfil do egresso o engenheiro, com formação técnico-científica sólida, generalista, humanista, crítica e reflexiva, capacitado a absorver e desenvolver novas tecnologias, estimulando a sua atuação crítica e criativa na identificação e resolução de problemas, considerando seus aspectos políticos, econômicos, sociais, ambientais e culturais, com visão ética e humanística, em atendimento às demandas da sociedade. Faz parte do perfil do egresso a postura de permanente busca da atualização profissional, além das seguintes habilidades:
+\begin{enumerate} [I -]
+\item possuir conhecimento das questões humanísticas, sociais, ambientais, éticas, profissionais, legais e políticas;
+\item possuir compreensão do impacto da Engenharia de Computação e suas tecnologias no que concerne ao atendimento e à antecipação estratégica das necessidades da sociedade;
+\item possuir atitude crítica, interdisciplinar e criativa na identificação e resolução de problemas;
+\item possuir compreensão das necessidades de contínua atualização e aprimoramento de suas competências e habilidades;
+\item possuir uma sólida formação em Computação, Física, Matemática, Eletrônica, Automação e Telecomunicações.
+\item conhecer a estrutura dos sistemas de computação e os processos envolvidos na sua análise e construção;
+\item considerar os aspectos ambientais, econômicos, financeiros, de gestão e de qualidade, associados a novos produtos e organizações;
+\item considerar fundamental a inovação, a criatividade, a atitude empreendedora e a inserção internacional.
+\end{enumerate}
+
+O egresso da Engenharia de Computação, no processo de sua formação, deverá desenvolver as seguintes competências:
+\begin{enumerate} [I -]
+\item antever as implicações humanísticas, sociais, ambientais, éticas, profissionais, legais (inclusive relacionadas à propriedade intelectual) e políticas dos sistemas computacionais;
+\item identificar demandas socioeconômicas e ambientais relevantes, planejar, especificar e projetar sistemas de computação, seguindo teorias, princípios, métodos e procedimentos interdisciplinares;
+\item construir, testar, verificar e validar sistemas de computação, seguindo métodos, técnicas e procedimentos interdisciplinares;
+\item perceber as necessidades de atualização decorrentes da evolução tecnológica e social;
+\item relacionar problemas do mundo real com suas soluções, considerando aspectos de computabilidade e de escalabilidade;
+\item analisar, desenvolver, avaliar e aperfeiçoar software e hardware em arquiteturas de computadores;
+\item analisar, desenvolver, avaliar e aperfeiçoar sistemas de automação e sistemas inteligentes;
+\item analisar, desenvolver, avaliar e aperfeiçoar sistemas de informação computacionais;
+\item analisar, desenvolver, avaliar e aperfeiçoar circuitos eletroeletrônicos;
+\item gerenciar pessoas e infraestrutura de Sistemas de Computação;
+\item perceber as necessidades de inovação e inserção internacional com atitudes criativas e empreendedoras.
+\end{enumerate}
+
+O curso de Engenharia de Computação tem, predominantemente, a computação como atividade fim, visando à formação de recursos humanos para o desenvolvimento científico e tecnológico da computação. Assim sendo, o curso deve capacitar indivíduos para desenvolver software e hardware, com uma forte base matemática e física.
+
+Os egressos do curso de Engenharia de Computação estarão situados no estado da arte da ciência e da tecnologia da computação, de tal forma que possam continuar suas atividades na pesquisa, promovendo o desenvolvimento científico, ou aplicando os conhecimentos científicos, propiciando o desenvolvimento tecnológico. Para tal, é dada uma forte ênfase no uso de laboratórios para capacitar os egressos no projeto e construção tanto de software quanto de hardware.
+\section{Estrutura Curricular}
+O currículo do curso de Engenharia de Computação é constituído por disciplinas obrigatórias e eletivas, estágio supervisionado, trabalho de conclusão de curso e atividades complementares. O curso é organizado em 10 semestres, podendo o aluno cumpri-lo em um máximo de 18 semestres.
+
+Para uma eficaz orientação pedagógica, é proposto o aconselhamento curricular apresentado nas tabelas \ref{tab1p} a \ref{tab10p}. Os pré-requisitos das disciplinas podem ser observados no fluxograma do curso (anexo \ref{fluxograma}).
+
+O aluno deverá cursar no mínimo três disciplinas eletivas restritas oferecidas.
+
+\rowcolors{1}{gray!5}{white}
+\setlength{\tabcolsep}{5pt}
+\renewcommand{\arraystretch}{1.5}
+\begin{table}
+\centering
+\caption{1º Período}
+\label{tab1p}
+\begin{spreadtab}{{tabularx}{\textwidth}{ | X|c|c| }}
+\hline
+@ {\textbf{Disciplina}} & @ {\textbf{CH}} & @ {\textbf{Créditos}} \\
+\hline
+@ \AlgComp	& \AlgCompCH	& \AlgCompCred	\\
+@ \CalcI	& \CalcICH		& \CalcICred	\\    
+@ \FisI		& \FisICH		& \FisICred		\\       
+@ \GD 		& \GDCH			& \GDCred		\\         
+@ \GeoAna	& \GeoAnaCH 	& \GeoAnaCred	\\  
+@ \QuiX 	& \QuiXCH 		& \QuiXCred		\\
+\hline
+@ Total 	& sum(b2:b7) 	& sum(c2:c7)	\\
+\hline
+\end{spreadtab}
+\end{table}
+
+\rowcolors{1}{gray!5}{white}
+\begin{table}
+\centering
+\caption{2º Período}
+\label{tab2p}
+\begin{spreadtab}{{tabularx}{\textwidth}{|X|c|c|}}
+\hline
+@ {\textbf{Disciplina}} & @ {\textbf{CH}} & @ {\textbf{Créditos}} \\
+\hline
+@ \AlgLin 	& \AlgLinCH		& \AlgLinCred	\\
+@ \CalcII	& \CalcIICH		& \CalcIICred	\\
+@ \DesBas	& \DesBasCH		& \DesBasCred	\\
+@ \EngComput& \EngComputCH	& \EngComputCred\\
+@ \FisII	& \FisIICH		& \FisIICred	\\
+@ \IntAmb	& \IntAmbCH		& \IntAmbCred	\\
+\hline
+@ Total 	& sum(b2:b7) 	& sum(c2:c7)	\\
+\hline
+\end{spreadtab}
+\end{table}
+
+\rowcolors{1}{gray!5}{white}
+\begin{table}
+\centering
+\caption{3º Período}
+\label{tab3p}
+\begin{spreadtab}{{tabularx}{\textwidth}{|X|c|c|}}
+\hline
+@ {\textbf{Disciplina}} & @ {\textbf{CH}} & @ {\textbf{Créditos}} \\
+\hline
+@ \AnaVet	& \AnaVetCH		& \AnaVetCred 	\\
+@ \CalcIII	& \CalcIIICH 	& \CalcIIICred	\\
+@ \EstrInf	& \EstrInfCH	& \EstrInfCred 	\\
+@ \FisIII	& \FisIIICH		& \FisIIICred	\\
+@ \MecTec	& \MecTecCH		& \MecTecCred	\\
+@ \ProbEst	& \ProbEstCH	& \ProbEstCred	\\
+\hline
+@ Total 	& sum(b2:b7) 	& sum(c2:c7)	\\
+\hline
+\end{spreadtab}
+\end{table}
+
+\rowcolors{1}{gray!5}{white}
+\begin{table}
+\centering
+\caption{4º Período}
+\label{tab4p}
+\begin{spreadtab}{{tabularx}{\textwidth}{|X|c|c|}}
+\hline
+@ {\textbf{Disciplina}} & @ {\textbf{CH}} & @ {\textbf{Créditos}} \\
+\hline
+@ \FenTran	& \FenTranCH	& \FenTranCred	\\
+@ \FisIV	& \FisIVCH		& \FisIVCred	\\
+@ \LabProgA	& \LabProgACH	& \LabProgACred	\\
+@ \MatEle	& \MatEleCH		& \MatEleCred	\\
+@ \MetQuant	& \MetQuantCH	& \MetQuantCred	\\
+@ \ResMat	& \ResMatCH		& \ResMatCred	\\
+\hline
+@ Total 	& sum(b2:b7) 	& sum(c2:c7)	\\
+\hline
+\end{spreadtab}
+\end{table}
+
+\rowcolors{1}{gray!5}{white}
+\begin{table}
+\centering
+\caption{5º Período}
+\label{tab5p}
+\begin{spreadtab}{{tabularx}{\textwidth}{|X|c|c|}}
+\hline
+@ {\textbf{Disciplina}} & @ {\textbf{CH}} & @ {\textbf{Créditos}} \\
+\hline
+@ \CEV		& \CEVCH		& \CEVCred		\\
+@ \EletI	& \EletICH		& \EletICred	\\
+@ \FundComp	& \FundCompCH	& \FundCompCred	\\
+@ \LabProgB	& \LabProgBCH	& \LabProgBCred	\\
+@ \LogProg	& \LogProgCH	& \LogProgCred	\\
+@ \ModMat	& \ModMatCH		& \ModMatCred	\\
+\hline
+@ Total 	& sum(b2:b7) 	& sum(c2:c7)	\\
+\hline
+\end{spreadtab}
+\end{table}
+
+\rowcolors{1}{gray!5}{white}
+\begin{table}
+\centering
+\caption{6º Período}
+\label{tab6p}
+\begin{spreadtab}{{tabularx}{\textwidth}{|X|c|c|}}
+\hline
+@ {\textbf{Disciplina}} & @ {\textbf{CH}} & @ {\textbf{Créditos}} \\
+\hline
+@ \AnAlg	& \AnAlgCH		& \AnAlgCred	\\
+@ \ArqComp	& \ArqCompCH	& \ArqCompCred	\\
+@ \CEVI		& \CEVICH 		& \CEVICred		\\
+@ \EletIIA	& \EletIIACH		& \EletIIACred	\\
+@ \EngSistA & \EngSistACH	& \EngSistACred	\\
+@ \IC		& \ICCH			& \ICCred		\\
+\hline
+@ Total 	& sum(b2:b7) 	& sum(c2:c7)	\\
+\hline
+\end{spreadtab}
+\end{table}
+
+\rowcolors{1}{gray!5}{white}
+\begin{table}
+\centering
+\caption{7º Período}
+\label{tab7p}
+\begin{spreadtab}{{tabularx}{\textwidth}{|X|c|c|}}
+\hline
+@ {\textbf{Disciplina}} & @ {\textbf{CH}} & @ {\textbf{Créditos}} \\
+\hline
+@ \AnaFis		& \AnaFisCH		& \AnaFisCred		\\
+@ \EngCompSoc 	& \EngCompSocCH & \EngCompSocCred	\\
+@ \PrincTelec 	& \PrincTelecCH & \PrincTelecCred	\\
+@ \ProjBD		& \ProjBDCH		& \ProjBDCred		\\
+@ \SegHig		& \SegHigCH		& \SegHigCred		\\
+@ \TeoComp		& \TeoCompCH	& \TeoCompCred		\\
+\hline
+@ Total			& sum(b2:b7)	& sum(c2:c7)		\\
+\hline
+\end{spreadtab}
+\end{table}
+
+\rowcolors{1}{gray!5}{white}
+\begin{table}
+\centering
+\caption{8º Período}
+\label{tab8p}
+\begin{spreadtab}{{tabularx}{\textwidth}{|X|c|c|}}
+\hline
+@ {\textbf{Disciplina}} & @ {\textbf{CH}} & @ {\textbf{Créditos}} \\
+\hline
+@ \CServMec	& \CServMecCH	& \CServMecCred	\\
+@ \ProjSO			& \ProjSOCH				& \ProjSOCred			\\
+@ \MineraDados		& \MineraDadosCH		& \MineraDadosCred		\\
+@ \SistEmb			& \SistEmbCH			& \SistEmbCred			\\
+@ \Telep			& \TelepCH				& \TelepCred			\\
+@ \ProcImag			& \ProcImagCH			& \ProcImagCred			\\
+\hline
+@ Total				& sum(b2:b7)			& sum(c2:c7)			\\
+\hline
+\end{spreadtab}
+\end{table}
+
+\rowcolors{1}{gray!5}{white}
+\begin{table}
+\centering
+\caption{9º Período}
+\label{tab9p}
+\label{tab7p}
+\begin{spreadtab}{{tabularx}{\textwidth}{|X|c|c|}}
+\hline
+@ {\textbf{Disciplina}} & @ {\textbf{CH}} & @ {\textbf{Créditos}} \\
+\hline
+@ \EletA		& \EletACH		& \EletACred	\\
+@ \CompParal	& \CompParalCH	& \CompParalCred\\	
+@ \EstSup		& \EstSupCH		& \EstSupCred	\\
+@ \ProjA		& \ProjACH		& \ProjACred	\\
+@ \IntEco		& \IntEcoCH		& \IntEcoCred	\\
+\hline
+@ Total			& sum(b2:b6)	& sum(c2:c6)	\\
+\hline
+\end{spreadtab}
+\end{table}
+
+\begin{table}
+\centering
+\caption{10º Período}
+\label{tab10p}
+\begin{spreadtab}{{tabularx}{\textwidth}{|X|c|c|}}
+\hline
+@ {\textbf{Disciplina}} & @ {\textbf{CH}} & @ {\textbf{Créditos}} \\
+\hline
+@ \ProjB	& \ProjBCH	& \ProjBCred	\\
+@ \Control	& \ControlCH& \ControlCred	\\
+@ \EletB	& \EletBCH	& \EletBCred	\\
+@ \EletC	& \EletCCH	& \EletCCred	\\
+@ \Adm		& \AdmCH	& \AdmCred		\\
+\hline
+@ Total		& sum(b2:b6)& sum(c2:c6)	\\
+\hline
+\end{spreadtab}
+\end{table}
+
+
+%%%% CRIS: Begin
+
+\section{Coordenação de Áreas}
+
+As disciplinas do curso de Engenharia de Computação estão divididas em quatro grandes áreas de conhecimento: (1) Sistemas de Informação; (2) Arquitetura de Sistemas de Computação; (3) Algoritmos e Linguagens de Programação; (4) Lógica e Inteligência Computacional.
+
+A integração das disciplinas em áreas de conhecimento permite o compartilhamento de informações sobre interesses e objetivos comuns. Favorece a atuação conjunta de alunos e professores em temas globais e impulsiona a criação de linhas de pesquisa. 
+
+Cada área de conhecimento deverá possuir um Professor Coordenador. O Coordenador de área será responsável pelas disciplinas de sua área, cabendo a ele(a): orientar os alunos em questões referentes às disciplinas, analisar os requerimentos de quebras de pré-requisitos e conflitos de horário, tratar questões relativas aos conteúdos programáticos das disciplinas, promover a integração dos professores da mesma área, e  incentivar a pesquisa na área.
+
+A tabela \ref{tab:areas} mostra a distribuição das disciplinas por área de conhecimento. As disciplinas Eletivas Restritas em Engenharia de Computação não possuem ementas fixas e serão divididas nas referidas áreas de acordo com a ementa proposta no período corrente.
+
+\begin{table}
+\centering
+\caption{Tabela de divisão de disciplinas por área de conhecimento}
+\label{tab:areas}
+\begin{tabularx}{\textwidth}{| X | l |} 
+\hiderowcolors
+\hline
+{\bf Área de Conhecimento}                   	&  {\bf Disciplinas} \\ 
+\hline
+\multirow{3}{*}{Sistemas de Informação} 		&  \EngSistA \\
+                                        		&  \ProjBD \\
+												&  \EngCompSoc \\
+                                        		&  \MineraDados \\ \hline
+\multirow{7}{*}{Arquitetura de Sistemas de Computação}  &  \FundComp \\
+                                        		&  \ArqComp \\
+                                        		&  \ProjSO \\
+                                       			&  \SistEmb \\
+                                       			&  \Telep \\
+                                        		&  \CompParal \\
+                                        		&  \Control \\ \hline
+\multirow{7}{*}{Algoritmos e Linguagens de Programação} &  \AlgComp \\
+                                        		&  \EngComput \\
+                                        		&  \EstrInf \\
+                                        		&  \LabProgA \\
+                                        		&  \LabProgB \\
+                                        		&  \AnAlg \\
+                                        		&  \TeoComp \\
+                                        		&  \ProcImag \\ \hline
+\multirow{2}{*}{Lógica e Inteligência Computacional} 	&  \LogProg \\
+                                        		&  \IC \\ 
+\hline
+\end{tabularx}
+\end{table}
+
+
+%%%% CRIS: End
+
+
+\section{Equivalência com o Curso Anterior}
+O curso de Engenharia de Computação ora proposto substituirá o curso de Engenharia Elétrica com ênfase em Sistemas e Computação e, na hipótese de algum aluno desejar migrar do curso antigo para este novo, será possível dispensar disciplinas do novo currículo iguais ou equivalentes às disciplinas do curso antigo.
+
+A tabela \ref{DiscIguais} apresenta a relação das disciplinas que são iguais nos dois cursos, logo, a dispensa é direta, e a tabela \ref{equivalencias} mostra a equivalência entre as disciplinas dos currículos antigo e novo. Finalmente, a tabela \ref{DiscSemEqui} exibe as disciplinas do novo curso sem equivalência com alguma(s) disciplina(s) do curso anterior.
+
+\rowcolors{1}{gray!5}{white}
+\begin{table}
+\caption{Disciplinas Iguais em Ambos os Currículos}
+\label{DiscIguais}
+\centering
+\renewcommand{\arraystretch}{1.5}
+\begin{tabularx}{\textwidth}{|X|l|}
+\showrowcolors
+\hline
+{\textbf{Disciplina}} & \textbf{Código}\\
+\hline
+\Adm 			& \AdmCod 	\\
+\AlgLin 		& \AlgLinCod\\
+\AnaFis 		& \AnaFisCod\\
+\AnaVet 		& \AnaVetCod\\
+\CalcI 			& \CalcICod \\
+\CalcII 		& \CalcIICod \\
+\CalcIII 		& \CalcIIICod\\
+\CServMec		& \CServMecCod\\
+\DesBas 		& \DesBasCod\\
+\EletI 			& \EletICod\\
+\FenTran 		& \FenTranCod \\
+\FisI 			& \FisICod\\
+\FisII 			& \FisIICod\\
+\FisIII 		& \FisIIICod\\
+\FisIV 			& \FisIVCod \\
+\GD 			& \GDCod\\
+\GeoAna 		& \GeoAnaCod\\
+\IntEco 		& \IntEcoCod\\
+\IntAmb 		& \IntAmbCod \\
+\MatEle 		& \MatEleCod\\
+\MecTec 		& \MecTecCod\\
+\ModMat 		& \ModMatCod\\
+\PrincTelec 	& \PrincTelecCod\\
+\ProbEst 		& \ProbEstCod\\
+\ProjA 			& \ProjACod\\
+\ProjB 			& \ProjBCod\\
+\QuiX 			& \QuiXCod\\
+\ResMat 		& \ResMatCod\\
+\hline
+\end{tabularx}
+\end{table}
+
+\rowcolors{1}{gray!5}{white}
+\begin{table}
+\centering
+\renewcommand{\arraystretch}{1.5}
+\caption{Equivalências no novo currículo}
+\label{equivalencias}
+\begin{tabularx}{\textwidth}{|X|l|l|}
+\hline
+{\textbf{Disciplinas do Currículo Antigo}} & \textbf{Código} & \textbf{Equivalente no Currículo Novo}\\
+\hline
+Algoritmos Computacionais 			& FEN06-03559 		&\AlgComp\\
+Análise de Algoritmos 				& FEN06-03713 		&\AnAlg\\
+Arquitetura de Computadores I		& FEN06-04119 		&\ArqComp\\
+Arquitetura de Sistemas Operacionais& FEN06-04664 		&\ProjSO\\
+Cálculo Numérico IV					& IME04-04541 		&\EngComput\\
+Carac. das Linguagens de Prog. I 	& FEN06-03980 		&\LabProgB\\
+Circuitos Elétricos I 				& FEN04-00944 		&\CEV\\
+Circuitos Elétricos IV 				& FEN04-05222  		&\CEVI\\
+Controle de Processos por Computador & FEN06-05080 		&\Control\\
+Engenharia de Sistemas A 			& FEN06-04243 		&\EngSistA\\
+Engenharia de Sistemas B 			& FEN06-04314 		&\ProjBD\\
+Eletrônica II						& FEN06-01840		&\EletIIA\\
+Estruturas de Informação I 			& FEN06-03648 		&\EstrInf\\
+Fundamentos de Comp. Digitais I e Técnicas Digitais II & \parbox[t]{2cm}{FEN06-03787\\FEN05-04561} 				&\FundComp\\
+Laboratório de Programação I		& FEN06-04049 		& \LabProgA\\
+Segurança e Higiene do Trabalho 	& FEN07-02722 		&\SegHig\\
+Teleproc. e Redes de Computadores 	&FEN06-04718 		&\Telep\\
+Teoria de Compiladores 				& FEN06-04516 		& \TeoComp\\
+Tóp. Especiais em Eng. de Sistemas e Computação A, B ou C& \parbox[t]{2cm}{FEN06-04889\\FEN06-04939\\FEN06-04990}  & Eletivas Restritas\\
+\hline
+\end{tabularx}
+\end{table}
+
+\begin{table}
+\centering
+\renewcommand{\arraystretch}{1.5}
+\caption{Disciplinas sem Equivalências}
+\label{DiscSemEqui}
+\begin{tabularx}{\textwidth}{|X|}
+\hline
+{\textbf{Disciplinas do Novo Currículo sem Equivalência}}\\
+\hline
+\MetQuant\\
+\LogProg\\
+\IC\\
+\EngCompSoc\\
+\MineraDados\\
+\SistEmb\\
+\ProcImag\\
+\CompParal\\
+\EstSup\\
+\hline
+\end{tabularx}
+\end{table}
+
+\section{Ementário das Disciplinas}
+As ementas das disciplinas obrigatórias e eletivas são apresentadas no anexo \ref{ementas}.
+
+\section{Normas Gerais de Ensino de Graduação da UERJ}
+O curso de Engenharia de Computação obedecerá ao regime de créditos e as aulas serão oferecidas nos turnos manhã e tarde, com aulas predominantemente pela manhã, para os aprovados classificados no primeiro semestre; e tarde e noite, com aulas predominantemente pela tarde, para os aprovados classificados no segundo semestre. O turno da manhã transcorre no horário das 07:00h às 12:20h; o da tarde das 12:30h às 17:50h e o da noite das 18:00h às 22:40h. As aulas têm duração de 50 minutos nos turnos da manhã e tarde e de 45 minutos no turno da noite. 
+
+As Normas Gerais de Ensino de Graduação da UERJ são definidas pela deliberação nº~33/95 da UERJ (anexo \ref{delib3395}), sendo seus aspectos principais apresentados a seguir:
+
+\subsection{Relação entre crédito e carga horária}
+\textit{
+\textbf{Art. 57} – O número mínimo de créditos necessários para integralizar o currículo será estabelecido com base na carga horária total do curso.}
+
+\textit{
+\textbf{Parágrafo Único} - A unidade de crédito corresponde a:
+\begin{enumerate}[a)]
+\item 15 (quinze) horas de aula teórica, ou
+\item 30 (trinta) horas de aula prática, laboratório ou estágio curricular.
+\end{enumerate}}
+
+\subsection{Aproveitamento escolar}
+\begin{itquotation}
+\setcounter{artigo}{94}
+\artigo A aprovação do aluno em disciplinas do Curso de Graduação desta Universidade terá por base notas e freqüência. São condições para aprovação: obtenção de nota final mínima 5,0 (cinco vírgula zero), constituída pela média aritmética da média semestral e nota da prova final, freqüência mínima de 75\% (setenta e cinco por cento) do total de horas/aula determinado para a disciplina.
+
+\begin{paragrafos}
+\paragrafo Para cada disciplina haverá, pelo menos, duas avaliações por turma, por período letivo, sendo uma delas necessariamente individual e escrita. A média dos resultados dessas avaliações constitui a média semestral do aluno na disciplina.\\
+\paragrafo O aluno que obtiver média semestral igual ou superior a 4,0 (quatro vírgula zero) terá direito à prova final.\\
+\paragrafo O aluno que obtiver média semestral igual ou superior a 7,0 (sete vírgula zero) estará dispensado de prestar prova final.\\
+\ldots
+
+\setcounter{paragrafo}{6}
+\paragrafo  O aluno que obtiver nota final menor que 5,0 (cinco vírgula zero) ou média semestral inferior a 4,0 (quatro vírgula zero) será reprovado.\\
+\paragrafo O aluno que não obtiver freqüência mínima de 75\% (setenta e cinco por cento) do total de horas/aula determinadas pela disciplina será reprovado, sem direito à prova final e independente de alcançar nota final superior a 7,0 (sete vírgula zero).\\
+\end{paragrafos}
+
+\end{itquotation}
+\subsection{Período de integralização do curso}
+\setcounter{artigo}{98}
+\begin{itquotation}
+\artigo Somente receberá o diploma o aluno que cumprir a Integralização Curricular.
+\end{itquotation}
+
+O período mínimo de integralização curricular dos cursos de engenharia é de 10 (dez) semestres, exceto para os casos de isenção de disciplinas, em que é possível um tempo mínimo menor. Já o prazo máximo para essa integralização é de 18 (dezoito) semestres.
+
+
+\section{Identificação das Condições Técnico-Ambientais}
+
+\subsection{Edificações e Instalações}
+A Faculdade de Engenharia está situada no quinto andar do pavilhão João Lyra Filho e possui, no bloco F, 22 salas de aula com capacidade média para 40 alunos. 
+
+\subsection{Biblioteca}
+Os recursos bibliográficos postos à disposição dos alunos estão sob a guarda da biblioteca central e das bibliotecas setoriais. São mais de vinte mil (20.000) títulos com cerca de trinta mil exemplares (30.000), cerca de mil e duzentos títulos de periódicos sobre os mais diversos assuntos de todas as áreas.
+
+A Biblioteca setorial do curso está situada no quinto andar do pavilhão João Lyra Filho e reúne o acervo básico, oferecendo área de estudos específica para os discentes e docentes.
+ 
+Associado a esses recursos, os alunos, por meio do uso de computadores e da Internet, têm acesso ao sistema automático de busca bibliográfica.
+
+Em relação aos mecanismos de atualização, a biblioteca conta com doações e verbas próprias da UERJ.
+
+\subsection{Laboratórios}
+A Faculdade de Engenharia possui laboratórios que atendem tanto os cursos de graduação como também à pós-graduação. O Curso de Engenharia de Computação utilizará, para as aulas práticas das disciplinas do núcleo de conteúdos básicos, os laboratórios vinculados às Ciências Básicas: Física, Química e de Informática. Para as disciplinas do núcleo profissional, serão utilizados o Laboratório de Engenharia Elétrica e o Laboratório de Computação. 
+
+O Laboratório de Engenharia Elétrica (LEE) apoia as atividades de ensino e pesquisa em Eletricidade, Eletrônica, Máquinas Elétricas, Sistemas de Controle, Acionamentos Elétricos, Eletrônica Industrial, Conversão Eletromecânica de Energia, Sistemas Digitais e Telecomunicações.
+
+O Laboratório de Computação (LabComp) apoia as atividades de ensino e pesquisa em Arquitetura de Computadores, Desenvolvimento de Sistemas, Linguagens de Programação, Análise de Algoritmos e Sistemas Embutidos.
+
+\subsection{Perfil do Corpo Docente}
+O corpo docente do DESC que ministrará as disciplinas de responsabilidade do DESC do curso de Engenharia de Computação é composto por 13 doutores e 1 graduado, conforme é apresentado na tabela \ref{CorpoDocente}, com suas respectivas cargas horárias e cargos na UERJ.
+
+%%%% CRIS: Begin
+
+É importante ressaltar que o corpo docente atual é suficiente para atender a demanda de todas as disciplinas oferecidas no curso de Engenharia de Computação. Desta forma, a implementação do novo currículo não irá requerer a contratação de nenhum outro professor.
+
+%%%% CRIS: End
+\rowcolors{1}{gray!5}{white}
+\begin{table}
+\centering
+\caption{Corpo Docente}
+\label{CorpoDocente}
+\begin{tabular}{|l|c|l|l|}
+\hline
+{\textbf{Docente}} & \textbf{CH} & \textbf{Titulação} &\textbf{Cargo} \\
+\hline
+Arnaldo Vieira da Rocha Filho & 40h & Doutorado em Sistemas de Informação & Prof. Adjunto \\
+Cristiana Barbosa Bentes & 40h & Doutorado em Eng. de Sistemas e Computação & Prof. Associado \\
+Flávio Joaquim de Souza & 40h & Doutorado em Engenharia Elétrica & Prof. Associado \\
+João Araujo Ribeiro & 40h & Doutorado em Computação & Prof. Associado \\
+Jorge Duarte Pires Valério & 40h & Doutorado em Engenharia Elétrica & Prof. Associado \\
+Luiza de Macedo Mourelle & 40h & Doutorado em Computação & Prof. Associado \\
+Margareth Gonçalves Simões & 20h & Doutorado em Geografia & Prof. Associado \\
+Marley M. Bernardes Rebuzzi Vellasco & 40h & Doutorado em Ciência da Computação & Prof. Associado \\
+Nival Nunes de Almeida & 40h & Doutorado em Engenharia Elétrica & Prof. Associado \\
+Orlando Bernardo Filho & 40h & Doutorado em Engenharia Elétrica & Prof. Associado \\
+Oscar Luiz Monteiro de Farias & 40h & Doutorado em Informática & Prof. Associado \\
+Pedro Paulo Thompson de Vasconcellos & 20h & Graduado em Engenharia & Prof. Auxiliar \\
+Raul Queiroz Feitosa & 40h & Doutorado em Ciência da Computação & Prof. Adjunto \\
+Sheila Regina Murgel Veloso & 40h & Doutorado em Eng. de Sistemas e Computação & Prof. Titular \\
+\hline
+\end{tabular}
+\end{table}
+
+
+
+
+
+

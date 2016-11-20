@@ -1,0 +1,40 @@
+%----------------------------------------------------------------------------------------
+%	Latex para ementa tipo dep da uerj
+%----------------------------------------------------------------------------------------
+%apagar .aux e executar biber ementalatex para obter bibliografia atualizada
+\documentclass[12pt,a4paper]{article} % Use A4 paper with a 12pt font size 
+
+\usepackage{ementa}
+\input{default.def}
+
+\newcommand \nomeprofessor	{Marley M. Bernardes Rebuzzi Vellasco}
+\newcommand \matriculaprofessor{31250-4}
+
+\newcommand \ndisciplina 	{Teleprocessamento e Redes de Computadores I}
+
+\newcommand \chta 		{60h}%carga horária total aluno
+\newcommand \chtp		{60h}%carga horária total professor
+\newcommand \codigo		{FEN06-xxxxx}%Código da disciplina 
+\newcommand \curso		{Engenharia de Sistemas e Computação}
+
+\newcommand \objetivos	{Ao final do período o aluno deverá ter adquirido: conhecimentos sobre transmissão de dados e redes de computadores, com noções sobre os equipamentos necessários; meios para elaboração de projeto lógico; noções sobre software de controle; compreensão sobre o funcionamento da Internet, seus principais protocolos e aplicativos.
+}
+
+\newcommand \ementa	{Características físicas dos sistemas de teleprocessamento. Detecção e tratamento de erros de transmissão. Redes locais. Arquitetura de protocolos e padrões. Modelo OSI. Ligação inter-redes. Serviços e tecnologias web. Segurança em redes de computadores.
+}
+
+\newcommand \preum		{Arquitetura de Computadores A} %
+\newcommand \codpreum		{FEN06-xxxxx} %
+\newcommand \predois		{Princípios de Telecomunicações III} %
+\newcommand \codpredois		{FEN05-04975} %
+
+\newcommand \crteorica		{4} %
+\newcommand \crlab		{0} %
+
+\input{contadores.inc}
+
+
+\begin{document}
+\headsep = 1pt
+\formementa{Telep}
+\end{document}

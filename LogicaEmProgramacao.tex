@@ -1,0 +1,43 @@
+%----------------------------------------------------------------------------------------
+%	Latex para ementa tipo dep da uerj
+%----------------------------------------------------------------------------------------
+%apagar .aux e executar biber ementalatex para obter bibliografia atualizada
+\documentclass[12pt,a4paper]{article} % Use A4 paper with a 12pt font size 
+
+\usepackage{ementa}
+\input{default.def}
+
+\newcommand \nomeprofessor	{Sheila Regina Murgel Veloso}
+\newcommand \matriculaprofessor{34558-7}
+
+\newcommand \ndisciplina 	{Lógica em Programação}
+
+\newcommand \chta 		{60h}%carga horária total aluno
+\newcommand \chtp		{60h}%carga horária total professor
+\newcommand \codigo		{FEN06-xxxxx}%Código da disciplina 
+
+\newcommand \objetivos	{O aluno deverá assimilar noções de lógica de primeira ordem e ser expostos a alguns formalismos usados para representação e raciocínio do conhecimento em computação, tais como PROLOG e lógicas descritivas. 
+}
+
+\newcommand \ementa	{Lógica proposicional: sintaxe, semântica, complexidade, sistemas dedutivos (método de tableaux e de resolução).
+
+Lógica de primeira ordem: sintaxe, sistemas dedutivos (método de tableaux e de resolução), cláusulas de Horn, semântica (estruturas de primeira  ordem).
+
+Lógicas descritivas: Introdução à representação  e raciocínio do conhecimento (KRR); introdução a ontologias e lógicas descritivas; introdução a modelagem e raciocínio com a lógica descritiva ALC; aplicação de lógica descritiva usando PROTEGÉ.
+
+Introdução ao PROLOG : linguagem, árvore de prova, recursão;  estruturas de dados em PROLOG (listas , árvores, grafos);  aplicação de PROLOG a problemas clássicos de Inteligência Artificial (busca automática, programação não determinística, geração e teste).
+}
+
+\newcommand \preum		{} % Pré-requisito 1
+\newcommand \codpreum		{} %
+\newcommand \predois		{} % Pré-requisito 2
+\newcommand \codpredois		{} %
+\newcommand \crteorica		{4} %
+\newcommand \crlab		{0} %
+
+\input{contadores.inc}
+
+\begin{document}
+\headsep = 1pt
+\formementa{LogProg}
+\end{document}

@@ -1,0 +1,49 @@
+%----------------------------------------------------------------------------------------
+%	Latex para ementa tipo dep da uerj
+%----------------------------------------------------------------------------------------
+%apagar .aux e executar biber ementalatex para obter bibliografia atualizada
+\documentclass[12pt,a4paper]{article} % Use A4 paper with a 12pt font size 
+
+\usepackage{ementa}
+
+\input{default.def}
+
+\newcommand \nomeprofessor{Oscar Luiz Monteiro de Farias}
+\newcommand \matriculaprofessor{31998-8}
+
+\newcommand \ndisciplina {Laboratório de Programação B}
+
+\newcommand \chta		{75h}%carga horária total aluno
+\newcommand \chtp		{75h}%carga horária total professor
+\newcommand \creditos	{4}%Créditos
+\newcommand \codigo	{FEN06-xxxxx}%Código da disciplina 
+
+\renewcommand \isoladasim			{x} %Permite
+\renewcommand \isoladanao			{} %Permite
+\newcommand \objetivos	{
+Capacitar o aluno a escolher a linguagem de programação mais adequada à solução de
+um dado problema.
+
+Capacitar o aluno a desenvolver programas, segundo diversos paradigmas de programação existentes.
+}
+
+\newcommand \ementa{
+Paradigmas de programação: programação imperativa, funcional, lógica, orientada a eventos,
+orientada a objetos. Visão geral de algumas linguagens de programação e paradigmas 
+adotados. Programação em ambiente de rede. Conectividade a Bancos de Dados.
+}
+
+\newcommand \preum	{Laboratório de Programação A} %
+\newcommand \codpreum	{FEN06-xxxxx} %
+\newcommand \predois		{} %
+\newcommand \codpredois		{} %
+
+\newcommand \crteorica	{3} %
+\newcommand \crlab	{1} %
+
+\input{contadores.inc}
+
+\begin{document}
+\headsep = 1pt
+\formementa{LabProgII}
+\end{document}

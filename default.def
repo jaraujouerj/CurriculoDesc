@@ -1,0 +1,35 @@
+\newcommand \criacao	{x}
+\newcommand \alteracao	{}
+
+\newcommand \presencial 	{x}
+\newcommand \semipresencial	{}
+\newcommand \adistancia	{}
+
+\newcommand \obrigatoria	{x}%disciplina é obrigatória? marcar x
+\newcommand \erestrita		{}%disciplina é eletiva restrita? marcar x
+\newcommand \edefinida		{}%disciplina é eletiva definida? marcar x
+\newcommand \euniversal	{}%disciplina é eletiva universal? marcar x
+\newcommand \cursouniversal		{}
+\newcommand \cursorestrita {}
+\newcommand \frequencia	{} %Se aprovação for por frequência, marcar x.
+\newcommand \frequenciaenota	{x} %Se aprovação for por frequência e nota, marcar x.
+
+\newcommand \empreparosim	{} % Permite situação em preparo? sim?
+\newcommand \empreparonao	{x} % Permite situação em preparo? não?
+
+\newcommand \maisdeumdocentesim	{x} %Permite mais de um docente? sim
+\newcommand \maisdeumdocentenao	{} %Permite mais de um docente? nao
+
+\newcommand \horarioincompletosim	{} %Permite
+\newcommand \horarioincompletonao	{x} %Não Permite
+
+\newcommand \isoladasim			{} %Permite
+\newcommand \isoladanao			{x} %Não Permite
+
+\newcommand \travadecreditos   {} % trava de créditos
+
+\newcommand \crestagio		{0} %
+\newcommand \crpratica		{0} %
+
+\newcommand \concomitanciasim		{} %Permite
+\newcommand \concomitancianao		{x} %Não Permite

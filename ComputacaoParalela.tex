@@ -1,0 +1,85 @@
+%----------------------------------------------------------------------------------------
+%	Latex para ementa tipo dep da uerj
+%----------------------------------------------------------------------------------------
+%apagar .aux e executar biber ementalatex para obter bibliografia atualizada
+\documentclass[12pt,a4paper]{article} % Use A4 paper with a 12pt font size 
+
+\usepackage{ementa}
+
+\def \criacao		{x}
+\def \alteracao		{}
+\def \nomeprofessor	{Cristiana Barbosa Bentes}
+\def \matriculaprofessor{30729-8}
+
+\def \ndisciplina 	{Computação Paralela e Distribuída}
+\def \presencial 	{x}
+\def \semipresencial	{}
+\def \adistancia	{}
+
+\def \chta 		{75h}%carga horária total aluno
+\def \chtp		{75h}%carga horária total professor
+\def \codigo		{FEN06-xxxxx}%Código da disciplina 
+\def \obrigatoria	{x}%disciplina é obrigatória? marcar x
+\def \erestrita		{}%disciplina é eletiva restrita? marcar x
+\def \edefinida		{}%disciplina é eletiva definida? marcar x
+\def \euniversal	{}%disciplina é eletiva universal? marcar x
+\def \curso		{Engenharia de Sistemas e Computação}
+\def \cursouniversal {}
+\def \cursorestrita {}
+\def \frequencia	{} %Se aprovação for por frequência, marcar x.
+\def \frequenciaenota	{x} %Se aprovação for por frequência e nota, marcar x.
+
+\def \objetivos	{Os objetivos da disciplina são apresentar conceitos e técnicas de programação paralela e distribuída voltada ao alto desempenho. Ao final da disciplina, espera-se que os alunos sejam capazes de: entender as diversas arquiteturas paralelas modernas; conhecer os modelos de programação paralela; desenvolver programas paralelos nos modelos de memória compartilhada e troca de mensagens.
+}
+
+\def \ementa	{Computação de alto desempenho: CPUs multinucleadas (multi-core); programação de propósito geral em unidades de processamento gráfico (GPGPU); computadores paralelos; multiprocessadores; multicomputadores; aglomerados computacionais (clusters) e grades computacionais (grids); computação em nuvem. Conceitos de Sistemas Distribuídos. Programação Paralela: desenvolvimento de programas paralelos com threads e memória compartilhada; desenvolvimento de programas distribuídos com troca de mensagens. Ambientes bibliotecas para programação paralela e distribuída.
+}
+
+\def \preum		{Projeto de Sistemas Operacionais} %
+\def \codpreum		{FEN06-XXXXX} %
+\def \predois		{} %
+\def \codpredois		{} %
+\def \travadecreditos   {} % trava de créditos
+\def \crteorica		{3} %
+\def \crlab		{1} %
+\def \crestagio		{0} %
+
+\def \empreparosim	{} % Permite situação em preparo? sim?
+\def \empreparonao	{x} % Permite situação em preparo? não?
+
+\def \maisdeumdocentesim	{x} %Permite mais de um docente? sim
+\def \maisdeumdocentenao	{} %Permite mais de um docente? nao
+
+\def \horarioincompletosim	{} %Permite
+\def \horarioincompletonao	{x} %Não Permite
+
+\def \concomitanciasim		{} %Permite
+\def \concomitancianao		{x} %Não Permite
+
+\def \isoladasim		{x} %Permite
+\def \isoladanao		{} %Não Permite
+
+%Não preencher daqui em diante
+\setcounter		{numcr}{0}
+\addtocounter		{numcr}{\crteorica}
+\addtocounter		{numcr}{\crlab}
+
+\setcounter		{chteoricatotal}{15*\crteorica}
+
+\setcounter		{chlabtotal}{30*\crlab}
+
+\setcounter		{chlabsemanal}{2*\crlab}
+
+\setcounter		{chtotalsemanal}{0}
+\setcounter		{chtotalsemanal}{2*\crlab}
+\addtocounter		{chtotalsemanal}{\crteorica}
+
+\setcounter		{chtotal}{0}
+\setcounter		{chtotal}{\the\value{chlabtotal}+\the\value{chteoricatotal}}
+
+
+\begin{document}
+\headsep = 1pt
+\formementa{CompParal}
+
+\end{document}

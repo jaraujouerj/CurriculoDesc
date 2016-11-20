@@ -1,0 +1,84 @@
+%----------------------------------------------------------------------------------------
+%	Latex para ementa tipo dep da uerj
+%----------------------------------------------------------------------------------------
+%apagar .aux e executar biber ementalatex para obter bibliografia atualizada
+\documentclass[12pt,a4paper]{article} % Use A4 paper with a 12pt font size 
+
+\usepackage{ementa}
+
+\def \criacao		{x}
+\def \alteracao		{}
+\def \nomeprofessor	{Nival Nunes de Almeida}
+\def \matriculaprofessor{6484-0}
+
+\def \ndisciplina 	{Engenharia de Computação e Sociedade}
+\def \presencial 	{x}
+\def \semipresencial	{}
+\def \adistancia	{}
+
+\def \chta 		{60h}%carga horária total aluno
+\def \chtp		{60h}%carga horária total professor
+\def \codigo		{FEN06-xxxxx}%Código da disciplina 
+\def \obrigatoria	{x}%disciplina é obrigatória? marcar x
+\def \erestrita		{}%disciplina é eletiva restrita? marcar x
+\def \edefinida		{}%disciplina é eletiva definida? marcar x
+\def \euniversal	{}%disciplina é eletiva universal? marcar x
+\def \cursouniversal {}
+\def \cursorestrita {}
+\def \frequencia	{} %Se aprovação for por frequência, marcar x.
+\def \frequenciaenota	{x} %Se aprovação for por frequência e nota, marcar x.
+
+\def \empreparosim	{} % Permite situação em preparo? sim?
+\def \empreparonao	{x} % Permite situação em preparo? não?
+
+\def \maisdeumdocentesim	{x} %Permite mais de um docente? sim
+\def \maisdeumdocentenao	{} %Permite mais de um docente? nao
+
+\def \horarioincompletosim	{} %Permite
+\def \horarioincompletonao	{x} %Não Permite
+
+\def \concomitanciasim		{} %Permite
+\def \concomitancianao		{x} %Não Permite
+
+\def \isoladasim		{x} %Permite
+\def \isoladanao		{} %Não Permite
+
+\def \objetivos	{Apresentar as bases histórica, teórica e conceitual relativas à engenharia e a tecnologia, bem como sua inter-relação com a ciência, de modo a proporcionar aos estudantes elementos de compreensão e de reflexão sobre a importância da engenharia para a sociedade, no que tange ao desenvolvimento econômico e social, especialmente, na atuação profissional do engenheiro de computação.
+}
+
+\def \ementa	{As bases histórica, teórica e conceitual relativas à engenharia e a tecnologia. A engenharia e a metodologia científica. Comunicação e Expressão. A ciência e a tecnologia e suas inter-relações com a engenharia.  Os impactos políticos, estratégicos e econômicos da tecnologia na indústria. Tecnologias industriais básicas (tib) e propriedade intelectual. Prospecção tecnológica, transferência de tecnologia e cerceamento tecnológico. A questão da inovação e do empreendedorismo na formação do engenheiro. A pesquisa e o desenvolvimento em engenharia. O projeto de engenharia. A função social do engenheiro. A ética em engenharia. O engenheiro de computação e sua inserção na indústria e na área de serviços. 
+}
+
+\def \preum		{} %
+\def \codpreum		{} %
+\def \predois		{} %
+\def \codpredois		{} %
+\def \travadecreditos   {94} % trav de créditos
+\def \crteorica		{4} %
+\def \crlab		{0} %
+\def \crestagio		{0} %
+\def \crpratica		{0} %
+
+
+\setcounter		{numcr}{0}
+\addtocounter		{numcr}{\crteorica}
+\addtocounter		{numcr}{\crlab}
+
+\setcounter		{chteoricatotal}{15*\crteorica}
+
+\setcounter		{chlabtotal}{30*\crlab}
+
+\setcounter		{chlabsemanal}{2*\crlab}
+
+\setcounter		{chtotalsemanal}{0}
+\setcounter		{chtotalsemanal}{2*\crlab}
+\addtocounter		{chtotalsemanal}{\crteorica}
+
+\setcounter		{chtotal}{0}
+\setcounter		{chtotal}{\the\value{chlabtotal}+\the\value{chteoricatotal}}
+
+
+\begin{document}
+\headsep = 1pt
+\formementa{EngCompSoc}
+\end{document}

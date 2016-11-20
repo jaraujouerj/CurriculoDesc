@@ -1,0 +1,43 @@
+%----------------------------------------------------------------------------------------
+%	Latex para ementa tipo dep da uerj
+%----------------------------------------------------------------------------------------
+%apagar .aux e executar biber ementalatex para obter bibliografia atualizada
+\documentclass[12pt,a4paper]{article} % Use A4 paper with a 12pt font size 
+
+\usepackage{ementa}
+\input{default.def}
+
+\newcommand \nomeprofessor	{Marley M. Bernardes Rebuzzi Vellasco}
+\newcommand \matriculaprofessor{31250-4}
+
+\newcommand \ndisciplina 	{Mineração de Dados}
+
+\newcommand \chta 		{60h}%carga horária total aluno
+\newcommand \chtp		{60h}%carga horária total professor
+\newcommand \codigo		{FEN06-xxxxx}%Código da disciplina 
+
+\newcommand \curso		{Engenharia de Sistemas e Computação}
+
+\newcommand \objetivos	{Introduzir conceitos básicos de mineração de dados; análise de dados, seleção de atributos; análise de problemas de classificação, agrupamento de dados e previsão. 
+}
+
+\newcommand \ementa	{Introdução e Motivação ao Processo de Descoberta de Conhecimento em Bases de Dados, Etapas do Processo de Mineração de Dados, Conceitos de Dados, Pré-Processamento de Dados: Limpeza, Avaliação de \textit{Outlier}, Transformação, Redução e Discretização de Dados, Análise e Seleção de Variáveis; Construção de atributos; Representação do Conhecimento, Algoritmos e Técnicas para Classificação, Associação, Previsão e Agrupamento: Árvore de Decisão, Indução de regras da 1a ordem, Bayesiana, Algoritmos de Cobertura, Regressão, Aprendizagem Baseada em Instância, Agrupamento (\textit{Clustering}) por partição e por hierarquia, Softwares e Ferramentas de MD; Aplicações e Estudos de Casos.
+}
+
+\newcommand \preum		{Inteligência Computacional} %
+\newcommand \codpreum		{FEN06-xxxxx} %
+\newcommand \predois		{} %
+\newcommand \codpredois		{} %
+
+\newcommand \crteorica		{4} %
+\newcommand \crlab		{0} %
+
+\renewcommand \isoladasim		{x} %Permite
+\renewcommand \isoladanao		{} %Não Permite
+
+\input{contadores.inc}
+
+\begin{document}
+\headsep = 1pt
+\formementa{MinDados}
+\end{document}

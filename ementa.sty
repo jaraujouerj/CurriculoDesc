@@ -1,0 +1,464 @@
+\ProvidesPackage{ementa}
+%\usepackage{showframe}
+\usepackage{calc} %serve para fazer certas contas simples
+
+\usepackage[left=2.75cm,right=1.85cm,top=1.35cm,marginparwidth=3.4cm]{geometry} % Adjust page margins
+
+\usepackage{tabularx} % Ambiente de tabelas
+
+\usepackage{fancyhdr} % Required to customize headers
+\setlength{\headheight}{80pt} % Increase the size of the header to accommodate meta-information
+\pagestyle{fancy}\fancyhf{} % Use the custom header specified below
+\renewcommand{\headrulewidth}{0pt} % Remove the default horizontal rule under the header
+
+\usepackage[utf8]{inputenc}
+\usepackage[portuguese]{babel}
+
+\usepackage[defernumbers=true, backend=biber, sorting=none]{biblatex} %bibliografia
+
+\nocite{*} %Não coloca a palavra bibliografia
+\bibliography{bibliografia}{}
+
+\usepackage{ifthen}
+
+\makeatletter
+\renewcommand\@cite[2]{%
+  Ref.~#1\ifthenelse{\boolean{@tempswa}}
+    {, \nolinebreak[3] #2}{}
+}
+\renewcommand\@biblabel[1]{#1.}
+\makeatother
+
+\usepackage{tikz}
+
+\tikzset{
+    %Define standard arrow tip
+	>=stealth,
+    %Define style for boxes
+    linha/.style={
+    	rectangle,
+    	draw=none,
+    	minimum width=16.5cm,
+    	text width=16.5cm,
+    	minimum height=0.755cm,
+        append after command={
+        	(\tikzlastnode.north west)edge[ultra thin](\tikzlastnode.north east)
+        	(\tikzlastnode.north east)edge[ultra thin](\tikzlastnode.south east)
+        	(\tikzlastnode.north west)edge[ultra thin](\tikzlastnode.south west)},
+        font=\scriptsize},
+	linha2/.style={
+		rectangle,
+		draw=none,
+		text width=10cm,
+		minimum height=0.755cm,
+        ultra thin,
+        font=\footnotesize},
+	linhafinal/.style={
+		rectangle,
+		draw=black,
+		text width=16.515cm,
+		minimum height=0.755cm,
+		ultra thin,
+		font=\scriptsize},
+    % Define arrow style
+    pil/.style={},
+    label/.style={
+                      text width=16cm,
+                      draw=none,
+                      font=\scriptsize},
+    label2/.style={
+                      text width=16cm,
+                      font=\small},
+    label3/.style={
+    	text width=16cm,
+    	draw=none,
+    	append after command={
+    		(\tikzlastnode.north west)edge[ultra thin](\tikzlastnode.north east)
+    		(\tikzlastnode.north east)edge[ultra thin](\tikzlastnode.south east)
+    		(\tikzlastnode.north west)edge[ultra thin](\tikzlastnode.south west)},
+    		font=\scriptsize},
+    label4/.style={
+    	minimum width=5.051cm,
+    	text width=4.77cm,
+    	draw=none,
+    	append after command={
+    		(\tikzlastnode.north west)edge[ultra thin](\tikzlastnode.north east)
+    		(\tikzlastnode.north west)edge[ultra thin](\tikzlastnode.south west)},
+    		font=\scriptsize},
+}
+\tikzstyle{basico}=[linha]
+\tikzstyle{boxmodalidade}=[linha, text height=0.77cm]
+\tikzstyle{campo}=[linha, font=\Large, align=center]
+\tikzstyle{box}=[draw=black, minimum width=6.1mm, minimum height=6.1mm, font=\LARGE]
+\usetikzlibrary{positioning,shapes,shadows,arrows,calc}
+\setlength{\parindent}{0cm} % Remove paragraph indentation
+\newcounter{numcr}
+\newcounter{chteoricatotal}
+\newcounter{chprattotal}
+\newcounter{chlabtotal}
+\newcounter{chlabsemanal}
+\newcounter{chpratsemanal}
+\newcounter{chestagiototal}
+\newcounter{chestagiosemanal}
+\newcounter{chtotalsemanal}
+\newcounter{chtotal}
+%----------------------------------------------------------------------------------------
+%	HEADER INFORMATION
+%----------------------------------------------------------------------------------------
+
+\renewcommand*{\familydefault}{\sfdefault}
+\lhead{
+\raisebox{-0.3\height}{\includegraphics[height=20.1mm,keepaspectratio]{imagens/subreitoria}}}
+\chead{\hspace{0.9mm}\raisebox{1mm} {UNIVERSIDADE DO ESTADO DO RIO DE JANEIRO}\\[5pt]
+		FORMULÁRIO DE IDENTIFICAÇÃO DE DISCIPLINA}
+\rhead{\raisebox{-0.28\height}{\includegraphics[height=19.5mm,keepaspectratio]{imagens/dep1}}}
+
+\newcommand*{\tamlin}{0.81cm}%
+\newcommand*{\xsepara}{1mm}%
+\newcommand*{\paddingsup}{-79mm}
+\newcommand*{\gap}{0mm}%
+\newcommand{\cursowidth}{11.435cm}
+
+\def \boxlabel [#1]#2#3{\node%PRESENCIAL BOX
+						[box,  #1] 
+						(boxpres)
+						{#3};				
+					\node[right =1mm of boxpres, text width=4cm, font=\scriptsize] 
+					(pres)
+					{\textbf{#2}};}
+
+\newcommand*{\formementa}[1]{%
+%\include{#1}
+\flushleft
+\begin{tikzpicture}
+%  UNIDADE
+\node at (0mm,0mm)
+	[basico] 
+	(unidade)
+	{};
+\node 
+	[box, above left=3mm and -48mm of unidade] 
+	(boxcriacao)
+	{\criacao};
+\node %box CRIAÇÃO
+	[right =3mm of boxcriacao, text width=1.5cm] 
+	(criacao)
+	{CRIAÇÃO};
+\node %BOX ALTERAÇÃO
+	[box, right=14mm of criacao] 
+	(boxaltera)
+	{\alteracao};
+\node 
+	[right =1mm of boxaltera, text width=1.5cm] 
+	(criacao)
+	{ALTERAÇÃO};
+
+\node %UNIDADE
+	[label, below left =\xsepara and \paddingsup of unidade.north ] 
+	(unidadelabel)
+	{\textbf{UNIDADE:} 
+	{\small Faculdade de Engenharia}};
+
+\node %DEPARTAMENTO
+	[basico, below=\gap of unidade] (depto){};
+\node 
+	[label, below left =\xsepara and \paddingsup of depto.north] 
+	(deptolabel)
+	{\textbf{DEPARTAMENTO:} 
+	{\small Engenharia de Sistemas e Computação}};
+
+\node %DISCIPLINA
+	[basico, below=\gap of depto] (disciplina){};
+\node 
+	[label, below left =\xsepara and \paddingsup   of disciplina.north] 
+	(discilabel)
+	{\textbf{DISCIPLINA:}  
+	{\small \ndisciplina}};
+
+\node %MODALIDADE DE ENSINO
+	[boxmodalidade,below=\gap of disciplina] 
+	(modalidade)
+	{};
+\node 
+	[below left =2.2mm and 43mm of modalidade.north,font=\scriptsize] 
+	(discilabel)
+	{\textbf{MODALIDADE DE ENSINO:} };
+
+\boxlabel[right=5mm  of discilabel]{PRESENCIAL}{\presencial}
+\boxlabel[right=37mm  of discilabel]{SEMIPRESENCIAL}{\semipresencial}
+\boxlabel[right=78mm  of discilabel]{A DISTÂNCIA}{\adistancia}
+
+\node %
+	[basico, below=\gap of modalidade, minimum height=1.9cm, font=\scriptsize] (#1big){};
+
+\node [label={Label}, below right = 2mm and 14.8mm of #1big.north west] 
+	{\textbf{ALUNO}};
+\node [label={Label}, below right = 11mm and 15.8mm of #1big.north west] 
+	{\Large \chta};
+	\node [label={Label}, below right = 2mm and 30.2mm of #1big.north west] 
+	{\textbf{PROFESSOR}};
+\node [label={Label}, below right = 11mm and 34.2mm of #1big.north west] 
+	{\Large \chtp};
+\node [label={Label}, below right = 2mm and 52mm of #1big.north west] 
+	{\textbf{CRÉDITOS:}};
+\node [label={Label}, below right = 8mm and 67mm of #1big.north west] 
+	{\Large \the\value{numcr}};
+\node [label={Label}, below right = 2mm and 95.4mm of #1big.north west] 
+	{\textbf{CÓDIGO:}};
+\node [label={Label}, below right = 7.9mm and 95.4mm of #1big.north west] 
+	{\large \codigo};
+\path ($(#1big.south west) + (13mm,0mm) $)edge [ultra thin]
+	($ (#1big.north west) + (13mm,0mm) $);
+	
+\path ($(#1big.south west) + (30.4mm,0mm) $)
+	edge [ultra thin]
+	($ (#1big.north west) + (30.4mm,0mm) $);
+	
+\path ($(#1big.south west) + (50.6mm,0mm) $)
+	edge [ultra thin] 
+	($ (#1big.north west) + (50.6mm,0mm) $);
+\path ($(#1big.south west) + (94mm,0mm) $)
+	edge [ultra thin] 
+	($ (#1big.north west) + (94mm,0mm) $);
+	
+\path ($(#1big.north west) + (13mm,-9mm) $)
+	edge [ultra thin] 
+	($ (#1big.north west) + (50.6mm,-9mm) $);
+\node [label,below right =3mm and -0.3mm of #1big.north west, text width=1.2cm, draw=none] 
+	(chlabel2)
+	{\textbf{CH\\TOTAL} };
+
+
+
+
+	
+\node %STATUS
+	[label4,align=flush left, below right=0mm and 0mm of #1big.south west, minimum height=\tamlin, fill=gray!20] 
+	(status)
+	{\textbf{STATUS}};
+
+\node %CURSO(S) / HABILITAÇÃO(ÕES) / ÊNFASE(S)
+	[label3,align=flush left, right=0mm  of status, text width=\cursowidth, minimum height=\tamlin, fill=gray!20] 
+	(cursos)
+	{\textbf{CURSO(S) / HABILITAÇÃO(ÕES) / ÊNFASE(S):}};
+
+
+\node %OBRIGATÓRIA
+	[label4, below =\gap  of status, text width=4.764cm, minimum height=\tamlin] 
+	(obrig)
+	{};
+
+\node 
+	[label3,align=flush left, below =\gap  of cursos, text width=\cursowidth, minimum height=\tamlin] 
+	(obrig2)
+	{\small Engenharia de Computação};
+
+\node 
+	[label4, below =\gap  of obrig, text width=4.764cm, minimum height=\tamlin] 
+	(restrita)
+	{};
+
+\node 
+	[label3,align=flush left, below =\gap  of obrig2, text width=\cursowidth, minimum height=\tamlin] 
+	(restrita2)
+	{\small \cursorestrita};
+\node 
+	[label4, below =0mm  of restrita, text width=4.764cm, minimum height=\tamlin,] 
+	(definida)
+	{};
+\node 
+	[label3,align=flush left, below =0mm  of restrita2, text width=\cursowidth, minimum height=\tamlin] 
+	(definida2)
+	{};
+
+\node 
+	[label4, below =\gap  of definida, text width=4.764cm, minimum height=\tamlin] 
+	(universal)
+	{};
+\node 
+	[label3, below =\gap  of definida2, text width=\cursowidth, minimum height=\tamlin] 
+	(universal2)
+	{\small \cursouniversal};
+
+\boxlabel[below left=1mm and -10mm of obrig.north west]{OBRIGATÓRIA}{\obrigatoria}
+\boxlabel[below left=1mm and -10mm of restrita.north west]{ELETIVA RESTRITA}{\erestrita}
+\boxlabel[below left=1mm and -10mm of definida.north west]{ELETIVA DEFINIDA}{\edefinida}
+\boxlabel[below left=1mm and -10mm of universal.north west]{ELETIVA UNIVERSAL}{\euniversal}
+
+\node 
+	[linhafinal, below right =\gap and -0.02mm  of universal.south west,  minimum height=\tamlin] 
+	(aprova)
+	{};
+
+\node 
+	[below left =1.4mm and 48mm   of aprova.north,font=\scriptsize,] 
+	(discmoda)
+	{\textbf{TIPO DE APROVAÇÃO:} };
+	
+\boxlabel[right=3mm  of discmoda]{FREQUÊNCIA}{\frequencia}
+\boxlabel[right=40mm  of discmoda]{FREQUÊNCIA E NOTA}{\frequenciaenota}
+
+%\node [box,  right=3mm  of discmoda] (boxpres){\frequencia};
+%\node [  right =2mm of boxpres, text width=0.5cm, font=\scriptsize] (pres){\textbf{FREQUÊNCIA}};
+%
+%\node [box, right=15mm of pres] (boxsp){\frequenciaenota};
+%\node [  right =1mm of boxsp, text width=4cm, font=\scriptsize] (fn){\textbf{FREQUÊNCIA E NOTA}};
+
+\end{tikzpicture}
+\ifx \crpratica \undefined
+  \def \crpratica {0}
+\fi
+
+\vspace{-2.5mm}
+\scriptsize 
+\renewcommand{\arraystretch}{1.5}
+\begin{center}
+\textbf{QUADRO DE DISTRIBUIÇÃO DE CARGA HORÁRIA / CRÉDITO}
+\begin{tabular}{|l|c|c|c|}
+\hline
+\textbf{TIPO DE AULA} & \textbf{CRÉDITO} & \textbf{CH SEMANAL} & \textbf{CH TOTAL} \\
+\hline
+TEÓRICA & \crteorica & \crteorica h & \the\value{chteoricatotal}h \\
+\hline
+PRÁTICA / Trab. Campo & \crpratica & \the\value{chpratsemanal}h & \the\value{chprattotal}h \\
+\hline
+LABORATÓRIO & \crlab & \the\value{chlabsemanal}h  & \the\value{chlabtotal}h \\
+\hline
+ESTÁGIO & \crestagio & \the\value{chestagiosemanal}h & \the\value{chestagiototal}h \\
+\hline
+\textbf{TOTAL} & \the\value{numcr} & \the\value{chtotalsemanal}h & \the\value{chtotal}h \\
+\hline
+\end{tabular}
+\vspace{1.5mm}
+\end{center}
+
+\def\tamanholinha{16.8cm}
+\renewcommand{\arraystretch}{2.6}
+\begin{tabularx}{\tamanholinha}{ |X| }
+  \hline
+  \textbf{OBJETIVOS:} {\small \objetivos} \\
+  \hline
+  \textbf{EMENTA:} {\small \ementa}  \\
+  \hline
+\end{tabularx}
+\vspace{2mm}
+
+\begin{tabularx}{\tamanholinha}{ |X|X| }
+  \hline
+  \textbf{PRÉ-REQUISITO 1:} {\small \preum}& \textbf{CÓDIGO:} {\small \codpreum}\\
+  \hline
+  \textbf{PRÉ-REQUISITO 2:} {\small \predois}& \textbf{CÓDIGO:} {\small \codpredois}\\
+  \hline
+  \textbf{CÓ-REQUISITO:}& \textbf{CÓDIGO:} \\
+  \hline
+  \textbf{PRÉ-CÓ-REQUISITO:}& \textbf{CÓDIGO:} \\
+  \hline
+  \textbf{TRAVA DE CRÉDITOS:} {{\large \travadecreditos} } \\
+  \hline
+  \textbf{DISCIPLINA(S) CORRESPONDENTE(S):}& \textbf{CÓDIGO(S):} \\
+  \hline
+\end{tabularx}
+
+\vspace{2mm}
+\begin{tabularx}{\tamanholinha}{ |X| }
+  \hline
+  \textbf{BIBLIOGRAFIA:} { \printbibliography[heading=none, resetnumbers=true, keyword=#1, notsubtype=ref]
+  \small \printbibliography[title={\small Referências}, keyword=#1, subtype=ref]
+  }\\
+  
+  \hline
+\end{tabularx}
+\vspace{2mm}
+
+\begin{center}
+\penalty -1000
+\fontfamily{phv}\selectfont\normalsize
+  SITUAÇÕES ESPECIAIS\\
+  \vspace{4pt}
+
+\begin{figure}[ht]
+\begin{tikzpicture}
+\node [linhafinal,  minimum height=\tamlin, very thin] (aprova){};
+\node [below right=1mm and 0mm  of aprova.north west,font=\scriptsize] (discmoda){\textbf{PERMITE SITUAÇÃO ``EM PREPARO'' DE ACORDO COM A DELIBERAÇÃO 27/03:} };
+\node [box,  below right=1mm and 120mm  of aprova.north west] (boxpres){\empreparosim};
+\node [  right =2mm of boxpres, text width=0.5cm, font=\scriptsize] (pres){\textbf{SIM}};
+\node [box, right=10mm of pres] (boxsp){\empreparonao};
+\node [  right =1mm of boxsp, text width=3cm, font=\scriptsize] (fn){\textbf{NÃO}};
+\end{tikzpicture}
+\end{figure}
+\vspace{4pt}
+
+\begin{figure}[ht]
+\begin{tikzpicture}
+\node [linhafinal, minimum height=\tamlin, very thin] (aprova3){};
+\node [below right=1.5mm and 0mm  of aprova3.north west,font=\scriptsize] (discmoda){\textbf{PERMITE MAIS DE UM DOCENTE:} };
+\node [box,  below right=1mm and 120mm  of aprova3.north west] (boxpres){\maisdeumdocentesim};
+\node [  right =2mm of boxpres, text width=0.5cm, font=\scriptsize] (pres){\textbf{SIM}};
+\node [box, right=10mm of pres] (boxsp){\maisdeumdocentenao};
+\node [  right =1mm of boxsp, text width=3cm, font=\scriptsize] (fn){\textbf{NÃO}};
+\end{tikzpicture}
+\end{figure}
+\vspace{4pt}
+\begin{figure}[!ht]
+\begin{tikzpicture}
+\node [linhafinal, minimum height=\tamlin, very thin,, minimum height=11mm] (aprova3){};
+\node [below right=1mm and 0mm  of aprova3.north west,font=\scriptsize, text width=7cm] (discmoda){\textbf{PERMITE HORÁRIOS INCOMPLETOS NO PT: (TUTORIA OU ORIENTAÇÃO)} };
+\node [box,  below right=2mm and 120mm  of aprova3.north west] (boxpres){\horarioincompletosim};
+\node [  right =2mm of boxpres, text width=0.5cm, font=\scriptsize] (pres){\textbf{SIM}};
+\node [box, right=10mm of pres] (boxsp){\horarioincompletonao};
+\node [  right =1mm of boxsp, text width=3cm, font=\scriptsize] (fn){\textbf{NÃO}};
+\end{tikzpicture}
+\end{figure}
+
+\begin{figure}[!ht]
+\begin{tikzpicture}
+\node [linhafinal, minimum height=\tamlin, very thin] (aprova3){};
+\node [below right=1mm and 0mm  of aprova3.north west,font=\scriptsize] (discmoda){\textbf{CONCOMITÂNCIA DE HORÁRIOS:} };
+\node [box,  below right=1mm and 120mm  of aprova3.north west] (boxpres){\concomitanciasim};
+\node [  right =2mm of boxpres, text width=0.5cm, font=\scriptsize] (pres){\textbf{SIM}};
+\node [box, right=10mm of pres] (boxsp){\concomitancianao};
+\node [  right =1mm of boxsp, text width=3cm, font=\scriptsize] (fn){\textbf{NÃO}};
+\end{tikzpicture}
+\end{figure}
+
+
+\begin{figure}[!ht]
+\begin{tikzpicture}
+\node [linhafinal, minimum height=\tamlin, very thin] (aprova3){};
+\node [below right=1.5mm and 0mm  of aprova3.north west,font=\scriptsize] (discmoda){\textbf{PODE SER OFERECIDA COMO DISCIPLINA ISOLADA:} };
+\node [box,  below right=1mm and 120mm  of aprova3.north west] (boxpres){\isoladasim};
+\node [  right =2mm of boxpres, text width=0.5cm, font=\scriptsize] (pres){\textbf{SIM}};
+\node [box, right=10mm of pres] (boxsp){\isoladanao};
+\node [  right =1mm of boxsp, text width=3cm, font=\scriptsize] (fn){\textbf{NÃO}};
+\end{tikzpicture}
+\end{figure}
+\end{center}
+
+\raggedright
+%\begin{figure}[!ht]
+\begin{minipage}{\linewidth}% to keep image and caption on one page
+\begin{flushright}
+
+
+\begin{tikzpicture}
+\node [linhafinal, text width=11.3cm, minimum height=10pt, align=center] 
+	(proponente)
+	{\textbf{PROFESSOR PROPONENTE}};
+\node [linhafinal, minimum width=3cm, text width=3cm, minimum height=1.9cm, align=center, 
+		below right=0mm of proponente.south west] 
+		(data){\today};
+\node [below=0mm and 0mm  of data.north,font=\scriptsize]{\textbf{DATA}};
+
+\node [linhafinal, minimum width=8.3cm, text width=7cm, minimum height=1.9cm, very thin, align=center, right=-0.09mm of data] (assinatura){\\[1cm]
+\nomeprofessor\ - Mat. \matriculaprofessor};
+\node [below=-0.7mm and 0mm  of assinatura.north, font=\scriptsize] {\textbf{ASSINATURA/MATRÍCULA/CARIMBO}};
+
+\end{tikzpicture}
+\end{flushright}
+\end{minipage}
+%\end{figure}
+\\[5mm]
+{\normalsize \textbf{OBS}: Segundo o Parágrafo Único do Artigo 57 da Deliberação 33/95, a unidade de crédito corresponde a 15h de aulas teóricas ou 30h de prática, laboratório ou estágio.}
+}
+
+%------------------------------------------------------------------------------------

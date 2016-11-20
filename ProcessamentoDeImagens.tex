@@ -1,0 +1,38 @@
+%----------------------------------------------------------------------------------------
+%	Latex para ementa tipo dep da uerj
+%----------------------------------------------------------------------------------------
+%apagar .aux e executar biber ementalatex para obter bibliografia atualizada
+\documentclass[12pt,a4paper]{article} % Use A4 paper with a 12pt font size 
+
+\usepackage{ementa}
+\input{default.def}
+
+\newcommand \nomeprofessor	{Raul Queiroz Feitosa}
+\newcommand \matriculaprofessor{31242-1}
+
+\newcommand \ndisciplina 	{Processamento Digital de Imagens}
+
+\newcommand \chta 		{60h}%carga horária total aluno
+\newcommand \chtp		{60h}%carga horária total professor
+\newcommand \codigo		{FEN06-xxxxx}%Código da disciplina 
+
+\newcommand \objetivos	{O objetivo da disciplina é introduzir as principais técnicas para o pré-processamento e análise de imagens em 2 dimensões. Além de apresentar os aspectos teóricos a disciplina visa proporcionar uma vivência prática no desenvolvimento de soluções para problemas de média complexidade.
+}
+
+\newcommand \ementa	{Fundamentos de imagens digitais; Realce no Domínio Espacial; Realce no Domínio da Frequência; Processamento de Imagens Coloridas; Restauração de Imagens; Processamento Morfológico; Segmentação; Representação e Descrição; Reconhecimento de Padrões em Imagens.
+}
+
+\newcommand \preum		{Algebra Linear III} %
+\newcommand \codpreum		{IME02-01388} %
+\newcommand \predois		{Probabilidade e Estatística III} %
+\newcommand \codpredois		{IME05-05316} %
+\renewcommand \travadecreditos   {94} % trava de créditos
+\newcommand \crteorica		{4} %
+\newcommand \crlab		{0} %
+
+\input{contadores.inc}
+
+\begin{document}
+\headsep = 1pt
+\formementa{ProcImag}
+\end{document}

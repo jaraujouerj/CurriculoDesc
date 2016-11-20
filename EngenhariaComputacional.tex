@@ -1,0 +1,84 @@
+%----------------------------------------------------------------------------------------
+%	Latex para ementa tipo dep da uerj
+%----------------------------------------------------------------------------------------
+%apagar .aux e executar biber ementalatex para obter bibliografia atualizada
+\documentclass[12pt,a4paper]{article} % Use A4 paper with a 12pt font size 
+
+\usepackage{ementa}
+
+\def \criacao		{x}
+\def \alteracao		{}
+\def \nomeprofessor	{Orlando Bernardo Filho}
+\def \matriculaprofessor{}
+
+\def \ndisciplina 	{Engenharia Computacional}
+\def \presencial 	{x}
+\def \semipresencial	{}
+\def \adistancia	{}
+
+\def \chta 		{75h}%carga horária total aluno
+\def \chtp		{75h}%carga horária total professor
+\def \codigo		{FEN06-xxxx}%Código da disciplina 
+\def \obrigatoria	{x}%disciplina é obrigatória? marcar x
+\def \erestrita		{}%disciplina é eletiva restrita? marcar x
+\def \edefinida		{}%disciplina é eletiva definida? marcar x
+\def \euniversal	{}%disciplina é eletiva universal? marcar x
+\def \cursouniversal {}
+\def \cursorestrita {}
+\def \frequencia	{} %Se aprovação for por frequência, marcar x.
+\def \frequenciaenota	{x} %Se aprovação for por frequência e nota, marcar x.
+
+\def \objetivos	{Ao final do período o aluno deverá ser capaz de aplicar métodos numéricos no desenvolvimento de modelos computacionais de problemas relacionados à engenharia.
+}
+
+\def \ementa	{Erros nas representações numéricas. Aritmética de ponto flutuante. Teorema de Taylor. Integração Numérica. Resolução Numérica de Sistemas Lineares e não lineares. Problemas de Valor Inicial. Método das diferenças finitas.  Modelos numéricos para a engenharia. Tópico avançado: Resolução Numérica de Equações Diferenciais.
+}
+
+\def \preum		{Algoritmos Computacionais I} %
+\def \codpreum		{FEN06-xxxxx} %
+\def \predois		{Cálculo Diferencial e Integral I} %
+\def \codpredois		{IME01-00508} %
+\def \travadecreditos   {} % trava de créditos
+\def \crteorica		{3} %
+\def \crlab		{1} %
+\def \crestagio		{0} %
+\def \crpratica		{0} %
+
+\def \empreparosim	{} % Permite situação em preparo? sim?
+\def \empreparonao	{x} % Permite situação em preparo? não?
+
+\def \maisdeumdocentesim	{x} %Permite mais de um docente? sim
+\def \maisdeumdocentenao	{} %Permite mais de um docente? nao
+
+\def \horarioincompletosim	{} %Permite
+\def \horarioincompletonao	{x} %Não Permite
+
+\def \concomitanciasim		{} %Permite
+\def \concomitancianao		{x} %Não Permite
+
+\def \isoladasim		{} %Permite
+\def \isoladanao		{x} %Não Permite
+
+%Não preencher daqui em diante
+\setcounter		{numcr}{0}
+\addtocounter		{numcr}{\crteorica}
+\addtocounter		{numcr}{\crlab}
+
+\setcounter		{chteoricatotal}{15*\crteorica}
+
+\setcounter		{chlabtotal}{30*\crlab}
+
+\setcounter		{chlabsemanal}{2*\crlab}
+
+\setcounter		{chtotalsemanal}{0}
+\setcounter		{chtotalsemanal}{2*\crlab}
+\addtocounter		{chtotalsemanal}{\crteorica}
+
+\setcounter		{chtotal}{0}
+\setcounter		{chtotal}{\the\value{chlabtotal}+\the\value{chteoricatotal}}
+
+
+\begin{document}
+\headsep = 1pt
+\formementa{EngComp}
+\end{document}
