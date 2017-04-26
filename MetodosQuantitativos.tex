@@ -1,0 +1,47 @@
+%----------------------------------------------------------------------------------------
+%	Latex para ementa tipo dep da uerj
+%----------------------------------------------------------------------------------------
+%apagar .aux e executar biber ementalatex para obter bibliografia atualizada
+\documentclass[12pt,a4paper]{article} % Use A4 paper with a 12pt font size 
+
+\usepackage{ementaIndustrial}
+\input{default.def}
+\include{disciplinasDB}
+
+\newcommand \nomeprofessor{}
+\newcommand \matriculaprofessor{}
+
+\renewcommand \criacao	{}
+\renewcommand \alteracao	{x}
+
+\newcommand \ndisciplina {\MetQuant}
+
+\newcommand \chta 		{\MetQuantCH h}%carga horária total aluno
+\newcommand \chtp		{\MetQuantCH h}%carga horária total professor
+\newcommand \creditos		{\MetQuantCred}%Créditos
+\newcommand \codigo		{\MetQuantCod}%Código da disciplina 
+
+\newcommand \objetivos	{Ao final do período, o aluno deverá ser capaz de identificar e propor soluções em problemas de produção
+que possam ser aperfeiçoados por métodos quantitativos, também eficazes no incremento das margens de
+comercialização e na redução de custos de produção, especialmente em questões relacionadas ao
+processo produtivo.
+}
+
+\newcommand \ementa	{Introdução à pesquisa operacional; Modelagem em PO; Programação Linear: Método Simplex e Dualidade;
+Uso de pacotes computacionais; Modelos de alocação e transporte; Introdução a teoria dos jogos.
+}
+
+\newcommand \preum		{\AlgLin} %
+\newcommand \codpreum	{\AlgLinCod} %
+\newcommand \predois		{} %
+\newcommand \codpredois		{} %
+
+\newcommand \crteorica	{3} %
+\newcommand \crlab	{0} %
+
+\input{contadores.inc}
+
+\begin{document}
+\headsep = 1pt
+\formementa{MetQuant}
+\end{document}

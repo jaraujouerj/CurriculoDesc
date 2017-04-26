@@ -1,61 +1,92 @@
 #origem https://www.drewsilcock.co.uk/using-make-and-latexmk
+PP=ProjetoPedagogico
 LATEX=pdflatex
 LATEXOPT=--shell-escape
 NONSTOP=--interaction=nonstopmode
-#AUXDIROPT=-auxdir=aux
 OUTDIROPT=-outdir=pdf
 OUTDIR=pdf
+EXTDIR=ementasExternas
 
 LATEXMK=latexmk
 LATEXMKOPT=-pdf
 #CONTINUOUS=-pvc
+VPATH=pdf ementasExternas leis
 
-MAIN=AlgoritmosComputacionais AnaliseDeAlgoritmos ArquiteturaDeComputadores \
-	CircuitosEletricosV AnaliseDeSistemasFisicos CircuitosEletricosVI \
-	ProjetoDeSistemasOperacionais ComputacaoParalela ControleDeProcessosPorComputador \
-	EngenhariaComputacional EngenhariaDeComputacaoESociedade EngenhariaDeSistemas \
-	ProjetoEAdministracaoDeBancoDeDados Eletiva1_ReconhecimentoDePadroes Eletiva2_RedesDeInterconexao \
-	Eletiva3_Geomatica Eletiva4_ComputacaoDeAltoDesempenho Eletiva5_ProgramacaoParaDispositivosMoveis \
-	Eletiva6_Padroes EletronicaIIA EstruturasDeInformacao EstagioSupervisionadoXIA \
-	FundamentosDeComputadores InteligenciaComputacional LaboratorioDeProgramacaoA \
-	LaboratorioDeProgramacaoB LogicaEmProgramacao MateriaisEletricosEMagneticos \
-	MineracaoDeDados ProcessamentoDeImagens ProjetoXIA SistemasEmbutidos \
-	TeleprocessamentoERedes TeoriaDeCompiladores \
-	fluxogramaEngenhariaComputacao \
-	ProjetoPedagogico
-#	    \
-#	  \
-#	 
-SOURCES=$(MAIN).tex ementa.sty ementaEletrica.sty ementaEletronica.sty ementaeletiva.sty
+DESC=AlgoritmosComputacionais.pdf AnaliseDeAlgoritmos.pdf ArquiteturaDeComputadores.pdf \
+	ProjetoDeSistemasOperacionais.pdf ComputacaoParalela.pdf ControleDeProcessosPorComputador.pdf \
+	EngenhariaComputacional.pdf EngenhariaDeComputacaoESociedade.pdf EngenhariaDeSistemas.pdf \
+	ProjetoEAdministracaoDeBancoDeDados.pdf EstruturasDeInformacao.pdf EstagioSupervisionadoXIA.pdf \
+	FundamentosDeComputadores.pdf InteligenciaComputacional.pdf LaboratorioDeProgramacaoA.pdf \
+	LaboratorioDeProgramacaoB.pdf LogicaEmProgramacao.pdf  \
+	MineracaoDeDados.pdf ProcessamentoDeImagens.pdf ProjetoXIA.pdf SistemasEmbutidos.pdf \
+	TeleprocessamentoERedes.pdf TeoriaDeCompiladores.pdf 
+
+ELETIVAS=Eletiva1_ReconhecimentoDePadroes.pdf Eletiva2_RedesDeInterconexao.pdf \
+	Eletiva3_Geomatica.pdf Eletiva4_ComputacaoDeAltoDesempenho.pdf Eletiva5_ProgramacaoParaDispositivosMoveis.pdf \
+	Eletiva6_Padroes.pdf
+
+ELETRO=EletronicaIIA.pdf
+
+ELETRICA=AnaliseDeSistemasFisicos.pdf CircuitosEletricosV.pdf CircuitosEletricosVI.pdf\
+	MateriaisEletricosEMagneticos.pdf
+
+INDUSTRIAL=EngenhariaDoTrabalhoI.pdf MetodosQuantitativos.pdf
+
+TODASDISC= $(DESC) $(ELETRO) $(ELETRICA) $(INDUSTRIAL) $(ELETIVAS)
+
+FLUXOGRAMA=fluxogramaEngenhariaComputacao.pdf
+
+EXTERNOS=Administracao.pdf AlgebraLinearIII.pdf AnaliseVetorial.pdf CalculoI.pdf CalculoII.pdf CalculoIII.pdf \
+	ControleEServomec.pdf DesenhoBasico.pdf EletronicaI.pdf FenomenosDeTransporte.pdf FisicaI.pdf \
+	FisicaII.pdf FisicaIII.pdf FisicaIV.pdf GeometriaAnalitica.pdf GeometriaDescritivaI.pdf IntroducaoAEconomia.pdf \
+	IntroducaoAEngenhariaAmbiental.pdf MateriaisEletricos.pdf MecanicaTecnica.pdf \
+	ModelosMatematicos.pdf PrincipiosDeTelecomunicacoes.pdf ProbEst.pdf QuimicaX.pdf ResMat.pdf
+
+LEIS=CES112002.pdf Deliberacao33-95.pdf res1010.pdf
+
+PPPARTES=disciplinasDB.tex Capitulos.tex anexos.tex
+
 #Makefile yourothertexfiles
 FIGURES := $(shell find imagens/* -type f)
 
-all:    $(MAIN).pdf
+all:    $(PP).pdf
+
+$(TODASDISC):disciplinasDB.tex contadores.inc default.def
+$(DESC):ementa.sty 
+$(ELETRO):ementaEletronica.sty 
+$(ELETRICA):ementaEletrica.sty 
+$(INDUSTRIAL):ementaIndustrial.sty 
+$(ELETIVAS):ementaeletiva.sty 
+$(FLUXOGRAMA):fluxogramaEngenhariaComputacao.tex disciplinasDB.tex
+
+$(PP).pdf: $(PP).tex $(PPPARTES) $(DESC) $(ELETRO) $(ELETRICA) $(INDUSTRIAL) $(FLUXOGRAMA) $(EXTERNOS) $(LEIS)
+	$(LATEXMK) $(LATEXMKOPT) $(OUTDIROPT) $(CONTINUOUS) \
+		-pdflatex="$(LATEX) $(LATEXOPT) $(NONSTOP) %O %S" $(PP)
+
+%.pdf: %.tex 
+	$(LATEXMK) $(LATEXMKOPT) $(OUTDIROPT) $(CONTINUOUS) \
+		-pdflatex="$(LATEX) $(LATEXOPT) $(NONSTOP) %O %S" $(PP) $<
 
 .refresh:
 	touch .refresh
 
-$(MAIN).pdf: $(MAIN).tex .refresh $(SOURCES) $(FIGURES)
-	$(LATEXMK) $(LATEXMKOPT) $(OUTDIROPT) $(CONTINUOUS) \
-		-pdflatex="$(LATEX) $(LATEXOPT) $(NONSTOP) %O %S" $(MAIN)
-
 force:
 	touch .refresh
-	rm $(MAIN).pdf
+	rm $(PP).pdf
 	$(LATEXMK) $(LATEXMKOPT) $(CONTINUOUS) \
 		-pdflatex="$(LATEX) $(LATEXOPT) %O %S" $(MAIN)
 
 clean:
-	$(LATEXMK) -C $(MAIN)
-	rm -f $(OUTDIR)/$(MAIN).pdfsync
+	$(LATEXMK) -C $(PP)
+	rm -f $(OUTDIR)/$(PP).pdfsync
 	rm -rf *~ $(OUTDIR)/*.tmp
 	rm -f $(OUTDIR)/*.bbl $(OUTDIR)/*.blg $(OUTDIR)/*.aux $(OUTDIR)/*.end $(OUTDIR)/*.fls $(OUTDIR)/*.log $(OUTDIR)/*.out $(OUTDIR)/*.fdb_latexmk $(OUTDIR)/*.bcf $(OUTDIR)/*.run.xml
 
 
 once:
-	$(LATEXMK) $(LATEXMKOPT) -pdflatex="$(LATEX) $(LATEXOPT) %O %S" $(MAIN)
+	$(LATEXMK) $(LATEXMKOPT) -pdflatex="$(LATEX) $(LATEXOPT) %O %S" $(PP)
 
 debug:
-	$(LATEX) $(LATEXOPT) $(MAIN)
+	$(LATEX) $(LATEXOPT) $(PP)
 
 .PHONY: clean force once all

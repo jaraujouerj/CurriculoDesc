@@ -6,16 +6,17 @@
 
 \usepackage{ementaEletronica}
 \input{default.def}
+\include{disciplinasDB}
 
 \newcommand \nomeprofessor{}
 \newcommand \matriculaprofessor{}
 
-\newcommand \ndisciplina {Eletrônica II-A}
+\newcommand \ndisciplina {\EletIIA}
 
-\newcommand \chta 		{90h}%carga horária total aluno
-\newcommand \chtp		{90h}%carga horária total professor
-\newcommand \creditos		{3}%Créditos
-\newcommand \codigo		{FEN04-05197}%Código da disciplina 
+\newcommand \chta 		{\EletIIACH h}%carga horária total aluno
+\newcommand \chtp		{\EletIIACH h}%carga horária total professor
+\newcommand \creditos		{\EletIIACred}%Créditos
+\newcommand \codigo		{\EletIIACod}%Código da disciplina 
 
 \newcommand \objetivos	{Ao final do período o aluno deverá ser capaz de compreender o funcionamento dinâmico dos FETs e Bipolares bem como efetuar projetos com estes componentes.
 }
@@ -23,10 +24,10 @@
 \newcommand \ementa	{Análise do Bipolar e do FET em AC. Estudo das suas características e limitações. Resposta em baixa e alta frequência. Tipos de amplificadores: Bootstrap e cascodo. Amplificadores de vários estágios; respostas em baixa e alta frequência.
 }
 
-\newcommand \preum		{Eletrônica I} %
-\newcommand \codpreum	{FEN05-01620} %
-\newcommand \predois		{Circuitos Elétricos V} %
-\newcommand \codpredois		{FEN04-xxxx} %
+\newcommand \preum		{\EletI} %
+\newcommand \codpreum	{\EletICod} %
+\newcommand \predois		{\CEV} %
+\newcommand \codpredois		{\CEVCod} %
 
 \newcommand \crteorica	{2} %
 \newcommand \crlab	{1} %

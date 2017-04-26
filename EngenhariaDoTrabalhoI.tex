@@ -1,0 +1,52 @@
+%----------------------------------------------------------------------------------------
+%	Latex para ementa tipo dep da uerj
+%----------------------------------------------------------------------------------------
+%apagar .aux e executar biber ementalatex para obter bibliografia atualizada
+\documentclass[12pt,a4paper]{article} % Use A4 paper with a 12pt font size 
+
+\usepackage{ementaIndustrial}
+\input{default.def}
+\include{disciplinasDB}
+
+\newcommand \nomeprofessor{}
+\newcommand \matriculaprofessor{}
+
+\renewcommand \criacao	{}
+\renewcommand \alteracao	{x}
+
+\newcommand \ndisciplina {\SegHig}
+
+\newcommand \chta 		{\SegHigCH h}%carga horária total aluno
+\newcommand \chtp		{\SegHigCH h}%carga horária total professor
+\newcommand \creditos		{\SegHigCred}%Créditos
+\newcommand \codigo		{\SegHigCod}%Código da disciplina 
+
+\newcommand \objetivos	{Introduzir conceitos básicos das noções de riscos de acidentes e doenças do trabalho, aspectos mercadológicos de
+avaliação da condição de trabalho e mostrar a importância de garantia à saúde e a segurança do trabalhador nos
+projetos de unidades produtivas. Provocar o contato do aluno com situações reais do trabalho.
+}
+
+\newcommand \ementa	{Conceitos da engenharia do trabalho; Aspectos históricos do conceito de riscos ocupacionais; agentes causadores de
+prejuízos à saúde (conceitos de riscos de cargas de trabalho); O impacto das inovações tecnológicas e
+organizacionais na saúde dos trabalhadores; Aspectos legais sobre condições do trabalho; Metodologia para avaliação
+de condições de trabalho; técnicas de medição de agentes ambientais; Intervenções nos ambientes de trabalho.
+}
+
+\renewcommand \travadecreditos   {90} % trava de créditos
+
+\newcommand \preum		{} %
+\newcommand \codpreum	{} %
+\newcommand \predois		{} %
+\newcommand \codpredois		{} %
+
+\newcommand \crteorica	{2} %
+\newcommand \crlab	{0} %
+\renewcommand \crestagio		{0} %
+\renewcommand \crpratica		{1} %
+
+\input{contadores.inc}
+
+\begin{document}
+\headsep = 1pt
+\formementa{SegHig}
+\end{document}

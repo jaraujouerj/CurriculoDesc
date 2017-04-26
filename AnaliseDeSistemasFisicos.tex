@@ -5,21 +5,22 @@
 \documentclass[12pt,a4paper]{article} % Use A4 paper with a 12pt font size 
 
 \usepackage{ementaEletrica}
+\include{disciplinasDB}
 
 \def \criacao	{}
 \def \alteracao	{x}
 \def \nomeprofessor{}
 \def \matriculaprofessor{}
 
-\def \ndisciplina {Análise de Sistemas Físicos I}
+\def \ndisciplina {\AnaFisSName}
 \def \presencial 	{x}
 \def \semipresencial	{}
 \def \adistancia	{}
 
-\def \chta 		{75h}%carga horária total aluno
-\def \chtp		{75h}%carga horária total professor
-\def \creditos		{4}%Créditos
-\def \codigo		{FEN04-05253}%Código da disciplina 
+\def \chta 		{\AnaFisCH h}%carga horária total aluno
+\def \chtp		{\AnaFisCH h}%carga horária total professor
+\def \creditos		{\AnaFisCred}%Créditos
+\def \codigo		{\AnaFisCod}%Código da disciplina 
 \def \obrigatoria	{x}%disciplina é obrigatória? marcar x
 \def \erestrita		{}%disciplina é eletiva restrita? marcar x
 \def \edefinida		{}%disciplina é eletiva definida? marcar x
