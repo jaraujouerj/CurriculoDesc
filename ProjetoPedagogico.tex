@@ -14,11 +14,6 @@
 %\usepackage[dvinames]{xcolor}
 % Measurements are taken directly from the guide
 \usepackage[top=1in,left=1.5in,bottom=1in,right=2.5cm]{geometry}
-%\usepackage{graphicx}
-%\usepackage[colorlinks=false,
-%            pdfborder={0 0 0},
-%            ]{hyperref}
-%\usepackage{lipsum}
 \usepackage[absolute]{textpos}
 \usepackage[table]{xcolor}
 \usepackage{tikz}
@@ -26,7 +21,23 @@
 \usepackage{scrextend}
 \usepackage{tabularx}
 \usepackage{spreadtab}
-
+\usepackage{tocloft}
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks,
+	citecolor=black,
+	filecolor=black,
+	linkcolor=black,
+	urlcolor=black
+}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{}
+\chead{}
+\renewcommand{\headrule}{}
+\rhead{{\footnotesize \thepage}}
+\fancyfoot{}
+\addtolength{\headwidth}{0.3\marginparwidth}
 % A nice serif font, but no the prescribed nonfree ITC stone
 %\usepackage[oldstylenums]{kpfonts}
 \usepackage[T1]{fontenc}
@@ -36,8 +47,7 @@
 \usepackage{multirow}
 \usepackage[titletoc,toc,page]{appendix}
 \usepackage{pdfpages}
-%\usepackage[titletoc]{appendix}
-%\renewcommand{\appendixtocname}{Anexos}
+
 \renewcommand{\appendixtocname}{Anexos}
 \renewcommand{\appendixpagename}{Anexos}
 
@@ -68,12 +78,6 @@
 % No paragraph indentation
 \parindent0pt
 \setlength{\parskip}{0.8\baselineskip}
-%\raggedright
-%\pagestyle{empty}
-
-%fim teste
-% choose options for [] as required from the list
-% in the Reference Guide, Sect. 2.2
 
 \usepackage{makeidx}         % allows index generation
 \usepackage{graphicx}        % standard LaTeX graphics tool
@@ -94,7 +98,8 @@
  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Básico
 \normalsize 
-
+\setlength\cftparskip{-2pt}
+\setlength\cftbeforechapskip{0pt}
 \begin{document}
 
 \begin{textblock*}{3cm}[0.5,0.5](4cm,4cm)
@@ -113,12 +118,12 @@
 \subtitle{2016}
 \date{}
 \maketitle
-
-
-\begin{minipage}{\textwidth}
+\pagestyle{empty}
 \vfill
+
 \tableofcontents
-\end{minipage}
+\listoftables
+
 \frontmatter%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\include{dedic}
 %\include{pref} 
@@ -128,6 +133,7 @@
 
 \mainmatter%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\include{part}
+\pagestyle{fancy}
 \include{Capitulos}
 %\include{chapter}
 \backmatter%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

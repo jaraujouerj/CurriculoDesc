@@ -6,77 +6,30 @@
 
 \usepackage{ementa}
 
-\def \criacao		{x}
-\def \alteracao		{}
-\def \nomeprofessor	{Orlando Bernardo Filho}
-\def \matriculaprofessor{}
+\newcommand \nomeprofessor	{Orlando Bernardo Filho}
+\newcommand \matriculaprofessor{}
 
-\def \ndisciplina 	{Engenharia Computacional}
-\def \presencial 	{x}
-\def \semipresencial	{}
-\def \adistancia	{}
+\newcommand \ndisciplina 	{Engenharia Computacional}
 
-\def \chta 		{75h}%carga horária total aluno
-\def \chtp		{75h}%carga horária total professor
-\def \codigo		{FEN06-xxxx}%Código da disciplina 
-\def \obrigatoria	{x}%disciplina é obrigatória? marcar x
-\def \erestrita		{}%disciplina é eletiva restrita? marcar x
-\def \edefinida		{}%disciplina é eletiva definida? marcar x
-\def \euniversal	{}%disciplina é eletiva universal? marcar x
-\def \cursouniversal {}
-\def \cursorestrita {}
-\def \frequencia	{} %Se aprovação for por frequência, marcar x.
-\def \frequenciaenota	{x} %Se aprovação for por frequência e nota, marcar x.
+\newcommand \chta 		{75h}%carga horária total aluno
+\newcommand \chtp		{75h}%carga horária total professor
+\newcommand \codigo		{FEN06-xxxx}%Código da disciplina 
 
-\def \objetivos	{Ao final do período o aluno deverá ser capaz de aplicar métodos numéricos no desenvolvimento de modelos computacionais de problemas relacionados à engenharia.
+\newcommand \objetivos	{Ao final do período o aluno deverá ser capaz de aplicar métodos numéricos no desenvolvimento de modelos computacionais de problemas relacionados à engenharia.
 }
 
-\def \ementa	{Erros nas representações numéricas. Aritmética de ponto flutuante. Teorema de Taylor. Integração Numérica. Resolução Numérica de Sistemas Lineares e não lineares. Problemas de Valor Inicial. Método das diferenças finitas.  Modelos numéricos para a engenharia. Tópico avançado: Resolução Numérica de Equações Diferenciais.
+\newcommand \ementa	{Erros nas representações numéricas. Aritmética de ponto flutuante. Teorema de Taylor. Integração Numérica. Resolução Numérica de Sistemas Lineares e não lineares. Problemas de Valor Inicial. Método das diferenças finitas.  Modelos numéricos para a engenharia. Tópico avançado: Resolução Numérica de Equações Diferenciais.
 }
 
-\def \preum		{Algoritmos Computacionais I} %
-\def \codpreum		{FEN06-xxxxx} %
-\def \predois		{Cálculo Diferencial e Integral I} %
-\def \codpredois		{IME01-00508} %
-\def \travadecreditos   {} % trava de créditos
-\def \crteorica		{3} %
-\def \crlab		{1} %
-\def \crestagio		{0} %
-\def \crpratica		{0} %
+\newcommand \preum		{Algoritmos Computacionais I} %
+\newcommand \codpreum		{FEN06-xxxxx} %
+\newcommand \predois		{Cálculo Diferencial e Integral I} %
+\newcommand \codpredois		{IME01-00508} %
 
-\def \empreparosim	{} % Permite situação em preparo? sim?
-\def \empreparonao	{x} % Permite situação em preparo? não?
+\newcommand \crteorica		{3} %
+\newcommand \crlab		{1} %
 
-\def \maisdeumdocentesim	{x} %Permite mais de um docente? sim
-\def \maisdeumdocentenao	{} %Permite mais de um docente? nao
-
-\def \horarioincompletosim	{} %Permite
-\def \horarioincompletonao	{x} %Não Permite
-
-\def \concomitanciasim		{} %Permite
-\def \concomitancianao		{x} %Não Permite
-
-\def \isoladasim		{} %Permite
-\def \isoladanao		{x} %Não Permite
-
-%Não preencher daqui em diante
-\setcounter		{numcr}{0}
-\addtocounter		{numcr}{\crteorica}
-\addtocounter		{numcr}{\crlab}
-
-\setcounter		{chteoricatotal}{15*\crteorica}
-
-\setcounter		{chlabtotal}{30*\crlab}
-
-\setcounter		{chlabsemanal}{2*\crlab}
-
-\setcounter		{chtotalsemanal}{0}
-\setcounter		{chtotalsemanal}{2*\crlab}
-\addtocounter		{chtotalsemanal}{\crteorica}
-
-\setcounter		{chtotal}{0}
-\setcounter		{chtotal}{\the\value{chlabtotal}+\the\value{chteoricatotal}}
-
+\input{contadores.inc}
 
 \begin{document}
 \headsep = 1pt

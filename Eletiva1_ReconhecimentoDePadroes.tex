@@ -2,84 +2,29 @@
 %	Latex para ementa tipo dep da uerj
 %----------------------------------------------------------------------------------------
 %apagar .aux e executar biber ementalatex para obter bibliografia atualizada
-\documentclass[12pt,a4paper]{article} % Use A4 paper with a 12pt font size 
-
-\usepackage{ementaeletiva}
-
-\def \criacao		{x}
-\def \alteracao		{}
-\def \nomeprofessor	{Orlando Bernardo Filho}
-\def \matriculaprofessor{30802-3}
-
-\def \ndisciplina 	{Reconhecimento de Padrões}
-\def \presencial 	{x}
-\def \semipresencial	{}
-\def \adistancia	{}
-
-\def \chta 		{60h}%carga horária total aluno
-\def \chtp		{60h}%carga horária total professor
-\def \codigo		{FEN06-XXXXX}%Código da disciplina 
-\def \obrigatoria	{}%disciplina é obrigatória? marcar x
-\def \erestrita		{x}%disciplina é eletiva restrita? marcar x
-\def \edefinida		{}%disciplina é eletiva definida? marcar x
-\def \euniversal	{}%disciplina é eletiva universal? marcar x
-\def \cursorestrita		{\scriptsize Eng. de Sist. e Comp., Eng. Elétrica/Eletrônica e Eng. Elétrica/Telecomunicações}
-\def \cursodefinida		{}
-\def \cursouniversal {}
-\def \frequencia	{} %Se aprovação for por frequência, marcar x.
-\def \frequenciaenota	{x} %Se aprovação for por frequência e nota, marcar x.
-
-\def \empreparosim	{} % Permite situação em preparo? sim?
-\def \empreparonao	{x} % Permite situação em preparo? não?
-
-\def \maisdeumdocentesim	{x} %Permite mais de um docente? sim
-\def \maisdeumdocentenao	{} %Permite mais de um docente? nao
-
-\def \horarioincompletosim	{x} %Permite
-\def \horarioincompletonao	{} %Não Permite
-
-\def \concomitanciasim		{} %Permite
-\def \concomitancianao		{x} %Não Permite
-
-\def \isoladasim		{} %Permite
-\def \isoladanao		{x} %Não Permite
-
-\def \objetivos	{Ao final do período o aluno deverá ter assimilado os métodos de reconhecimento de padrões e aprendizado de máquina. O aluno deverá também ter se familiarizado com os conceitos fundamentais, teorias e algoritmos para reconhecimento de padrões e aprendizado de máquina, devendo ter conhecimento para aplicá-los em visão computacional, processamento de imagens, reconhecimento de voz, mineração de dados, estatística e aplicações médicas.
-}
-
-\def \ementa	{Distribuições de Probabilidade; Modelos Lineares para Regressão; Modelos Lineares para Classificação; Redes Neurais; Métodos de Núcleo; Máquinas de Agrupamento Esparso; Modelos Gráficos; Modelos de Mistura e EM (Estimação-Maximização); Inferência Aproximada; Métodos de Amostragem; Variáveis Latentes Contínuas; Dados Sequenciais; Métodos não paramétricos: k-vizinhos mais próximos (kNN); Teoria de decisão de Bayes, Combinação de Modelos.
-}
-
-\def \preum		{Álgebra Linear III} %
-\def \codpreum		{IME02-01388} %
-\def \predois		{Probabilidade e Estatística III} %
-\def \codpredois		{IME05-05316} %
-\def \travadecreditos   {170} % trava de créditos
-\def \crteorica		{4} %
-\def \crlab		{0} %
-\def \crestagio		{0} %
-\def \crpratica		{0} %
-
-
-\setcounter		{numcr}{0}
-\addtocounter		{numcr}{\crteorica}
-\addtocounter		{numcr}{\crlab}
-
-\setcounter		{chteoricatotal}{15*\crteorica}
-
-\setcounter		{chlabtotal}{30*\crlab}
-
-\setcounter		{chlabsemanal}{2*\crlab}
-
-\setcounter		{chtotalsemanal}{0}
-\setcounter		{chtotalsemanal}{2*\crlab}
-\addtocounter		{chtotalsemanal}{\crteorica}
-
-\setcounter		{chtotal}{0}
-\setcounter		{chtotal}{\the\value{chlabtotal}+\the\value{chteoricatotal}}
-
+\documentclass{ementa} % Use A4 paper with a 12pt font size 
 
 \begin{document}
-\headsep = 1pt
+\ndisciplina 		{\EletRec}
+\naoobrigatoria		%disciplina não é obrigatória
+\nomeprofessor		{Orlando Bernardo Filho}
+\matriculaprofessor	{30802-3}
+\chta 				{\EletRecCH h}%carga horária total aluno
+\eletivarestrita	{}
+\preum				{\AlgLin} %
+\codpreum			{\AlgLinCod} %
+\predois			{\ProbEst} %
+\codpredois			{\ProbEstCod} %
+\travadecreditos   	{170} % trava de créditos
+\credteorica		{2} %
+\credlab			{1}
+\objetivos			{Ao final do período o aluno deverá ter assimilado os métodos de reconhecimento de 
+					padrões e aprendizado de máquina. O aluno deverá também ter se familiarizado com os 
+					conceitos fundamentais, teorias e algoritmos para reconhecimento de padrões e aprendizado 
+					de máquina, devendo ter conhecimento para aplicá-los em visão computacional, processamento 
+					de imagens, reconhecimento de voz, mineração de dados, estatística e aplicações médicas.}
+\ementa				{Distribuições de Probabilidade; Modelos Lineares para Regressão; Modelos Lineares para Classificação; 
+					Redes Neurais; Métodos de Núcleo; Máquinas de Agrupamento Esparso; Modelos Gráficos; Modelos de Mistura e EM (Estimação-Maximização); Inferência Aproximada; Métodos de Amostragem; Variáveis Latentes Contínuas; Dados Sequenciais; 
+					Métodos não paramétricos: k-vizinhos mais próximos (kNN); Teoria de decisão de Bayes, Combinação de Modelos.}
 \formementa{Eletiva1_ReconhecDePad}
 \end{document}

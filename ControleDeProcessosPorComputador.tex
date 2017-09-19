@@ -5,62 +5,32 @@
 \documentclass[12pt,a4paper]{article} % Use A4 paper with a 12pt font size 
 
 \usepackage{ementa}
+\input{default.def}
 
-\def \criacao		{x}
-\def \alteracao		{}
-\def \nomeprofessor	{Nival Nunes de Almeida}
-\def \matriculaprofessor{6484-0}
+\newcommand \nomeprofessor	{Nival Nunes de Almeida}
+\newcommand \matriculaprofessor{6484-0}
 
-\def \ndisciplina 	{Controle de Processos por Computador I}
-\def \presencial 	{x}
-\def \semipresencial	{}
-\def \adistancia	{}
+\newcommand \ndisciplina 	{Controle de Processos por Computador I}
 
-\def \chta 		{75h}%carga horária total aluno
-\def \chtp		{75h}%carga horária total professor
-\def \codigo		{FEN06-XXXXX}%Código da disciplina 
-\def \obrigatoria	{x}%disciplina é obrigatória? marcar x
-\def \erestrita		{}%disciplina é eletiva restrita? marcar x
-\def \edefinida		{}%disciplina é eletiva definida? marcar x
-\def \euniversal	{}%disciplina é eletiva universal? marcar x
-\def \cursouniversal {}
-\def \cursorestrita {}
-\def \frequencia	{} %Se aprovação for por frequência, marcar x.
-\def \frequenciaenota	{x} %Se aprovação for por frequência e nota, marcar x.
+\newcommand \chta 		{75h}%carga horária total aluno
+\newcommand \chtp		{75h}%carga horária total professor
+\newcommand \codigo		{FEN06-XXXXX}%Código da disciplina 
 
-\def \objetivos	{Ao final do período o aluno deverá compreender as diferentes aplicações de computadores em controle de processos e automação industriais, conhecer as características do hardware e do software envolvidos e estar apto a desenvolver sistemas e aplicações na área.
+\newcommand \objetivos	{Ao final do período o aluno deverá compreender as diferentes aplicações de computadores em controle de processos e automação industriais, conhecer as características do hardware e do software envolvidos e estar apto a desenvolver sistemas e aplicações na área.
 }
 
-\def \ementa	{As bases teóricas e conceitos de controle de processos e a automação industrial.  Elementos de um sistema de controle de processos, conceitos, e aplicações, instrumentação e ambientes de manufatura integrados. Noções de robótica. Sistemas computacionais para aplicações industriais: controladores lógicos programáveis e controles inteligentes. Especificação e validação de sistemas a eventos discretos.  Sistema de tempo real.  Estudos de novas tecnologias na área. 
+\newcommand \ementa	{As bases teóricas e conceitos de controle de processos e a automação industrial.  Elementos de um sistema de controle de processos, conceitos, e aplicações, instrumentação e ambientes de manufatura integrados. Noções de robótica. Sistemas computacionais para aplicações industriais: controladores lógicos programáveis e controles inteligentes. Especificação e validação de sistemas a eventos discretos.  Sistema de tempo real.  Estudos de novas tecnologias na área. 
 }
 
-\def \preum		{Análise de Sistemas Físicos I} %
-\def \codpreum		{FEN04-05253} %
-\def \predois		{Projeto de Sistemas Operacionais} %
-\def \codpredois		{FEN06-XXXXX} %
-\def \travadecreditos   {} % trava de créditos
-\def \crteorica		{3} %
-\def \crlab		{1} %
-\def \crestagio		{0} %
-\def \crpratica		{0} %
+\newcommand \preum		{Análise de Sistemas Físicos I} %
+\newcommand \codpreum		{FEN04-05253} %
+\newcommand \predois		{Projeto de Sistemas Operacionais} %
+\newcommand \codpredois		{FEN06-XXXXX} %
 
-\def \empreparosim	{} % Permite situação em preparo? sim?
-\def \empreparonao	{x} % Permite situação em preparo? não?
-
-\def \maisdeumdocentesim	{x} %Permite mais de um docente? sim
-\def \maisdeumdocentenao	{} %Permite mais de um docente? nao
-
-\def \horarioincompletosim	{} %Permite
-\def \horarioincompletonao	{x} %Não Permite
-
-\def \concomitanciasim		{} %Permite
-\def \concomitancianao		{x} %Não Permite
-
-\def \isoladasim		{x} %Permite
-\def \isoladanao		{} %Não Permite
+\newcommand \crteorica		{3} %
+\newcommand \crlab		{1} %
 
 \input{contadores.inc}
-
 
 \begin{document}
 \headsep = 1pt

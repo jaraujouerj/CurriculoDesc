@@ -75,6 +75,13 @@
     -| ($(#2.east) + (3mm,12mm) $) 
     -| ($ (#3.west) -(3mm,2mm)$) 
     -- ($(#3.west) -(0,2mm) $);}
+
+\newcommand{\prFisIIFenTran}[3][black] {
+	\draw [->, thick, #1]
+	($(#2.east) + (0,4mm) $) 
+	-| ($(#2.east) + (4mm,12mm) $) 
+	-| ($ (#3.west) -(3mm,2mm)$) 
+	-- ($(#3.west) -(0,2mm) $);}
     
 \newcommand{\prereqAD}[3][black] {
    \draw [->, thick, #1]
@@ -83,9 +90,9 @@
     -| ($ (#3.west) -(2mm,2mm)$) 
     -- ($(#3.west) -(0,2mm) $);}
     
-\newcommand{\prereqAE}[3][black] {
+\newcommand{\prereqAlinPI}[3][black] {
    \draw [->, thick, #1]
-    ($(#2.east) + (0,4mm) $) -| ($(#2.east) + (3mm,12mm) $) -| ($ (#3.west) -(4mm,0mm)$) -- ($(#3.west) $);}
+    ($(#2.east) + (0,4mm) $) -| ($(#2.east) + (2mm,12mm) $) -| ($ (#3.west) -(4mm,0mm)$) -- ($(#3.west) $);}
                 
 \newcommand{\prereqB}[3][black] {
   \draw [->, thick, #1]
@@ -168,9 +175,9 @@
    \draw [->, thick]
     ($(#1.east) + (0,2mm) $) -| ($(#1.east) + (1mm,11mm) $) -| ($ (#2.west) -(4mm,3mm)$) -- ($(#2.west) -(0,3mm)   $);}
 
-\newcommand{\prereqIA}[2] {
+\newcommand{\prereqFisIIICEV}[2] {
    \draw [->, thick]
-    ($(#1.east) + (0,1mm) $) -| ($(#1.east) + (4mm,10mm) $) -| ($ (#2.west) -(4mm,-2mm)$) -- ($(#2.west) +(0,2mm)   $);}
+    ($(#1.east) + (0,2mm) $) -| ($(#1.east) + (5mm,10mm) $) -| ($ (#2.west) -(4mm,-2mm)$) -- ($(#2.west) +(0,2mm)   $);}
     
 \newcommand{\prereqIB}[2] {
    \draw [->, thick]
@@ -291,7 +298,7 @@
 
 \newcommand{\prereqc}[3][black] {
 	\draw [->, thick, #1]
-	($(#2.east) + (0,-4mm) $) -| ($(#2.east) + (1mm,-14mm) $) -| ($ (#3.west) -(4mm,-2mm)$) -- ($(#3.west) + (0,2mm)    $);}
+	($(#2.east) + (0,-4mm) $) -| ($(#2.east) + (1mm,-14mm) $) -| ($ (#3.west) -(5mm,-2mm)$) -- ($(#3.west) + (0,2mm)    $);}
 
 \prereqc	[blue]	{AlgComp}	{FundComp}
 
@@ -313,15 +320,14 @@
 \prereqB			{CalcII}	{MecTec}
 
 \prereq				{FisII}		{FisIII}
-\prereqAC	[blue]	{FisII}		{FenTran}
+\prFisIIFenTran[blue]	{FisII}		{FenTran}
 
 \prereqDA			{AlgLin}	{PO}
-\prereqAE	[red]	{AlgLin}	{ProcImag}
+\prereqAlinPI	[red]	{AlgLin}	{ProcImag}
 
 %Período 3
 \prereq				{EstrInf}	{LabProgI}
 \prereqDB	[teal]	{EstrInf}	{EngSistB}
-
 \prereq				{AnaVet}	{FenTran}
 \newcommand{\prereqd}[3][black] {
 	\draw [->, thick, #1]
@@ -330,38 +336,28 @@
 	-| ($ (#3.west) -(2mm,-4mm)$) 
 	-- ($(#3.west) + (0,4mm) $);}
 
-\prereqd [red]				{AnaVet}	{ModMat}
+\prereqd [red]		{AnaVet}	{ModMat}
 \prereqGE			{CalcIII}	{ModMat}
 \prereq				{MecTec}	{ResMat}
-
 \prereq				{FisIII}	{FisIV}
 \prereqBA	[red]	{FisIII}	{MatEle}
 \prereqGA	[blue]	{FisIII}	{EletI}
-\prereqIA	    	{FisIII}	{CEV}
-
+\prereqFisIIICEV   	{FisIII}	{CEV}
 \prereqIB			{ProbEst}	{ProcImag}
-
 %Período 4
-\prereq	{LabProgI}	{LabProgII}
-\prereqHA	{LabProgI}	{IC}
+\prereq				{LabProgI}	{LabProgII}
+\prereqHA			{LabProgI}	{IC}
 
 
 %Período 5
-%\prereqDA			{LabProgII}	{SO}
 \draw [->, thick]
     ($(LabProgII.east) + (0,-2mm) $) -| ($(LabProgII.east) + (4mm,-13mm) $) -| ($ (SO.west) -(4mm,-0mm)$) -- ($(SO.west) + (0,0mm)    $);
 \prereq	[blue]			{FundComp}	{ArqComp}
 \prereqGC	[blue]	{LabProgII}	{AnAlg}
-
-%\prereq				{ModMat}	{AnaFis}
-
 \prereqB			{ModMat}	{CEVI}
-
 \prereq				{CEV}		{CEVI}
 \prereqBB	[blue]	{CEV}		{EletII}
-
 \prereq				{EletI}		{EletII}
-
 %Período 6
 \prereq				{EngSistA}	{EngSistB}
 \prereq		{AnAlg}		{Comp}
@@ -386,7 +382,7 @@
 %\prereqDC	[blue]		{SO}		{Control}
 \draw [->, thick, blue]
     ($(SO.east) + (0,-2mm) $) 
-    -| ($(SO.east) + (2mm,-13mm) $) 
+    -| ($(SO.east) + (3mm,-13mm) $) 
     -| ($ (Control.west) -(3mm,-2mm)$) 
     -- ($(Control.west) + (0,2mm) $);
 %Período 9
@@ -409,12 +405,15 @@
     
 \newcommand{\trava}[2] {
   \node [above left=-21mm and -16mm of #2,text width=40pt, font=\scriptsize] (#2trava) {#1 cred.};}
+
+\newcommand{\travaEst}[2] {
+	\node [above left=-25mm and -16mm of #2,text width=40pt, font=\scriptsize] (#2trava) {#1 cred.};}
   
 \newcommand{\travaA}[2] {
   \node [above left=2mm and -16mm of #2,text width=40pt, font=\scriptsize] (#2trava) {#1 cred.};}
 
 \newcommand{\travaB}[2] {
-    \node [above left=-20mm and -16mm of #2,text width=40pt, font=\scriptsize] (#2trava) {#1 cred.};}
+    \node [above left=-21mm and -16mm of #2,text width=40pt, font=\scriptsize] (#2trava) {#1 cred.};}
   
 \node [above left=-21.5mm and -12mm of ETS,text width=30pt, font=\scriptsize] (94cred) {94 cred.};
 
@@ -428,7 +427,7 @@
 \prereqCr {ECtrava}{EC}
 %\trava{170}{ED}
 %\prereqCr {EDtrava}{ED}
-\trava{170}{EstSup}
+\travaEst{170}{EstSup}
 \prereqCr {EstSuptrava}{EstSup}
 \trava{170}{ProjA}
 \prereqCr {ProjAtrava}{ProjA}

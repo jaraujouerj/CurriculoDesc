@@ -21,11 +21,13 @@ DESC=AlgoritmosComputacionais.pdf AnaliseDeAlgoritmos.pdf ArquiteturaDeComputado
 	MineracaoDeDados.pdf ProcessamentoDeImagens.pdf ProjetoXIA.pdf SistemasEmbutidos.pdf \
 	TeleprocessamentoERedes.pdf TeoriaDeCompiladores.pdf 
 
+CLASSEDESC=ProjetoXIA.pdf ArquiteturaDeComputadores.pdf SistemasEmbutidos.pdf
+
 ELETIVAS=Eletiva1_ReconhecimentoDePadroes.pdf Eletiva2_RedesDeInterconexao.pdf \
 	Eletiva3_Geomatica.pdf Eletiva4_ComputacaoDeAltoDesempenho.pdf Eletiva5_ProgramacaoParaDispositivosMoveis.pdf \
 	Eletiva6_Padroes.pdf
 
-ELETRO=EletronicaIIA.pdf
+ELETRO=EletronicaIIA.pdf PrincipiosDeTelecomunicacoesIIIA.pdf ControleEServomecanismosIIIA.pdf
 
 ELETRICA=AnaliseDeSistemasFisicos.pdf CircuitosEletricosV.pdf CircuitosEletricosVI.pdf\
 	MateriaisEletricosEMagneticos.pdf
@@ -36,11 +38,11 @@ TODASDISC= $(DESC) $(ELETRO) $(ELETRICA) $(INDUSTRIAL) $(ELETIVAS)
 
 FLUXOGRAMA=fluxogramaEngenhariaComputacao.pdf
 
-EXTERNOS=Administracao.pdf AlgebraLinearIII.pdf AnaliseVetorial.pdf CalculoI.pdf CalculoII.pdf CalculoIII.pdf \
-	ControleEServomec.pdf DesenhoBasico.pdf EletronicaI.pdf FenomenosDeTransporte.pdf FisicaI.pdf \
-	FisicaII.pdf FisicaIII.pdf FisicaIV.pdf GeometriaAnalitica.pdf GeometriaDescritivaI.pdf IntroducaoAEconomia.pdf \
-	IntroducaoAEngenhariaAmbiental.pdf MateriaisEletricos.pdf MecanicaTecnica.pdf \
-	ModelosMatematicos.pdf PrincipiosDeTelecomunicacoes.pdf ProbEst.pdf QuimicaX.pdf ResMat.pdf
+EXTERNOS=Administracao.pdf AlgebraLinearIII.pdf AnaliseVetorial.pdf CalculoI.pdf CalculoII.pdf \
+	CalculoIII.pdf DesenhoBasico.pdf EletronicaI.pdf FenomenosDeTransporte.pdf FisicaI.pdf \
+	FisicaII.pdf FisicaIII.pdf FisicaIV.pdf GeometriaAnalitica.pdf GeometriaDescritivaI.pdf \
+	IntroducaoAEconomia.pdf IntroducaoAEngenhariaAmbiental.pdf MateriaisEletricos.pdf MecanicaTecnica.pdf ModelosMatematicos.pdf \
+	ProbEst.pdf QuimicaX.pdf ResMat.pdf
 
 LEIS=CES112002.pdf Deliberacao33-95.pdf res1010.pdf
 
@@ -52,14 +54,15 @@ FIGURES := $(shell find imagens/* -type f)
 all:    $(PP).pdf
 
 $(TODASDISC):disciplinasDB.tex contadores.inc default.def
-$(DESC):ementa.sty 
+$(DESC):ementa.sty
+$(CLASSEDESC):ementa.cls
 $(ELETRO):ementaEletronica.sty 
 $(ELETRICA):ementaEletrica.sty 
 $(INDUSTRIAL):ementaIndustrial.sty 
 $(ELETIVAS):ementaeletiva.sty 
 $(FLUXOGRAMA):fluxogramaEngenhariaComputacao.tex disciplinasDB.tex
 
-$(PP).pdf: $(PP).tex $(PPPARTES) $(DESC) $(ELETRO) $(ELETRICA) $(INDUSTRIAL) $(FLUXOGRAMA) $(EXTERNOS) $(LEIS)
+$(PP).pdf: $(PP).tex $(PPPARTES) $(DESC) $(ELETIVAS) $(ELETRO) $(ELETRICA) $(INDUSTRIAL) $(FLUXOGRAMA) $(EXTERNOS) $(LEIS)
 	$(LATEXMK) $(LATEXMKOPT) $(OUTDIROPT) $(CONTINUOUS) \
 		-pdflatex="$(LATEX) $(LATEXOPT) $(NONSTOP) %O %S" $(PP)
 

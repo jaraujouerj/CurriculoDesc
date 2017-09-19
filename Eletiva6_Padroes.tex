@@ -2,83 +2,23 @@
 %	Latex para ementa tipo dep da uerj
 %----------------------------------------------------------------------------------------
 %apagar .aux e executar biber ementalatex para obter bibliografia atualizada
-\documentclass[12pt,a4paper]{article} % Use A4 paper with a 12pt font size 
-
-\usepackage{ementaeletiva}
-
-\def \criacao	{x}
-\def \alteracao	{}
-\def \nomeprofessor{Oscar Luiz Monteiro de Farias}
-\def \matriculaprofessor{31998-8}
-
-\def \ndisciplina 	{Padrões de Projetos Orientados a Objetos}
-\def \presencial 	{x}
-\def \semipresencial	{}
-\def \adistancia	{}
-
-\def \chta 		{60h}%carga horária total aluno
-\def \chtp		{60h}%carga horária total professor
-\def \codigo		{FEN06-XXXXX}%Código da disciplina 
-\def \obrigatoria	{}%disciplina é obrigatória? marcar x
-\def \erestrita		{x}%disciplina é eletiva restrita? marcar x
-\def \edefinida		{}%disciplina é eletiva definida? marcar x
-\def \euniversal	{}%disciplina é eletiva universal? marcar x
-\def \curso		{Engenharia de Sistemas e Computação}
-\def \cursorestrita		{Engenharia de Sistemas e Computação}
-\def \cursodefinida		{}
-\def \cursouniversal {}
-\def \frequencia	{} %Se aprovação for por frequência, marcar x.
-\def \frequenciaenota	{x} %Se aprovação for por frequência e nota, marcar x.
-
-\def \empreparosim	{} % Permite situação em preparo? sim?
-\def \empreparonao	{x} % Permite situação em preparo? não?
-
-\def \maisdeumdocentesim	{x} %Permite mais de um docente? sim
-\def \maisdeumdocentenao	{} %Permite mais de um docente? nao
-
-\def \horarioincompletosim	{} %Permite
-\def \horarioincompletonao	{x} %Não Permite
-
-\def \concomitanciasim		{} %Permite
-\def \concomitancianao		{x} %Não Permite
-
-\def \isoladasim		{} %Permite
-\def \isoladanao		{x} %Não Permite
-
-\def \objetivos	{O objetivo desse curso é familiarizar os alunos com técnicas voltadas para o projeto de sistemas orientados a objetos, enfatizando a utilização de padrões.  Espera-se que ao término do curso os alunos estejam aptos a compreender os padrões de projetos mais relevantes e a empregá-los no projeto de sistemas orientados a objetos que sejam flexíveis, reusáveis, de fácil alteração e manutenção e que possam evoluir graciosamente ao longo do tempo.
-}
-
-\def \ementa	{Princípios utilizados no projeto de sistemas orientados a objetos. Técnicas que possibilitam o reuso de componentes modulares de software, organizados de forma cooperativa e que facilitam a manutenção e evolução dos sistemas orientados a objetos. Padrões de Projetos de Sistemas Orientados a Objetos (design patterns for object-oriented software systems). 
-}
-
-\def \preum		{Laboratório de Programação B} %
-\def \codpreum		{FEN06-xxxxx} %
-\def \predois		{} %
-\def \codpredois	{} %
-\def \travadecreditos   {170} % trava de créditos
-\def \crteorica		{4} %
-\def \crlab		{0} %
-\def \crestagio		{0} %
-
-
-\setcounter		{numcr}{0}
-\addtocounter		{numcr}{\crteorica}
-\addtocounter		{numcr}{\crlab}
-
-\setcounter		{chteoricatotal}{15*\crteorica}
-
-\setcounter		{chlabtotal}{30*\crlab}
-
-\setcounter		{chlabsemanal}{2*\crlab}
-
-\setcounter		{chtotalsemanal}{0}
-\setcounter		{chtotalsemanal}{2*\crlab}
-\addtocounter		{chtotalsemanal}{\crteorica}
-
-\setcounter		{chtotal}{0}
-\setcounter		{chtotal}{\the\value{chlabtotal}+\the\value{chteoricatotal}}
+\documentclass{ementa} % Use A4 paper with a 12pt font size 
 
 \begin{document}
-\headsep = 1pt
+\ndisciplina 		{\EletPadroes}
+\nomeprofessor		{Oscar Luiz Monteiro de Farias}
+\matriculaprofessor	{31998-8}
+\chta 				{\EletPadroesCH h}%carga horária total aluno
+\naoobrigatoria		%disciplina não é obrigatória
+\eletivarestrita	{}
+\preum				{Laboratório de Programação B} %
+\codpreum			{FEN06-xxxxx} %
+\travadecreditos   	{170} % trava de créditos
+\credteorica		{2} %
+\credlab			{1} %
+\objetivos			{O objetivo desse curso é familiarizar os alunos com técnicas 
+					voltadas para o projeto de sistemas orientados a objetos, enfatizando a utilização de padrões.  Espera-se que ao término do curso os alunos estejam aptos a compreender os padrões de projetos mais relevantes e a empregá-los no projeto de sistemas orientados a objetos que sejam flexíveis, reusáveis, de fácil alteração e manutenção e que possam evoluir graciosamente ao longo do tempo.}
+\ementa				{Princípios utilizados no projeto de sistemas orientados a objetos. Técnicas que possibilitam o reuso de componentes 
+					modulares de software, organizados de forma cooperativa e que facilitam a manutenção e evolução dos sistemas orientados a objetos. Padrões de Projetos de Sistemas Orientados a Objetos (design patterns for object-oriented software systems).}
 \formementa{Eletiva6_PadroesdeProj}
 \end{document}

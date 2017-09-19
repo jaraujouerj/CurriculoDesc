@@ -1,0 +1,39 @@
+Luiza:
+1- Mineração de Dados está com 3 créditos no fluxograma, enquanto tem 4 créditos na ementa; Ok.
+
+2- Processamento de Imagens está com 3 créditos no fluxograma, enquanto tem 4 créditos na ementa; na ementa, o nome está como Processamento Digital de Imagens; Ok
+
+3- Arquitetura de Computadores A w Sistemas Embutidos passar para Eletiva Definida. Ok.
+
+Controle e Servomecanismos III-A- Erro na ementa antiga. Toda eletrônica chama a disciplina como "servomecanismos", apenas na ementa do desc antiga está "servomecanismo"
+
+Lógica em Programação - sem pré-req. 
+Engenharia de sistemas sem pré-req. Mantido para não aprisionar o aluno
+Fundamentos de Computadores - Eletiva definida e não universal - Ok
+
+Mecânica Técnica. Na ementa e objetivos está escrito "estatística" em vez de "estática". O erro é da ementa original. A mecânica é que pode mudar. Está no site do DEP assim.
+
+Princípios de Telecomunicações III-A - Atualizado a ementa
+
+Química X - Ficou a original.
+
+Correção em Reconhecimento de padrões - (Horários incompletos)
+
+Orlando
+1) Nas tabelas 4.9 e 4.10  das disciplinas aparece Eletiva A, B e C e no fluxograma está eletiva restrita. Deve ficar igual, só eletiva restrita, pois Eletiva A, B e C parece o nome delas. Deveria, portanto, ter uma tabela com o nome delas, pois agora elas possuem nomes, assim como, elas devem aparecer na tabela 4.14 das disciplinas sem equivalência.
+
+2) Na tabela 2.1 aparece a palavra engenharia duas vezes em Engenharia Engenharia Ambiental e Sanitária
+
+3) Estágio Supervisionado XI-A precisa de novo nome?
+
+4) Na página 13 comenta-se que as eletivas não têm ementa fixa, mas agora tem.
+
+5) Ementas de princípios de telecomunicações III-A, Análise de sistemas físicos I-A e Servomec III-A não estão presentes no anexo.
+
+6) Estágio não seria aprovação só por frequência?
+
+7) Qual foi a alteração no projeto A? A ementa dele aparece como alterada.
+
+ 
+
+

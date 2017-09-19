@@ -2,48 +2,22 @@
 %	Latex para ementa tipo dep da uerj
 %----------------------------------------------------------------------------------------
 %apagar .aux e executar biber ementalatex para obter bibliografia atualizada
-\documentclass[12pt,a4paper]{article} % Use A4 paper with a 12pt font size 
-
-\usepackage{ementa}
-\input{default.def}
-\include{disciplinasDB}
-
-\renewcommand \criacao	{}
-\renewcommand \alteracao	{x}
-
-\newcommand \nomeprofessor	{}
-\newcommand \matriculaprofessor{}
-
-\newcommand \ndisciplina 	{\ProjA}
-
-\newcommand \chta 		{\ProjACH h}%carga horária total aluno
-\newcommand \chtp		{\ProjACH h}%carga horária total professor
-\newcommand \codigo		{\ProjACod}%Código da disciplina 
-
-\newcommand \curso		{Engenharia de Sistemas e Computação}
-
-\newcommand \objetivos	{Induzir o aluno a iniciar e desenvolver, parcialmente, um projeto de Engenharia de Sistemas e
-Computação, correlacionando e consolidando os conhecimentos adquiridos no curso, bem como
-estimulando sua capacidade de auto-crítica e auto-aprendizado.
-}
-
-\newcommand \ementa	{Definição do projeto, de acordo com as pretensões profissionais do aluno. Elaboração e qualificação
-do ante-projeto, em conjunto com o cronograma proposto. Seminários sobre o andamento do projeto.
-}
-
-\newcommand \preum		{} %
-\newcommand \codpreum		{} %
-\newcommand \predois		{} %
-\newcommand \codpredois		{} %
-\renewcommand \travadecreditos   {170} % trava de créditos
-\newcommand \crteorica		{1} %
-\renewcommand \crpratica		{1} %
-\newcommand \crlab		{0} %
-
-\input{contadores.inc}
+\documentclass{ementa} % Use A4 paper with a 12pt font size 
 
 \begin{document}
-\headsep = 1pt
+\alteracao
+\ndisciplina 		{\ProjA}
+\codigo				{\ProjACod}%Código da disciplina 
+\nomeprofessor		{João Araujo Ribeiro}
+\matriculaprofessor	{8055-6}
+\chta 				{\ProjACH h}%carga horária total aluno
+\objetivos			{Induzir o aluno a iniciar e desenvolver, parcialmente, um projeto de Engenharia de Sistemas e
+					Computação, correlacionando e consolidando os conhecimentos adquiridos no curso, bem como
+					estimulando sua capacidade de auto-crítica e auto-aprendizado.}
+\ementa				{Definição do projeto, de acordo com as pretensões profissionais do aluno. Elaboração e qualificação
+					do ante-projeto, em conjunto com o cronograma proposto. Seminários sobre o andamento do projeto.}
+\travadecreditos   {170} % trava de créditos
+\credteorica		{1} %
+\credpratica		{1} %
 \formementa{ProjXIA}
-
 \end{document}

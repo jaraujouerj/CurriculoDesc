@@ -5,78 +5,32 @@
 \documentclass[12pt,a4paper]{article} % Use A4 paper with a 12pt font size 
 
 \usepackage{ementa}
+\input{default.def}
 
-\def \criacao		{x}
-\def \alteracao		{}
-\def \nomeprofessor	{Cristiana Barbosa Bentes}
-\def \matriculaprofessor{30729-8}
+\newcommand \nomeprofessor	{Cristiana Barbosa Bentes}
+\newcommand \matriculaprofessor{30729-8}
 
-\def \ndisciplina 	{Projeto de Sistemas Operacionais}
-\def \presencial 	{x}
-\def \semipresencial	{}
-\def \adistancia	{}
+\newcommand \ndisciplina 	{Projeto de Sistemas Operacionais}
 
-\def \chta 		{75h}%carga horária total aluno
-\def \chtp		{75h}%carga horária total professor
-\def \codigo		{FEN06-XXXXX}%Código da disciplina 
-\def \obrigatoria	{x}%disciplina é obrigatória? marcar x
-\def \erestrita		{}%disciplina é eletiva restrita? marcar x
-\def \edefinida		{}%disciplina é eletiva definida? marcar x
-\def \euniversal	{}%disciplina é eletiva universal? marcar x
-\def \curso		{Engenharia de Sistemas e Computação}
-\def \cursouniversal {}
-\def \cursorestrita {}
-\def \frequencia	{} %Se aprovação for por frequência, marcar x.
-\def \frequenciaenota	{x} %Se aprovação for por frequência e nota, marcar x.
+\newcommand \chta 		{75h}%carga horária total aluno
+\newcommand \chtp		{75h}%carga horária total professor
+\newcommand \codigo		{FEN06-XXXXX}%Código da disciplina 
 
-\def \empreparosim	{} % Permite situação em preparo? sim?
-\def \empreparonao	{x} % Permite situação em preparo? não?
-
-\def \maisdeumdocentesim	{x} %Permite mais de um docente? sim
-\def \maisdeumdocentenao	{} %Permite mais de um docente? nao
-
-\def \horarioincompletosim	{} %Permite
-\def \horarioincompletonao	{x} %Não Permite
-
-\def \concomitanciasim		{} %Permite
-\def \concomitancianao		{x} %Não Permite
-
-\def \isoladasim		{} %Permite
-\def \isoladanao		{x} %Não Permite
-
-\def \objetivos	{Os principais objetivos da disciplina são fornecer aos alunos os fundamentos e os detalhes do projeto de um sistema operacional. Ao final da disciplina, espera-se que os alunos sejam capazes de: entender a arquitetura e o funcionamento geral dos principais componentes de um sistema operacional; descrever os problemas e as respectivas soluções teóricas que são normalmente encontrados no projeto de um sistema operacional; projetar e implementar soluções para problemas de programação concorrente/paralela utilizando threads e processos.
+\newcommand \objetivos	{Os principais objetivos da disciplina são fornecer aos alunos os fundamentos e os detalhes do projeto de um sistema operacional. Ao final da disciplina, espera-se que os alunos sejam capazes de: entender a arquitetura e o funcionamento geral dos principais componentes de um sistema operacional; descrever os problemas e as respectivas soluções teóricas que são normalmente encontrados no projeto de um sistema operacional; projetar e implementar soluções para problemas de programação concorrente/paralela utilizando threads e processos.
 }
 
-\def \ementa	{Introdução: histórico; funções e estrutura de um sistema operacional; estruturas de hardware do computador no qual executa um sistema operacional; multiprogramação. Processos: conceitos básicos de processos e threads; mecanismos de comunicação e sincronização; escalonamento. Gerência de memória: partições fixas e variáveis; swapping; memória virtual. Sistemas de Arquivo: organização; métodos de acesso. Sistemas de E/S.
+\newcommand \ementa	{Introdução: histórico; funções e estrutura de um sistema operacional; estruturas de hardware do computador no qual executa um sistema operacional; multiprogramação. Processos: conceitos básicos de processos e threads; mecanismos de comunicação e sincronização; escalonamento. Gerência de memória: partições fixas e variáveis; swapping; memória virtual. Sistemas de Arquivo: organização; métodos de acesso. Sistemas de E/S.
 }
 
-\def \preum		{Arquitetura de Computadores A} %
-\def \codpreum		{FEN06-XXXXX} %
-\def \predois		{Laboratório de Programação B} %
-\def \codpredois		{FEN06-XXXXX} %
-\def \travadecreditos   {} % trava de créditos
-\def \crteorica		{5} %
-\def \crlab		{0} %
-\def \crestagio		{0} %
+\newcommand \preum		{Arquitetura de Computadores A} %
+\newcommand \codpreum		{FEN06-XXXXX} %
+\newcommand \predois		{Laboratório de Programação B} %
+\newcommand \codpredois		{FEN06-XXXXX} %
 
-%Não preeencher abaixo
-\setcounter		{numcr}{0}
-\addtocounter		{numcr}{\crteorica}
-\addtocounter		{numcr}{\crlab}
+\newcommand \crteorica		{5} %
+\newcommand \crlab		{0} %
 
-\setcounter		{chteoricatotal}{15*\crteorica}
-
-\setcounter		{chlabtotal}{30*\crlab}
-
-\setcounter		{chlabsemanal}{2*\crlab}
-
-\setcounter		{chtotalsemanal}{0}
-\setcounter		{chtotalsemanal}{2*\crlab}
-\addtocounter		{chtotalsemanal}{\crteorica}
-
-\setcounter		{chtotal}{0}
-\setcounter		{chtotal}{\the\value{chlabtotal}+\the\value{chteoricatotal}}
-
+\input{contadores.inc}
 
 \begin{document}
 \headsep = 1pt

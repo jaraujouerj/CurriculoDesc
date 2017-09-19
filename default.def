@@ -5,12 +5,14 @@
 \newcommand \semipresencial	{}
 \newcommand \adistancia	{}
 
+\newcommand \curso		{Engenharia de Sistemas e Computação}
 \newcommand \obrigatoria	{x}%disciplina é obrigatória? marcar x
 \newcommand \erestrita		{}%disciplina é eletiva restrita? marcar x
 \newcommand \edefinida		{}%disciplina é eletiva definida? marcar x
 \newcommand \euniversal	{}%disciplina é eletiva universal? marcar x
 \newcommand \cursouniversal		{}
 \newcommand \cursorestrita {}
+\newcommand \cursodefinida {}
 \newcommand \frequencia	{} %Se aprovação for por frequência, marcar x.
 \newcommand \frequenciaenota	{x} %Se aprovação for por frequência e nota, marcar x.
 

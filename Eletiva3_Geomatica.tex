@@ -2,67 +2,21 @@
 %	Latex para ementa tipo dep da uerj
 %----------------------------------------------------------------------------------------
 %apagar .aux e executar biber ementalatex para obter bibliografia atualizada
-\documentclass[12pt,a4paper]{article} % Use A4 paper with a 12pt font size 
-
-\usepackage{ementaeletiva}
-\def \criacao		{x}
-\def \alteracao		{}
-\def \nomeprofessor	{Margareth Simões Penello Meirelles}
-\def \matriculaprofessor{337840}
-
-\def \ndisciplina 	{Geomática}
-\def \presencial 	{x}
-\def \semipresencial	{}
-\def \adistancia	{}
-
-\def \chta 		{75h}%carga horária total aluno
-\def \chtp		{75h}%carga horária total professor
-\def \creditos		{3}%Créditos
-\def \codigo		{FEN06-XXXXX}%Código da disciplina 
-\def \obrigatoria	{}%disciplina é obrigatória? marcar x
-\def \erestrita		{}%disciplina é eletiva restrita? marcar x
-\def \edefinida		{x}%disciplina é eletiva definida? marcar x
-\def \euniversal	{}%disciplina é eletiva universal? marcar x
-\def \cursodefinida		{Engenharia (FEN)}
-\def \cursouniversal {}
-\def \cursorestrita {}
-\def \frequencia	{} %Se aprovação for por frequência, marcar x.
-\def \frequenciaenota	{x} %Se aprovação for por frequência e nota, marcar x.
-
-\def \empreparosim	{} % Permite situação em preparo? sim?
-\def \empreparonao	{x} % Permite situação em preparo? não?
-
-\def \maisdeumdocentesim	{x} %Permite mais de um docente? sim
-\def \maisdeumdocentenao	{} %Permite mais de um docente? nao
-
-\def \horarioincompletosim	{} %Permite
-\def \horarioincompletonao	{x} %Não Permite
-
-\def \concomitanciasim		{} %Permite
-\def \concomitancianao		{x} %Não Permite
-
-\def \isoladasim		{x} %Permite
-\def \isoladanao		{} %Não Permite
-
-\def \objetivos	{Conceitos e aplicações de Sistemas de Informação Espacial, Análise Espacial  e tratamento de imagens de satélite.
-}
-
-\def \ementa	{Geoprocessamento, Conceituação, Mapeamento Automatizado, Representação de Dados Geográficos; Componentes de um SIG (Sistemas de Informação Espacial); Aquisição de Dados: Entrada de Dados Raster, Entrada de Dados Vetorial, Dados não Espaciais; Integração de Dados Espaciais e não Espaciais; Dados Ambientais; Objetos e Relacionamentos Espaciais; Consulta e Análise Espacial; Modelagem Digital de Terreno; Princípios de Sensoriamento Remoto; Implantação de um SIG. Aplicações Ambientais. Mudanças de Uso da Terra. Impactos Ambientais. Mudanças Climáticas Globais. Estudo dirigido
-}
-
-\def \preum		{} %
-\def \codpreum		{} %
-\def \predois		{} %
-\def \codpredois		{} %
-\def \travadecreditos   {170} % trava de créditos
-\def \crteorica		{5} %
-\def \crlab		{0} %
-\def \crestagio		{0} %
-\def \crpratica		{0} %
-
-\input{contadores.inc}
+\documentclass{ementa} % Use A4 paper with a 12pt font size 
 
 \begin{document}
-\headsep = 1pt
+\ndisciplina 		{\EletGeo}
+\nomeprofessor		{Margareth Simões Penello Meirelles}
+\matriculaprofessor	{337840}
+\chta 				{\EletGeoCH h}%carga horária total aluno
+\naoobrigatoria		%disciplina não é obrigatória
+\eletivarestrita	{}
+\eletivadefinida	{Engenharia (FEN)}%disciplina é eletiva definida
+\travadecreditos   	{170} % trava de créditos
+\credteorica		{2} %
+\credlab			{1} %
+\objetivos			{Conceitos e aplicações de Sistemas de Informação Espacial, Análise Espacial  e tratamento de imagens de satélite.}
+\ementa				{Geoprocessamento, Conceituação, Mapeamento Automatizado, Representação de Dados Geográficos; Componentes 
+					de um SIG (Sistemas de Informação Espacial); Aquisição de Dados: Entrada de Dados Raster, Entrada de Dados Vetorial, Dados não Espaciais; Integração de Dados Espaciais e não Espaciais; Dados Ambientais; Objetos e Relacionamentos Espaciais; Consulta e Análise Espacial; Modelagem Digital de Terreno; Princípios de Sensoriamento Remoto; Implantação de um SIG. Aplicações Ambientais. Mudanças de Uso da Terra. Impactos Ambientais. Mudanças Climáticas Globais. Estudo dirigido.}
 \formementa{Eletiva3_Geom}
 \end{document}
