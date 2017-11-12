@@ -14,6 +14,7 @@
 
 \RequirePackage[utf8]{inputenc}
 \RequirePackage[portuguese]{babel}
+\RequirePackage{csquotes}
 
 \RequirePackage[defernumbers=true, backend=biber, sorting=none]{biblatex} %bibliografia
 
@@ -31,7 +32,7 @@
 \makeatother
 
 \RequirePackage{tikz}
-\include{disciplinasDB}
+\RequirePackage{disciplinasDB}
 \tikzset{
     %Define standard arrow tip
 	>=stealth,
