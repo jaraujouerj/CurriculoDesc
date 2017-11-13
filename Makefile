@@ -1,5 +1,4 @@
 #origem https://www.drewsilcock.co.uk/using-make-and-latexmk
-PP=ProjetoPedagogico
 LATEX=pdflatex
 LATEXOPT=--shell-escape
 NONSTOP=--interaction=nonstopmode
@@ -12,25 +11,23 @@ LATEXMKOPT=-pdf
 #CONTINUOUS=-pvc
 VPATH=pdf ementasExternas leis
 
-DESC=AlgoritmosComputacionais.pdf AnaliseDeAlgoritmos.pdf ArquiteturaDeComputadores.pdf \
+CLASSEDESC=ProjetoXIA.pdf ArquiteturaDeComputadores.pdf EstagioSupervisionadoXIA.pdf EstruturasDeInformacao.pdf \
+	ProjetoXIA.pdf SistemasEmbutidos.pdf
+
+DESC=   AlgoritmosComputacionais.pdf AnaliseDeAlgoritmos.pdf \
 	ProjetoDeSistemasOperacionais.pdf ComputacaoParalela.pdf ControleDeProcessosPorComputador.pdf \
 	EngenhariaComputacional.pdf EngenhariaDeComputacaoESociedade.pdf EngenhariaDeSistemas.pdf \
-	ProjetoEAdministracaoDeBancoDeDados.pdf EstruturasDeInformacao.pdf EstagioSupervisionadoXIA.pdf \
+	ProjetoEAdministracaoDeBancoDeDados.pdf   \
 	FundamentosDeComputadores.pdf InteligenciaComputacional.pdf LaboratorioDeProgramacaoA.pdf \
 	LaboratorioDeProgramacaoB.pdf LogicaEmProgramacao.pdf  \
-	MineracaoDeDados.pdf ProcessamentoDeImagens.pdf ProjetoXIA.pdf SistemasEmbutidos.pdf \
-	TeleprocessamentoERedes.pdf TeoriaDeCompiladores.pdf 
-
-CLASSEDESC=ProjetoXIA.pdf ArquiteturaDeComputadores.pdf SistemasEmbutidos.pdf
+	MineracaoDeDados.pdf ProcessamentoDeImagens.pdf  SistemasEmbutidos.pdf \
+	TeleprocessamentoERedes.pdf TeoriaDeCompiladores.pdf $(CLASSEDESC)
 
 ELETIVAS=Eletiva1_ReconhecimentoDePadroes.pdf Eletiva2_RedesDeInterconexao.pdf \
 	Eletiva3_Geomatica.pdf Eletiva4_ComputacaoDeAltoDesempenho.pdf Eletiva5_ProgramacaoParaDispositivosMoveis.pdf \
 	Eletiva6_Padroes.pdf
 
-ELETRO=EletronicaIIA.pdf PrincipiosDeTelecomunicacoesIIIA.pdf ControleEServomecanismosIIIA.pdf
-
-ELETRICA=AnaliseDeSistemasFisicos.pdf CircuitosEletricosV.pdf CircuitosEletricosVI.pdf\
-	MateriaisEletricosEMagneticos.pdf
+ELETRICA= AnaliseDeSistemasFisicos.pdf CircuitosEletricosI.pdf MateriaisEletricosEMagneticos.pdf
 
 INDUSTRIAL=EngenhariaDoTrabalhoI.pdf MetodosQuantitativos.pdf
 
@@ -38,33 +35,43 @@ TODASDISC= $(DESC) $(ELETRO) $(ELETRICA) $(INDUSTRIAL) $(ELETIVAS)
 
 FLUXOGRAMA=fluxogramaEngenhariaComputacao.pdf
 
-EXTERNOS=Administracao.pdf AlgebraLinearIII.pdf AnaliseVetorial.pdf CalculoI.pdf CalculoII.pdf \
-	CalculoIII.pdf DesenhoBasico.pdf EletronicaI.pdf FenomenosDeTransporte.pdf FisicaI.pdf \
-	FisicaII.pdf FisicaIII.pdf FisicaIV.pdf GeometriaAnalitica.pdf GeometriaDescritivaI.pdf \
-	IntroducaoAEconomia.pdf IntroducaoAEngenhariaAmbiental.pdf MateriaisEletricos.pdf MecanicaTecnica.pdf ModelosMatematicos.pdf \
-	ProbEst.pdf QuimicaX.pdf ResMat.pdf
+EXTERNOS= Basico/FisicaI.pdf Basico/FisicaII.pdf Basico/FisicaIII.pdf Basico/FisicaIV.pdf \
+	Basico/Administracao.pdf Basico/IntroducaoAEconomia.pdf Basico/QuimicaX.pdf Basico/ProbEst.pdf\
+	Basico/CalculoI.pdf Basico/CalculoII.pdf Basico/EDO.pdf Basico/GeometriaAnalitica.pdf \
+	Basico/GeometriaDescritivaI.pdf Basico/AlgebraLinearIII.pdf Basico/DesenhoBasico.pdf  Basico/AnaliseVetorial.pdf \
+	Eletronica/ControleEServomecanismosIII.pdf  Eletronica/EletronicaI.pdf Eletronica/EletronicaII.pdf  \
+	Eletronica/PrincipiosDeTelecomunicacoesIII.pdf Eletronica/ModelosMatematicos.pdf \
+	Eletrica/CircuitosEletricosIV.pdf \
+	FenomenosDeTransporte.pdf IntroducaoAEngenhariaAmbiental.pdf MecanicaTecnica.pdf ResMat.pdf  
 
 LEIS=CES112002.pdf Deliberacao33-95.pdf res1010.pdf
 
-PPPARTES=disciplinasDB.sty Capitulos.tex anexos.tex
+IMAGENS= imagens/dep1.png imagens/subreitoria.png
 
-#Makefile yourothertexfiles
-FIGURES := $(shell find imagens/* -type f)
+PP=ProjetoPedagogico
 
 all:    $(PP).pdf
 
+$(PP).pdf: $(PP).tex Capitulos.tex anexos.tex svmono.cls imagens/logo_uerj_cor.jpg
+	@echo Criando $@
+	$(LATEXMK) $(LATEXMKOPT) $(OUTDIROPT) $(CONTINUOUS) \
+		-pdflatex="$(LATEX) $(LATEXOPT) $(NONSTOP) %O %S" $(PP)
+
+Capitulos.tex: disciplinasDB.sty
+
+anexos.tex: $(LEIS) $(EXTERNOS) $(FLUXOGRAMA) $(DESC) $(ELETIVAS) $(ELETRICA) $(INDUSTRIAL) 
+
 $(TODASDISC):disciplinasDB.sty contadores.inc default.def
 $(DESC):ementa.sty
-$(CLASSEDESC):ementa.cls
-$(ELETRO):ementaEletronica.sty 
-$(ELETRICA):ementaEletrica.sty 
+$(CLASSEDESC) $(ELETRICA):ementa.cls 
 $(INDUSTRIAL):ementaIndustrial.sty 
 $(ELETIVAS):ementaeletiva.sty 
 $(FLUXOGRAMA):fluxogramaEngenhariaComputacao.tex disciplinasDB.sty
 
-$(PP).pdf: $(PP).tex $(PPPARTES) $(DESC) $(ELETIVAS) $(ELETRO) $(ELETRICA) $(INDUSTRIAL) $(FLUXOGRAMA) $(EXTERNOS) $(LEIS)
+$(TODASDISC): %.pdf: %.tex $(IMAGENS)
+	@echo Criando $@
 	$(LATEXMK) $(LATEXMKOPT) $(OUTDIROPT) $(CONTINUOUS) \
-		-pdflatex="$(LATEX) $(LATEXOPT) $(NONSTOP) %O %S" $(PP)
+		-pdflatex="$(LATEX) $(LATEXOPT) $(NONSTOP) %O %S" $(PP) $<
 
 %.pdf: %.tex 
 	$(LATEXMK) $(LATEXMKOPT) $(OUTDIROPT) $(CONTINUOUS) \

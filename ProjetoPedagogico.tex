@@ -47,6 +47,8 @@
 \usepackage{multirow}
 \usepackage[titletoc,toc,page]{appendix}
 \usepackage{pdfpages}
+% Nomes das Disciplinas
+\usepackage{disciplinasDB}
 
 \renewcommand{\appendixtocname}{Anexos}
 \renewcommand{\appendixpagename}{Anexos}
@@ -93,10 +95,6 @@
                        % please use the style svind.ist with
                        % your makeindex program
 
-% Nomes das Disciplinas
-\input{disciplinasDB}
- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%Básico
 \normalsize 
 \setlength\cftparskip{-2pt}
 \setlength\cftbeforechapskip{0pt}
@@ -112,8 +110,6 @@
     Departamento de Engenharia de Sistemas e Computação
 \end{textblock*}
 
-
-
 \title{Projeto Pedagógico do Curso de Engenharia de Computação}
 \subtitle{2016}
 \date{}
@@ -125,28 +121,16 @@
 \listoftables
 
 \frontmatter%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\include{dedic}
-%\include{pref} 
-
-%\tableofcontents
-
 
 \mainmatter%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\include{part}
 \pagestyle{fancy}
 \include{Capitulos}
-%\include{chapter}
 \backmatter%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \appendix
 \appendixpage
 \include{anexos}
 \addappheadtotoc
-
-
-%\printindex
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \end{document}
 
