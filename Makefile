@@ -46,21 +46,21 @@ EXTERNOS=Administracao.pdf AlgebraLinearIII.pdf AnaliseVetorial.pdf CalculoI.pdf
 
 LEIS=CES112002.pdf Deliberacao33-95.pdf res1010.pdf
 
-PPPARTES=disciplinasDB.tex Capitulos.tex anexos.tex
+PPPARTES=disciplinasDB.sty Capitulos.tex anexos.tex
 
 #Makefile yourothertexfiles
 FIGURES := $(shell find imagens/* -type f)
 
 all:    $(PP).pdf
 
-$(TODASDISC):disciplinasDB.tex contadores.inc default.def
+$(TODASDISC):disciplinasDB.sty contadores.inc default.def
 $(DESC):ementa.sty
 $(CLASSEDESC):ementa.cls
 $(ELETRO):ementaEletronica.sty 
 $(ELETRICA):ementaEletrica.sty 
 $(INDUSTRIAL):ementaIndustrial.sty 
 $(ELETIVAS):ementaeletiva.sty 
-$(FLUXOGRAMA):fluxogramaEngenhariaComputacao.tex disciplinasDB.tex
+$(FLUXOGRAMA):fluxogramaEngenhariaComputacao.tex disciplinasDB.sty
 
 $(PP).pdf: $(PP).tex $(PPPARTES) $(DESC) $(ELETIVAS) $(ELETRO) $(ELETRICA) $(INDUSTRIAL) $(FLUXOGRAMA) $(EXTERNOS) $(LEIS)
 	$(LATEXMK) $(LATEXMKOPT) $(OUTDIROPT) $(CONTINUOUS) \

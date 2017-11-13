@@ -96,14 +96,17 @@
 \setlength{\parindent}{0cm} % Remove paragraph indentation
 
 %----------------------------------------------------------------------------------------
-%	HEADER INFORMATION
+% HEADER 
+% UNIVERSIDADE DO ESTADO DO RIO DE JANEIRO
+% FORMULÁRIO DE IDENTIFICAÇÃO DE DISCIPLINA
 %----------------------------------------------------------------------------------------
 
 \renewcommand*{\familydefault}{\sfdefault}
 \lhead{
 \raisebox{-0.3\height}{\includegraphics[height=20.1mm,keepaspectratio]{imagens/subreitoria}}}
-\chead{\hspace{0.9mm}\raisebox{1mm} {UNIVERSIDADE DO ESTADO DO RIO DE JANEIRO}\\[5pt]
-		FORMULÁRIO DE IDENTIFICAÇÃO DE DISCIPLINA}
+\chead{\hspace{0.9mm}\raisebox{1mm} {UNIVERSIDADE DO ESTADO DO RIO DE JANEIRO}\\
+	[5pt]
+	FORMULÁRIO DE IDENTIFICAÇÃO DE DISCIPLINA}
 \rhead{\raisebox{-0.28\height}{\includegraphics[height=19.5mm,keepaspectratio]{imagens/dep1}}}
 
 \newcommand*{\tamlin}{0.81cm}%
@@ -120,6 +123,13 @@
 					(pres)
 					{\textbf{#2}};}
 
+\newcommand \departamento[1] {%
+	\ifx&#1&%
+		\newcommand \idepartamento {}%
+	\else
+		\newcommand \idepartamento{#1}%
+	\fi}
+	
 \newcommand \curso[1] {%
   \ifx&#1&%
    \newcommand \icurso {}%
@@ -211,9 +221,9 @@
 
 \newcommand\matriculaprofessor[1]{%
   \ifx&#1&%
-   \newcommand \imatriculaprofessor {0}%
+   \newcommand \imatriculaprofessor {}%
   \else
-   \newcommand \imatriculaprofessor {#1}%
+   \newcommand \imatriculaprofessor {- Mat. #1}%
   \fi}
 
 \newcommand\preum[1]{%
@@ -327,6 +337,10 @@
   \newcommand{\icriacao}{}
 \fi
 
+\ifx \idepartamento \undefined
+\newcommand \idepartamento {Engenharia de Sistemas e Computação}
+\fi
+
 \ifx\isemipresencial\undefined
   \ifx\iadistancia\undefined
     \newcommand{\ipresencial}{x}
@@ -383,15 +397,12 @@
   \newcommand{\isoladanao}{}
 \fi
 
-
-
 \ifx\icursodefinida\undefined
   \newcommand{\icursodefinida}{}
   \ifx\idefinida\undefined
    \newcommand{\idefinida}{}
   \fi
 \fi
-
 
 \ifx\irestrita\undefined
   \newcommand{\irestrita}{}
@@ -413,8 +424,6 @@
 \else
   \newcommand{\icurso}{}
 \fi
-
-
 
 \ifx \crpratica \undefined
   \newcommand \crpratica {0}
@@ -516,15 +525,17 @@
 	[basico] 
 	(unidade)
 	{};
+% CRIAÇÃO
 \node 
 	[box, above left=3mm and -48mm of unidade] 
 	(boxcriacao)
 	{\icriacao};
-\node %box CRIAÇÃO
+\node 
 	[right =3mm of boxcriacao, text width=1.5cm] 
 	(criacao)
 	{CRIAÇÃO};
-\node %BOX ALTERAÇÃO
+% ALTERAÇÃO
+\node 
 	[box, right=14mm of criacao] 
 	(boxaltera)
 	{\ialteracao};
@@ -532,20 +543,20 @@
 	[right =1mm of boxaltera, text width=1.5cm] 
 	(criacao)
 	{ALTERAÇÃO};
-
-\node %UNIDADE
+%UNIDADE
+\node 
 	[label, below left =\xsepara and \paddingsup of unidade.north ] 
 	(unidadelabel)
 	{\textbf{UNIDADE:} 
 	{\small Faculdade de Engenharia}};
-
-\node %DEPARTAMENTO
+%DEPARTAMENTO
+\node 
 	[basico, below=\gap of unidade] (depto){};
 \node 
 	[label, below left =\xsepara and \paddingsup of depto.north] 
 	(deptolabel)
 	{\textbf{DEPARTAMENTO:} 
-	{\small Engenharia de Sistemas e Computação}};
+	{\small \idepartamento}};
 
 \node %DISCIPLINA
 	[basico, below=\gap of depto] (disciplina){};
@@ -673,12 +684,6 @@
 	
 \boxlabel[right=3mm  of discmoda]{FREQUÊNCIA}{\frequencia}
 \boxlabel[right=40mm  of discmoda]{FREQUÊNCIA E NOTA}{\frequenciaenota}
-
-%\node [box,  right=3mm  of discmoda] (boxpres){\frequencia};
-%\node [  right =2mm of boxpres, text width=0.5cm, font=\scriptsize] (pres){\textbf{FREQUÊNCIA}};
-%
-%\node [box, right=15mm of pres] (boxsp){\frequenciaenota};
-%\node [  right =1mm of boxsp, text width=4cm, font=\scriptsize] (fn){\textbf{FREQUÊNCIA E NOTA}};
 
 \end{tikzpicture}
 
@@ -823,7 +828,7 @@ ESTÁGIO & \crestagio & \the\value{chestagiosemanal}h & \the\value{chestagiotota
 \node [below=0mm and 0mm  of data.north,font=\scriptsize]{\textbf{DATA}};
 
 \node [linhafinal, minimum width=8.3cm, text width=7cm, minimum height=1.9cm, very thin, align=center, right=-0.09mm of data] (assinatura){\\[1cm]
-\inomeprofessor\ - Mat. \imatriculaprofessor};
+\inomeprofessor\ \imatriculaprofessor};
 \node [below=-0.7mm and 0mm  of assinatura.north, font=\scriptsize] {\textbf{ASSINATURA/MATRÍCULA/CARIMBO}};
 
 \end{tikzpicture}

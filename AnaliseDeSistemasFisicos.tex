@@ -1,90 +1,22 @@
 %----------------------------------------------------------------------------------------
 %	Latex para ementa tipo dep da uerj
 %----------------------------------------------------------------------------------------
-%apagar .aux e executar biber ementalatex para obter bibliografia atualizada
-\documentclass[12pt,a4paper]{article} % Use A4 paper with a 12pt font size 
-
-\usepackage{ementaEletrica}
-\include{disciplinasDB}
-
-\def \criacao	{x}
-\def \alteracao	{}
-\def \nomeprofessor{}
-\def \matriculaprofessor{}
-
-\def \ndisciplina {\AnaFisSName}
-\def \presencial 	{x}
-\def \semipresencial	{}
-\def \adistancia	{}
-
-\def \chta 		{\AnaFisCH h}%carga horária total aluno
-\def \chtp		{\AnaFisCH h}%carga horária total professor
-\def \creditos		{\AnaFisCred}%Créditos
-\def \codigo		{\AnaFisCod}%Código da disciplina 
-\def \obrigatoria	{x}%disciplina é obrigatória? marcar x
-\def \erestrita		{}%disciplina é eletiva restrita? marcar x
-\def \edefinida		{}%disciplina é eletiva definida? marcar x
-\def \euniversal	{}%disciplina é eletiva universal? marcar x
-\def \cursouniversal		{}
-\def \cursorestrita {}
-\def \frequencia	{} %Se aprovação for por frequência, marcar x.
-\def \frequenciaenota	{x} %Se aprovação for por frequência e nota, marcar x.
-
-\def \empreparosim	{} % Permite situação em preparo? sim?
-\def \empreparonao	{x} % Permite situação em preparo? não?
-
-\def \maisdeumdocentesim	{x} %Permite mais de um docente? sim
-\def \maisdeumdocentenao	{} %Permite mais de um docente? nao
-
-\def \horarioincompletosim	{} %Permite
-\def \horarioincompletonao	{x} %Não Permite
-
-\def \concomitanciasim		{} %Permite
-\def \concomitancianao		{x} %Não Permite
-
-\def \isoladasim			{} %Permite
-\def \isoladanao			{x} %Não Permite
-
-\def \objetivos	{Ao final do período o aluno deverá ser capaz de proceder à análise de sistemas físicos mais frequentes em problemas de engenharia, utilizando conceitos e técnicas de teoria geral de sistemas aplicáveis a sistemas determinísticos.
-}
-
-\def \ementa	{
-Conceitos básicos de teoria geral de sistemas. Espaços de estados. Classificação de sistemas: autômata. Modelagem de sistemas físicos: par excitação-resposta. Equações dinâmicas. Analogias.
-Representações gráficas de sistemas: diagramas de bloco e de fluxo de sinal. Diagramas de simulação analógica. Linearização de sistemas. Composição de sistemas. Técnicas de análises de sistemas lineares. Matriz de transição de estados. Funções de transferência e suas relações com matriz de transição de estados. Transformada Z e sua aplicação na análise de sistemas discretos. Propriedades qualitativas gerais de sistemas.}
-
-\def \preum		{Circuitos Elétricos VI} %
-\def \codpreum	{FEN04-xxxxx} %
-\def \predois		{} %
-\def \codpredois		{} %
-\def \travadecreditos   {} % trava de créditos
-\def \crteorica	{3} %
-\def \crlab	{0} %
-\def \crestagio		{0} %
-\def \crpratica		{1} %
-
-
-\setcounter{numcr}{0}
-\addtocounter{numcr}{\crteorica}
-\addtocounter{numcr}{\crlab}
-\addtocounter{numcr}{\crpratica}
-
-\setcounter{chteoricatotal}{15*\crteorica}
-
-\setcounter{chlabtotal}{30*\crlab}
-\setcounter{chprattotal}{30*\crpratica}
-
-\setcounter{chlabsemanal}{2*\crlab}
-\setcounter{chpratsemanal}{2*\crpratica}
-
-\setcounter{chtotalsemanal}{0}
-\setcounter{chtotalsemanal}{2*\crlab}
-\addtocounter{chtotalsemanal}{2*\crpratica}
-\addtocounter{chtotalsemanal}{\crteorica}
-
-\setcounter{chtotal}{0}
-\setcounter{chtotal}{\the\value{chlabtotal}+\the\value{chteoricatotal}+\the\value{chprattotal}}
+\documentclass{ementa} % Use A4 paper with a 12pt font size 
 
 \begin{document}
-\headsep = 1pt
-\formementa{AnaSistFisI}
+	\ndisciplina 		{\AnaFis}
+	\chta 				{\AnaFisCH h}%carga horária total aluno
+	\codigo				{\AnaFisCod}
+	\alteracao
+	\departamento		{Engenharia  Elétrica}
+	\preum				{\CEVI}
+	\codpreum			{\CEVICod} %
+	\credteorica		{3} %
+	\credpratica		{1} %
+	\objetivos	{Ao final do período o aluno deverá ser capaz de proceder à análise de sistemas físicos mais frequentes em problemas de engenharia, utilizando conceitos e técnicas de teoria geral de sistemas aplicáveis a sistemas determinísticos.
+	}
+	\ementa	{
+		Conceitos básicos de teoria geral de sistemas. Espaços de estados. Classificação de sistemas: autômata. Modelagem de sistemas físicos: par excitação-resposta. Equações dinâmicas. Analogias.
+		Representações gráficas de sistemas: diagramas de bloco e de fluxo de sinal. Diagramas de simulação analógica. Linearização de sistemas. Composição de sistemas. Técnicas de análises de sistemas lineares. Matriz de transição de estados. Funções de transferência e suas relações com matriz de transição de estados. Transformada Z e sua aplicação na análise de sistemas discretos. Propriedades qualitativas gerais de sistemas.}
+	\formementa{AnaSistFisI}
 \end{document}

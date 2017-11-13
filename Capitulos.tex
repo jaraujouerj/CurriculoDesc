@@ -165,7 +165,7 @@ docente e discente, não sendo necessariamente disponibilizadas todos os semestr
 \rowcolors{1}{gray!5}{white}
 \setlength{\tabcolsep}{5pt}
 \renewcommand{\arraystretch}{1.5}
-\begin{table}
+\begin{table}[ht]
 \centering
 \caption{1º Período}
 \label{tab1p}
@@ -401,7 +401,7 @@ Cada área de conhecimento deverá possuir um Professor Coordenador. O Coordenad
 
 A tabela \ref{tab:areas} mostra a distribuição das disciplinas por área de conhecimento.
 
-\begin{table}
+\begin{table}[ht]
 \centering
 \caption{Tabela de divisão de disciplinas por área de conhecimento}
 \label{tab:areas}
@@ -451,7 +451,7 @@ O curso de Engenharia de Computação ora proposto substituirá o curso de Engen
 A tabela \ref{DiscIguais} apresenta a relação das disciplinas que são iguais nos dois cursos, logo, a dispensa é direta, e a tabela \ref{equivalencias} mostra a equivalência entre as disciplinas dos currículos antigo e novo. Finalmente, a tabela \ref{DiscSemEqui} exibe as disciplinas do novo curso sem equivalência com alguma(s) disciplina(s) do curso anterior.
 
 \rowcolors{1}{gray!5}{white}
-\begin{table}
+\begin{table}[ht]
 \caption{Disciplinas Iguais em Ambos os Currículos}
 \label{DiscIguais}
 \centering
@@ -463,9 +463,14 @@ A tabela \ref{DiscIguais} apresenta a relação das disciplinas que são iguais 
 \hline
 \Adm 			& \AdmCod 	\\
 \AlgLin 		& \AlgLinCod\\
+\AnaFis			& \AnaFisCod\\
 \AnaVet 		& \AnaVetCod\\
+\CEV			& \CEVCod\\
+\CEVI			& \CEVICod\\
+\CServMec		& \CServMecCod\\
 \DesBas 		& \DesBasCod\\
 \EletI 			& \EletICod\\
+\EletIIA 		& \EletIIACod\\
 \FenTran 		& \FenTranCod \\
 \FisI 			& \FisICod\\
 \FisII 			& \FisIICod\\
@@ -475,8 +480,10 @@ A tabela \ref{DiscIguais} apresenta a relação das disciplinas que são iguais 
 \GeoAna 		& \GeoAnaCod\\
 \IntEco 		& \IntEcoCod\\
 \IntAmb 		& \IntAmbCod \\
+\MatEle 		& \MatEleCod\\
 \MecTec 		& \MecTecCod\\
 \ModMat			& \ModMatCod \\
+\PrincTelec		& \PrincTelecCod\\
 \ProbEst 		& \ProbEstCod\\
 \ProjA 			& \ProjACod\\
 \ProjB 			& \ProjBCod\\
@@ -498,7 +505,6 @@ A tabela \ref{DiscIguais} apresenta a relação das disciplinas que são iguais 
 \hline
 Algoritmos Computacionais 			& FEN06-03559 		&\AlgComp\\
 Análise de Algoritmos 				& FEN06-03713 		&\AnAlg\\
-Análise de Sistemas Físicos I 		& FEN04-5253 		&\AnaFis\\
 Arquitetura de Computadores I		& FEN06-04119 		&\ArqComp\\
 Arquitetura de Sistemas Operacionais& FEN06-04664 		&\ProjSO\\
 Cálculo Diferencial e Integral I	& IME01-00508	  	&\CalcI\\
@@ -506,18 +512,12 @@ Cálculo Diferencial e Integral II	& IME01-00854		&\CalcII\\
 Cálculo Diferencial e Integral III	& IME01-03646		&\CalcIII\\
 Cálculo Numérico IV					& IME04-04541 		&\EngComput\\
 Carac. das Linguagens de Prog. I 	& FEN06-03980 		&\LabProgB\\
-Circuitos Elétricos I 				& FEN04-00944 		&\CEV\\
-Circuitos Elétricos IV 				& FEN04-05222  		&\CEVI\\
 Controle de Processos por Comp.     & FEN06-05080 		&\Control\\
-Controle e Servomecanismo III 		& FEN05-05025 &\CServMec	\\
 Engenharia de Sistemas A 			& FEN06-04243 		&\EngSistA\\
 Engenharia de Sistemas B 			& FEN06-04314 		&\ProjBD\\
-Eletrônica II						& FEN06-01840		&\EletIIA\\
 Estruturas de Informação I 			& FEN06-03648 		&\EstrInf\\
 Fundamentos de Comp. Digitais I e Técnicas Digitais II & \parbox[t]{2cm}{FEN06-03787\\FEN05-04561} 				&\FundComp\\
 Laboratório de Programação I		& FEN06-04049 		& \LabProgA\\
-Materiais Elétricos e Magnéticos I 	& FEN04-05197 		&\MatEle \\
-Princípios de Telecomunicações III  & FEN05-04975 		&\PrincTelec\\
 Segurança e Higiene do Trabalho 	& FEN07-02722 		&\SegHig\\
 Teleproc. e Redes de Computadores 	&FEN06-04718 		&\Telep\\
 Teoria de Compiladores 				& FEN06-04516 		& \TeoComp\\

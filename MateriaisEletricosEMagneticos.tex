@@ -1,43 +1,21 @@
 %----------------------------------------------------------------------------------------
 %	Latex para ementa tipo dep da uerj
 %----------------------------------------------------------------------------------------
-%apagar .aux e executar biber ementalatex para obter bibliografia atualizada
-\documentclass[12pt,a4paper]{article} % Use A4 paper with a 12pt font size 
-
-\usepackage{ementaEletrica}
-
-\input{default.def}
-\renewcommand \criacao	{x}
-\renewcommand \alteracao	{}
-\newcommand \nomeprofessor{}
-\newcommand \matriculaprofessor{}
-
-\newcommand \ndisciplina {Materiais Elétricos e Magnéticos I-A}
-
-\newcommand \chta 		{60h}%carga horária total aluno
-\newcommand \chtp		{60h}%carga horária total professor
-\newcommand \creditos		{3}%Créditos
-\newcommand \codigo		{FEN04-XXXXX}%Código da disciplina 
-
-\newcommand \objetivos	{Ao final do período o aluno deverá ser capaz de avaliar, especificar e fazer a manutenção, operação, testes e ensaios dos materiais elétricos de empregos comuns em instalações elétricas, e conhecer os processos de fabricação dos mesmos.
-}
-
-\newcommand \ementa	{Materiais condutores – cabos de energia. Fusíveis e barramentos. Materiais isolantes e isoladores. Reatores e capacitores. Transformadores de força. Equipamentos de manobra e proteção. Materiais magnéticos. Dispositivos semi-condutores. Componentes utilizados na energia elétrica.
-}
-
-\newcommand \preum		{Física Teórica e Experimental III} %
-\newcommand \codpreum	{FIS03-05185} %
-\newcommand \predois		{} %
-\newcommand \codpredois		{} %
-
-\newcommand \crteorica	{2} %
-\newcommand \crlab	{0} %
-
-\renewcommand \crpratica		{1} %
-
-\input{contadores.inc}
+\documentclass{ementa} % Use A4 paper with a 12pt font size 
 
 \begin{document}
-\headsep = 1pt
-\formementa{MatEleMag}
+	\ndisciplina 	{\MatEle}
+	\chta 				{\MatEleCH h}%carga horária total aluno
+	\codigo				{FEN 04-05197}
+	\alteracao
+	\departamento		{Engenharia  Elétrica}
+	\preum				{\FisIII}
+	\codpreum			{\FisIIICod} %
+	\credteorica		{2} %
+	\credpratica		{1} %
+	\objetivos			{Ao final do período o aluno deverá ser capaz de avaliar, especificar e fazer a manutenção, operação, testes e ensaios dos materiais elétricos de empregos comuns em instalações elétricas, e conhecer os processos de fabricação dos mesmos.
+	}
+	\ementa				{Materiais condutores – cabos de energia. Fusíveis e barramentos. Materiais isolantes e isoladores. Reatores e capacitores. Transformadores de força. Equipamentos de manobra e proteção. Materiais magnéticos. Dispositivos semi-condutores. Componentes utilizados na energia elétrica.
+	}
+	\formementa{MatEleMag}
 \end{document}
