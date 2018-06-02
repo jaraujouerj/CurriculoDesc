@@ -12,7 +12,7 @@ LATEXMKOPT=-pdf
 VPATH=pdf ementasExternas leis
 
 CLASSEDESC=ProjetoXIA.pdf ArquiteturaDeComputadores.pdf EstagioSupervisionadoXIA.pdf EstruturasDeInformacao.pdf \
-	ProjetoXIA.pdf SistemasEmbutidos.pdf
+	SistemasEmbutidos.pdf
 
 DESC=   AlgoritmosComputacionais.pdf AnaliseDeAlgoritmos.pdf \
 	ProjetoDeSistemasOperacionais.pdf ComputacaoParalela.pdf ControleDeProcessosPorComputador.pdf \
@@ -20,18 +20,19 @@ DESC=   AlgoritmosComputacionais.pdf AnaliseDeAlgoritmos.pdf \
 	ProjetoEAdministracaoDeBancoDeDados.pdf   \
 	FundamentosDeComputadores.pdf InteligenciaComputacional.pdf LaboratorioDeProgramacaoA.pdf \
 	LaboratorioDeProgramacaoB.pdf LogicaEmProgramacao.pdf  \
-	MineracaoDeDados.pdf ProcessamentoDeImagens.pdf  SistemasEmbutidos.pdf \
+	MineracaoDeDados.pdf ProcessamentoDeImagens.pdf \
 	TeleprocessamentoERedes.pdf TeoriaDeCompiladores.pdf $(CLASSEDESC)
 
 ELETIVAS=Eletiva1_ReconhecimentoDePadroes.pdf Eletiva2_RedesDeInterconexao.pdf \
 	Eletiva3_Geomatica.pdf Eletiva4_ComputacaoDeAltoDesempenho.pdf Eletiva5_ProgramacaoParaDispositivosMoveis.pdf \
 	Eletiva6_Padroes.pdf
 
-ELETRICA= AnaliseDeSistemasFisicos.pdf CircuitosEletricosI.pdf MateriaisEletricosEMagneticos.pdf
+ELETRICA= AnaliseDeSistemasFisicos.pdf CircuitosEletricosI.pdf CircuitosEletricosII.pdf MateriaisEletricosEMagneticos.pdf
+ELETRONICA=PrincipiosDeTelecomunicacoesIII.pdf
 
 INDUSTRIAL=EngenhariaDoTrabalhoI.pdf MetodosQuantitativos.pdf
 
-TODASDISC= $(DESC) $(ELETRO) $(ELETRICA) $(INDUSTRIAL) $(ELETIVAS)
+TODASDISC= $(DESC) $(ELETRO) $(ELETRICA) $(ELETRONICA) $(INDUSTRIAL) $(ELETIVAS)
 
 FLUXOGRAMA=fluxogramaEngenhariaComputacao.pdf
 
@@ -40,8 +41,7 @@ EXTERNOS= Basico/FisicaI.pdf Basico/FisicaII.pdf Basico/FisicaIII.pdf Basico/Fis
 	Basico/CalculoI.pdf Basico/CalculoII.pdf Basico/EDO.pdf Basico/GeometriaAnalitica.pdf \
 	Basico/GeometriaDescritivaI.pdf Basico/AlgebraLinearIII.pdf Basico/DesenhoBasico.pdf  Basico/AnaliseVetorial.pdf \
 	Eletronica/ControleEServomecanismosIII.pdf  Eletronica/EletronicaI.pdf Eletronica/EletronicaII.pdf  \
-	Eletronica/PrincipiosDeTelecomunicacoesIII.pdf Eletronica/ModelosMatematicos.pdf \
-	Eletrica/CircuitosEletricosIV.pdf \
+	Eletronica/ModelosMatematicos.pdf \
 	FenomenosDeTransporte.pdf IntroducaoAEngenhariaAmbiental.pdf MecanicaTecnica.pdf ResMat.pdf  
 
 LEIS=CES112002.pdf Deliberacao33-95.pdf res1010.pdf
@@ -59,7 +59,7 @@ $(PP).pdf: $(PP).tex Capitulos.tex anexos.tex svmono.cls imagens/logo_uerj_cor.j
 
 Capitulos.tex: disciplinasDB.sty
 
-anexos.tex: $(LEIS) $(EXTERNOS) $(FLUXOGRAMA) $(DESC) $(ELETIVAS) $(ELETRICA) $(INDUSTRIAL) 
+anexos.tex: $(LEIS) $(EXTERNOS) $(FLUXOGRAMA) $(DESC) $(ELETIVAS) $(ELETRICA) $(INDUSTRIAL) $(ELETRONICA)
 
 $(TODASDISC):disciplinasDB.sty contadores.inc default.def
 $(DESC):ementa.sty
